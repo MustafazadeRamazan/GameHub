@@ -1,0 +1,538 @@
+﻿++Solution 'GameHub' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:GameHub.sln
+++GameHub
+i:{00000000-0000-0000-0000-000000000000}:GameHub
+++Properties
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\properties\
+++AssemblyInfo.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\properties\assemblyinfo.cs
+++References
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++App_Data
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\app_data\
+++App_Start
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\app_start\
+++Content
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\
+++css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\intellisence\css\
+++fonts
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\fonts\
+++img
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\
+++electronics
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\
+++fashion
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\fashion\
+++flag
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\flag\
+++man
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man\
+++slider
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\
+++sports
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\
+++view-slider
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\
+++women
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\women\
+++close-icon.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\close-icon.png
+++fashion-banner-game.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\fashion-banner-game.jpg
+++logo.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\logo.jpg
+++man-small-1.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man-small-1.jpg
+++paypal.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\paypal.jpg
+++promo-banner-2.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\promo-banner-2.jpg
+++promo-banner-5.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\promo-banner-5.jpg
+++woman-small-1.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\woman-small-1.jpg
+++woman-small-2.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\woman-small-2.jpg
+++Intellisence
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\intellisence\
+++js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\intellisence\js\
+++scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\
+++PagedList.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\pagedlist.css
+++Controllers
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\
+++AccountController.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\accountcontroller.cs
+++CheckOutController.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\checkoutcontroller.cs
+++HomeController.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\homecontroller.cs
+++LoadDataController.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\loaddatacontroller.cs
+++MyCartController.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\mycartcontroller.cs
+++ProductController.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\productcontroller.cs
+++ThankYouController.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\thankyoucontroller.cs
+++WishListController.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\controllers\wishlistcontroller.cs
+++Models
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\
+++GameHubDataModel.edmx
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\gamehubdatamodel.edmx
+++TempShpData.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\tempshpdata.cs
+++TopSoldProduct.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\topsoldproduct.cs
+++Scripts
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\
+++Views
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\
+++ClassDiagram1.cd
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\classdiagram1.cd
+++favicon.ico
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\favicon.ico
+++Global.asax
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\global.asax
+++packages.config
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\packages.config
+++Web.config
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\web.config
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\web.config
+++Antlr3.Runtime
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++EntityFramework
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++Microsoft.CSharp
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++Microsoft.Web.Infrastructure
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++Newtonsoft.Json
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++PagedList
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++PagedList.Mvc
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.ComponentModel.DataAnnotations
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Configuration
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Data
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Data.DataSetExtensions
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Data.Entity
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Drawing
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.EnterpriseServices
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Net.Http
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Net.Http.WebRequest
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Runtime.Serialization
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Security
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Abstractions
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.ApplicationServices
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.DynamicData
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Entity
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Extensions
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Helpers
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Mvc
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Optimization
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Razor
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Routing
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.Services
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.WebPages
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.WebPages.Deployment
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Web.WebPages.Razor
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Xml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++System.Xml.Linq
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++WebGrease
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:
+++BundleConfig.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\app_start\bundleconfig.cs
+++FilterConfig.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\app_start\filterconfig.cs
+++RouteConfig.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\app_start\routeconfig.cs
+++theme-color
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\theme-color\
+++bootstrap.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\bootstrap.css
+++font-awesome.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\font-awesome.css
+++jquery.simpleLens.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\jquery.simplelens.css
+++jquery.smartmenus.bootstrap.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\jquery.smartmenus.bootstrap.css
+++nouislider.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\nouislider.css
+++sequence-theme.modern-slide-in.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\sequence-theme.modern-slide-in.css
+++slick.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\slick.css
+++style.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\style.css
+++fontawesome-webfont.eot
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\fontawesome-webfont.eot
+++fontawesome-webfont.svg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\fontawesome-webfont.svg
+++fontawesome-webfont.ttf
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\fontawesome-webfont.ttf
+++fontawesome-webfont.woff
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\fontawesome-webfont.woff
+++fontawesome-webfont.woff2
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\fontawesome-webfont.woff2
+++FontAwesome.otf
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\fontawesome.otf
+++glyphicons-halflings-regular.eot
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\glyphicons-halflings-regular.eot
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\fonts\glyphicons-halflings-regular.eot
+++glyphicons-halflings-regular.svg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\glyphicons-halflings-regular.svg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\fonts\glyphicons-halflings-regular.svg
+++glyphicons-halflings-regular.ttf
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\glyphicons-halflings-regular.ttf
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\fonts\glyphicons-halflings-regular.ttf
+++glyphicons-halflings-regular.woff
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\glyphicons-halflings-regular.woff
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\fonts\glyphicons-halflings-regular.woff
+++glyphicons-halflings-regular.woff2
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\fonts\glyphicons-halflings-regular.woff2
+++electronic-1.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\electronic-1.png
+++electronic-2.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\electronic-2.png
+++electronic-3.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\electronic-3.png
+++electronic-4.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\electronic-4.png
+++electronic-5.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\electronic-5.png
+++electronic-6.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\electronic-6.png
+++electronic-7.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\electronic-7.png
+++electronic-8.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\electronics\electronic-8.png
+++1.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\fashion\1.jpg
+++2.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\fashion\2.jpg
+++3.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\fashion\3.jpg
+++4.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\fashion\4.jpg
+++5.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\fashion\5.jpg
+++fashion-header-bg-8.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\fashion\fashion-header-bg-8.jpg
+++english.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\flag\english.jpg
+++french.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\flag\french.jpg
+++polo-shirt-1.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man\polo-shirt-1.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\large\polo-shirt-1.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\medium\polo-shirt-1.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\thumbnail\polo-shirt-1.png
+++polo-shirt-2.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man\polo-shirt-2.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\large\polo-shirt-2.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\medium\polo-shirt-2.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\thumbnail\polo-shirt-2.png
+++polo-shirt-3.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man\polo-shirt-3.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\large\polo-shirt-3.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\medium\polo-shirt-3.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\thumbnail\polo-shirt-3.png
+++polo-shirt-4.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man\polo-shirt-4.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\large\polo-shirt-4.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\medium\polo-shirt-4.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\thumbnail\polo-shirt-4.png
+++polo-shirt-5.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man\polo-shirt-5.png
+++polo-shirt-6.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man\polo-shirt-6.png
+++t-shirt-1.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\man\t-shirt-1.png
+++ajax-loader.gif
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\ajax-loader.gif
+++bannerfive.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bannerfive.jpg
+++bannerfour.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bannerfour.jpg
+++bannerone.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bannerone.jpg
+++bannersix.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bannersix.jpg
+++bannerthree.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bannerthree.jpg
+++bannertwo.jpg
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bannertwo.jpg
+++bt-next.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bt-next.png
+++bt-next@2x.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bt-next@2x.png
+++bt-prev.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bt-prev.png
+++bt-prev@2x.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\slider\bt-prev@2x.png
+++sport-1.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\sport-1.png
+++sport-2.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\sport-2.png
+++sport-3.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\sport-3.png
+++sport-4.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\sport-4.png
+++sport-5.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\sport-5.png
+++sport-6.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\sport-6.png
+++sport-7.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\sport-7.png
+++sport-8.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\sports\sport-8.png
+++large
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\large\
+++medium
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\medium\
+++thumbnail
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\thumbnail\
+++loading.gif
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\view-slider\loading.gif
+++girl-1.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\women\girl-1.png
+++girl-2.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\women\girl-2.png
+++girl-3.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\women\girl-3.png
+++girl-4.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\women\girl-4.png
+++girl-5.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\women\girl-5.png
+++girl-6.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\women\girl-6.png
+++girl-7.png
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\img\women\girl-7.png
+++bootstrap.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\bootstrap.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\bootstrap.js
+++custom.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\custom.js
+++jquery.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\jquery.min.js
+++jquery.simpleGallery.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\jquery.simplegallery.js
+++jquery.simpleLens.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\jquery.simplelens.js
+++jquery.smartmenus.bootstrap.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\jquery.smartmenus.bootstrap.js
+++jquery.smartmenus.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\jquery.smartmenus.js
+++jquery.unobtrusive-ajax.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\jquery.unobtrusive-ajax.min.js
+++nouislider.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\nouislider.js
+++sequence-theme.modern-slide-in.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\sequence-theme.modern-slide-in.js
+++sequence.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\sequence.js
+++slick.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\js\slick.js
+++base
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\base\
+++layouts
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\layouts\
+++modules
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\modules\
+++style.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\style.scss
+++GameHubDataModel.Designer.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\gamehubdatamodel.designer.cs
+++GameHubDataModel.edmx.diagram
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\gamehubdatamodel.edmx.diagram
+++KhareedoDataModel.Context.tt
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\khareedodatamodel.context.tt
+++KhareedoDataModel.tt
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\khareedodatamodel.tt
+++_references.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\_references.js
+++bootstrap.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\bootstrap.min.js
+++jquery-1.10.2.intellisense.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery-1.10.2.intellisense.js
+++jquery-1.10.2.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery-1.10.2.js
+++jquery-1.10.2.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery-1.10.2.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\intellisence\js\jquery-1.10.2.min.js
+++jquery-1.10.2.min.map
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery-1.10.2.min.map
+++jquery.validate-vsdoc.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery.validate-vsdoc.js
+++jquery.validate.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery.validate.js
+++jquery.validate.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery.validate.min.js
+++jquery.validate.unobtrusive.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery.validate.unobtrusive.js
+++jquery.validate.unobtrusive.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\jquery.validate.unobtrusive.min.js
+++modernizr-2.6.2.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\modernizr-2.6.2.js
+++respond.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\respond.js
+++respond.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\scripts\respond.min.js
+++Account
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\account\
+++CheckOut
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\checkout\
+++Home
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\home\
+++LoadData
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\loaddata\
+++Login
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\login\
+++MyCart
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\mycart\
+++Product
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\product\
+++Shared
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\shared\
+++ThankYou
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\thankyou\
+++WishList
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\wishlist\
+++_ViewStart.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\_viewstart.cshtml
+++Global.asax.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\global.asax.cs
+++Web.Debug.config
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\web.debug.config
+++Web.Release.config
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\web.release.config
+++purple-theme.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\css\theme-color\purple-theme.css
+++jquery-ui.min.css
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\intellisence\css\jquery-ui.min.css
+++jquery-ui.min.js
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\intellisence\js\jquery-ui.min.js
+++_base.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\base\_base.scss
+++_mixins.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\base\_mixins.scss
+++_variables.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\base\_variables.scss
+++_footer.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\layouts\_footer.scss
+++_header.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\layouts\_header.scss
+++_nav.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\layouts\_nav.scss
+++_buttons.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\modules\_buttons.scss
+++_responsive.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\modules\_responsive.scss
+++_sections.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\modules\_sections.scss
+++_typography.scss
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\content\scss\modules\_typography.scss
+++KhareedoDataModel.Context.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\khareedodatamodel.context.cs
+++admin_Employee.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\admin_employee.cs
+++admin_Login.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\admin_login.cs
+++Category.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\category.cs
+++Customer.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\customer.cs
+++genMainSlider.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\genmainslider.cs
+++genPromoRight.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\genpromoright.cs
+++KhareedoDataModel.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\khareedodatamodel.cs
+++Order.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\order.cs
+++OrderDetail.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\orderdetail.cs
+++Payment.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\payment.cs
+++PaymentType.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\paymenttype.cs
+++Product.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\product.cs
+++RecentlyView.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\recentlyview.cs
+++Review.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\review.cs
+++Role.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\role.cs
+++ShippingDetail.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\shippingdetail.cs
+++SubCategory.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\subcategory.cs
+++Supplier.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\supplier.cs
+++sysdiagram.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\sysdiagram.cs
+++Wishlist.cs
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\models\wishlist.cs
+++Index.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\account\index.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\checkout\index.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\home\index.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\mycart\index.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\wishlist\index.cshtml
+++Login.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\account\login.cshtml
+++Products.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\product\products.cshtml
+++ViewDetails.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\product\viewdetails.cshtml
+++_Cartbox.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\shared\_cartbox.cshtml
+++_Layout.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\shared\_layout.cshtml
+++_Product.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\shared\_product.cshtml
+++Error.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\shared\error.cshtml
+++Thankyou.cshtml
+i:{27ea9351-4365-4d3f-bf48-260314fef665}:c:\users\workm\desktop\gamehub\client side\gamehub\views\thankyou\thankyou.cshtml
