@@ -250,7 +250,7 @@
     <Content Include="Content\img\fashion\fashion-header-bg-8.jpg" />
     <Content Include="Content\img\flag\english.jpg" />
     <Content Include="Content\img\flag\french.jpg" />
-    <Content Include="Content\img\logo.jpg" />
+    <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\man-small-1.jpg" />
     <Content Include="Content\img\man\polo-shirt-1.png" />
     <Content Include="Content\img\man\polo-shirt-2.png" />
@@ -268,7 +268,7 @@
     <Content Include="Content\img\slider\bannerone.jpg" />
     <Content Include="Content\img\slider\bannersix.jpg" />
     <Content Include="Content\img\slider\bannerthree.jpg" />
-    <Content Include="Content\img\slider\bannertwo.jpg" />
+    <Content Include="Content\img\slider\bannertwo3.jpg" />
     <Content Include="Content\img\slider\bt-next%402x.png" />
     <Content Include="Content\img\slider\bt-next.png" />
     <Content Include="Content\img\slider\bt-prev%402x.png" />
