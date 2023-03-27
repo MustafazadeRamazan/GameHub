@@ -10,6 +10,13 @@
             <div class="col-md-12">
                 <div class="aa-myaccount-area">
                     <div class="row">
+                    @if (TempData["AlertMessage"] != null)
+                    {
+                       <div class="alert alert-danger alert-dismissible fade in">
+                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                         <strong> @TempData["AlertMessage"].ToString()</strong>
+                       </div>
+                    }
                         <div class="col-md-6">
                             <div class="aa-myaccount-login">
                                 <h4>Login</h4>

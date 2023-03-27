@@ -36,6 +36,10 @@ namespace GameHub.Controllers
                 TempShpData.UserID = GetUser(cust.UserName).CustomerID;          
                 return RedirectToAction("Index","Home");
             }
+            else
+            {
+                TempData["AlertMessageHome"] = "Successfully registered";
+            }
             return View();
         }
 
@@ -64,6 +68,10 @@ namespace GameHub.Controllers
                     TempShpData.UserID = cust.CustomerID;
                     Session["username"] = cust.UserName;
                     return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    TempData["AlertMessage"] = "Username Or Password wrong.";
                 }
                       
             }

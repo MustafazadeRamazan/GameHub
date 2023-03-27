@@ -36,6 +36,8 @@
 */
 
 /* BASE - Base tyles, Variables, Mixins, etc. */
+
+
 body {
   background-color: #ffffff;
   font-family: "Lato", sans-serif;
@@ -123,6 +125,7 @@ img {
 }
 
 .aa-browse-btn {
+  border-radius: 30px;
   display: inline-block;
   font-size: 16px;
   padding: 12px 18px;
@@ -395,7 +398,7 @@ img {
   font-weight: bold;
   margin-bottom: 0;
   margin-left: 5px;
-  margin-top: -5px;
+  margin-top: 7px;
 }
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-logo a p span {
   display: block;
