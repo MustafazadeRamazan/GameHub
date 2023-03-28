@@ -15,10 +15,10 @@ namespace GameHub.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            ViewBag.MenProduct = db.Products.Where(x => x.Category.Name.Equals("Men")).ToList();
-            ViewBag.WomenProduct = db.Products.Where(x => x.Category.Name.Equals("Women")).ToList();
-            ViewBag.SportsProduct = db.Products.Where(x => x.Category.Name.Equals("Sports")).ToList();
-            ViewBag.ElectronicsProduct = db.Products.Where(x => x.Category.Name.Equals("Phones")).ToList();
+            ViewBag.MenProduct = db.Products.Where(x => x.Category.Name.Equals("Game Accounts")).ToList();
+            ViewBag.WomenProduct = db.Products.Where(x => x.Category.Name.Equals("Game Projects")).ToList();
+            ViewBag.SportsProduct = db.Products.Where(x => x.Category.Name.Equals("Laptops")).ToList();
+            ViewBag.ElectronicsProduct = db.Products.Where(x => x.Category.Name.Equals("Gaming Accessories")).ToList();
             ViewBag.Slider = db.genMainSliders.ToList();
             ViewBag.PromoRight = db.genPromoRights.ToList();
 

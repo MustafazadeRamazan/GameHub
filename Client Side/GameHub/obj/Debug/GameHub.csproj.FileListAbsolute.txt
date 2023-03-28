@@ -99,7 +99,6 @@ C:\Users\Workm\Desktop\GameHub\Client Side\GameHub\obj\Debug\GameHub.csproj.Core
 C:\Users\Workm\Desktop\GameHub\Client Side\GameHub\obj\Debug\GameHub.csproj.CopyComplete
 C:\Users\Workm\Desktop\GameHub\Client Side\GameHub\obj\Debug\GameHub.dll
 C:\Users\Workm\Desktop\GameHub\Client Side\GameHub\obj\Debug\GameHub.pdb
-C:\Users\Workm\Desktop\GameHub\Client Side\GameHub\obj\Debug\GameHub.csproj.AssemblyReference.cache
 C:\Users\Workm\Desktop\Final Projects\GameHub\Client Side\GameHub\bin\GameHub.dll.config
 C:\Users\Workm\Desktop\Final Projects\GameHub\Client Side\GameHub\bin\GameHub.dll
 C:\Users\Workm\Desktop\Final Projects\GameHub\Client Side\GameHub\bin\GameHub.pdb
@@ -134,3 +133,4 @@ C:\Users\Workm\Desktop\Final Projects\GameHub\Client Side\GameHub\obj\Debug\Game
 C:\Users\Workm\Desktop\Final Projects\GameHub\Client Side\GameHub\obj\Debug\GameHub.csproj.CopyComplete
 C:\Users\Workm\Desktop\Final Projects\GameHub\Client Side\GameHub\obj\Debug\GameHub.dll
 C:\Users\Workm\Desktop\Final Projects\GameHub\Client Side\GameHub\obj\Debug\GameHub.pdb
+C:\Users\Workm\Desktop\GameHub\Client Side\GameHub\obj\Debug\GameHub.csproj.AssemblyReference.cache
