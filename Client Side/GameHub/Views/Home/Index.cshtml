@@ -52,7 +52,7 @@
                                     <img src="~/Content/img/promo-banner-gameaccount.jpg" alt="img">
                                     <div class="aa-prom-content">
                                         <span>75% Off</span>
-                                        <h4><a href="@Url.Action("GetProductsByCategory", "Product", new { @categoryName = "Game Accounts" })">Game Accounts</a></h4>
+                                        <h4><a href="@Url.Action("GetProductsByCategory", "Product", new { @categoryName = "Fps Games" })">Fps Games</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -92,35 +92,35 @@
                         <div class="aa-product-inner">
                             <!-- start prduct navigation -->
                             <ul class="nav nav-tabs aa-products-tab">
-                                <li class="active"><a href="#men" data-toggle="tab">Game Accounts</a></li>
-                                <li><a href="#women" data-toggle="tab">Game Projects</a></li>
-                                <li><a href="#sports" data-toggle="tab">Laptops</a></li>
-                                <li><a href="#electronics" data-toggle="tab">Desktops</a></li>
-                                <li><a href="#electronics" data-toggle="tab">Accessories</a></li>
+                                <li class="active"><a href="#fps" data-toggle="tab">Fps Games</a></li>
+                                <li><a href="#gp" data-toggle="tab">Game Projects</a></li>
+                                <li><a href="#sports" data-toggle="tab">Sport</a></li>
+                                <li><a href="#aa" data-toggle="tab">Action Adventure</a></li>
+                                <li><a href="#sg" data-toggle="tab">Survival Games</a></li>
                             </ul>
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <!-- Start men product category -->
-                                <div class="tab-pane fade in active" id="men">
+                                <!-- Start FpsGames product category -->
+                                <div class="tab-pane fade in active" id="fps">
                                     <ul class="aa-product-catg">
                                         <!-- start single product item -->
-                                        @foreach (var item in (List<GameHub.Models.Product>)ViewBag.MenProduct)
+                                        @foreach (var item in (List<GameHub.Models.Product>)ViewBag.FpsGames)
                                         {
                                             { Html.RenderPartial("_Product", item); }
                                         }
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="#fps">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
                                 </div>
 
                                 <!-- start women product category -->
-                                <div class="tab-pane fade" id="women">
+                                <div class="tab-pane fade" id="gp">
                                     <ul class="aa-product-catg">
                                         <!-- start single product item -->
-                                        @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.WomenProduct)
+                                        @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.GameProjects)
                                         {
-                                            { Html.RenderPartial("_Product",item); }
+                                            { Html.RenderPartial("_Product", item); }
                                         }
                                         <!-- end start single product item -->
 
@@ -132,10 +132,10 @@
                                 <div class="tab-pane fade" id="sports">
                                     <ul class="aa-product-catg">
                                         <!-- start single product item -->
-                                       @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.SportsProduct)
-                                       {
-                                           { Html.RenderPartial("_Product", item); }
-                                       }
+                                        @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.SportsProduct)
+                                        {
+                                            { Html.RenderPartial("_Product", item); }
+                                        }
                                         <!-- end start single product item -->
 
                                     </ul>
@@ -143,21 +143,34 @@
 
                                 </div>
 
-                                <!-- start electronic product category -->
-                                <div class="tab-pane fade" id="electronics">
+                                <!-- start ActionAdventure product category -->
+                                <div class="tab-pane fade" id="aa">
                                     <ul class="aa-product-catg">
                                         <!-- start single product item -->
-                                       @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.ElectronicsProduct)
-                                       {
-                                           { Html.RenderPartial("_Product", item); }
-                                       }
+                                        @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.ActionAdventure)
+                                        {
+                                            { Html.RenderPartial("_Product", item); }
+                                        }
                                         <!-- end start single product item -->
 
                                     </ul>
                                     <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
 
                                 </div>
-                                <!-- / electronic product category -->
+                                <!-- / ActionAdventure product category -->
+                                <div class="tab-pane fade" id="sg">
+                                    <ul class="aa-product-catg">
+                                        <!-- start single product item -->
+                                        @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.SurvivalGames)
+                                        {
+                                            { Html.RenderPartial("_Product", item); }
+                                        }
+                                        <!-- end start single product item -->
+
+                                    </ul>
+                                    <a class="aa-browse-btn" href="#">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
+
+                                </div>
                             </div>
                             <!-- quick view modal -->
                             <div class="modal fade" id="quick-view-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -281,7 +294,7 @@
                             <div class="tab-pane fade in active" id="popular">
                                 <ul class="aa-product-catg aa-popular-slider">
                                     <!-- start single product item -->
-                                    @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.MenProduct)
+                                    @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.FpsGames)
                                     {
                                         { Html.RenderPartial("_Product", item); }
                                     }
@@ -309,7 +322,7 @@
                             <div class="tab-pane fade" id="latest">
                                 <ul class="aa-product-catg aa-latest-slider">
                                     <!-- start single product item -->
-                                    @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.ElectronicsProduct)
+                                    @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.SurvivalGames)
                                     {
                                         { Html.RenderPartial("_Product", item); }
                                     }

@@ -236,9 +236,21 @@
     <Content Include="Content\img\fashion-banner-game.jpg" />
     <Content Include="Content\img\flag\english.jpg" />
     <Content Include="Content\img\flag\turkishflag.jpg" />
+    <Content Include="Content\img\Game_Accounts\CsGo\csgoaccount1.png" />
+    <Content Include="Content\img\Game_Accounts\CsGo\csgoaccount2.png" />
+    <Content Include="Content\img\Game_Accounts\CsGo\csgoaccount3.png" />
+    <Content Include="Content\img\Game_Accounts\CsGo\csgoaccount5.png" />
+    <Content Include="Content\img\Game_Accounts\PubgMobile\pmobile.png" />
+    <Content Include="Content\img\Game_Accounts\PubgMobile\pmobile2.png" />
+    <Content Include="Content\img\Game_Accounts\PubgMobile\pmobile3.png" />
+    <Content Include="Content\img\Game_Accounts\PubgMobile\pmobile4.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\paypal.jpg" />
-    <Content Include="Content\img\PubgMobile\pmobile.jpg" />
+    <Content Include="Content\img\promo-banner-actionadventure.jpg" />
+    <Content Include="Content\img\promo-banner-gameaccount.jpg" />
+    <Content Include="Content\img\promo-banner-gameprojects.jpg" />
+    <Content Include="Content\img\promo-banner-sport.jpg" />
+    <Content Include="Content\img\promo-banner-survivalgames.jpg" />
     <Content Include="Content\img\slider\ajax-loader.gif" />
     <Content Include="Content\img\slider\bannerfive.jpg" />
     <Content Include="Content\img\slider\bannerfour.jpg" />
@@ -361,6 +373,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\Game_Accounts\AssassinsCreed\" />
+    <Folder Include="Content\img\Game_Accounts\CallOfDutyMobile\" />
+    <Folder Include="Content\img\Game_Accounts\CallOfDutyWarzone\" />
+    <Folder Include="Content\img\Game_Accounts\ClashOfClans\" />
+    <Folder Include="Content\img\Game_Accounts\ClashRoyale\" />
+    <Folder Include="Content\img\Game_Accounts\CriticalOps\" />
+    <Folder Include="Content\img\Game_Accounts\Fortnite\" />
+    <Folder Include="Content\img\Game_Accounts\GtaV\" />
+    <Folder Include="Content\img\Game_Accounts\Hayday\" />
+    <Folder Include="Content\img\Game_Accounts\MobileLegends\" />
+    <Folder Include="Content\img\Game_Accounts\Steam\" />
+    <Folder Include="Content\img\Game_Projects\BlackForce\" />
+    <Folder Include="Content\img\Game_Projects\CarArFoundation\" />
+    <Folder Include="Content\img\Game_Projects\DroneSimulator\" />
+    <Folder Include="Content\img\Game_Projects\EarnPromoCode\" />
+    <Folder Include="Content\img\Game_Projects\FootballPlayers\" />
+    <Folder Include="Content\img\Game_Projects\RaceKing\" />
     <Folder Include="Views\LoadData\" />
     <Folder Include="Views\Login\" />
   </ItemGroup>
