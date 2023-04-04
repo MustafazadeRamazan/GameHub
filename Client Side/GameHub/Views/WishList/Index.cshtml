@@ -47,8 +47,8 @@
                                         
                                             <tr>
                                                 <td><a class="remove" href="@Url.Action("Remove", "WishList", new { id=item.WishlistID})"><fa class="fa fa-close"></fa></a></td>
-                                                <td><a href="#"><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></a></td>
-                                                <td><a class="aa-cart-title" href="#">@item.Product.Name</a></td>
+                                                <td><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></td>
+                                                <td><a class="aa-cart-title">@item.Product.Name</a></td>
                                                 <td>@item.Product.UnitPrice</td>
                                                 <td>
                                                     @if (item.Product.UnitInStock > 0)

@@ -144,7 +144,7 @@
                                                 
                                                 <tr>
                                                     <td>@item.Product.Name <strong> x  @item.Quantity</strong></td>
-                                                    <td>@item.TotalAmount</td>
+                                                    <td>@item.TotalAmount <strong>$</strong></td>
                                                 </tr>
                                                 }
                                              }
@@ -156,17 +156,17 @@
                                             <tfoot>
                                                 <tr>
                                                     <th>Subtotal</th>
-                                                    <td>@ViewBag.SubTotal</td>
+                                                    <td>@ViewBag.SubTotal <strong>$</strong></td>
                                                 </tr>
                                                 <tr>
                                                     @Html.Hidden("discount", null,new { @value=ViewBag.Discount })
                                                     <th>Discount</th>
-                                                    <td>@ViewBag.Discount</td>
+                                                    <td>@ViewBag.Discount <strong>$</strong></td>
                                                 </tr>
                                                 <tr>
                                                     @Html.Hidden("totalAmount", null,new { @value=ViewBag.TotalAmount })
                                                     <th>Total</th>
-                                                    <td>@ViewBag.TotalAmount</td>
+                                                    <td>@ViewBag.TotalAmount <strong>$</strong></td>
                                                 </tr>
                                             </tfoot>
                                         </table>

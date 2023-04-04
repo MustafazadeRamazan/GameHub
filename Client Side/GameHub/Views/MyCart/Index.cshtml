@@ -53,11 +53,11 @@
                                                     @Html.Hidden("shcartID-"+i+"",item.ProductID)
                                                 
                                                     <td><a class="remove" href="@Url.Action("Remove", "MyCart", new { id = item.ProductID })"><fa class="fa fa-close"></fa></a></td>
-                                                    <td><a href="#"><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></a></td>
-                                                    <td><a class="aa-cart-title" href="#">@item.Product.Name</a></td>
-                                                    <td id="itemPrice-@(i)">@item.UnitPrice</td>
-                                                    <td><input id="itemQty-@(i)" name="Qty-@(i)" class="aa-cart-quantity" type="number" maxlength="2" min="1" max="99" value="@(item.Quantity==null ? "1": item.Quantity.ToString())" /></td>
-                                                    <td><strong id="itemAmount-@(i)">@item.TotalAmount</strong></td>
+                                                    <td><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></td>
+                                                    <td><a class="aa-cart-title">@item.Product.Name</a></td>
+                                                    <td id="itemPrice-@(i)">@item.UnitPrice <strong>$</strong></td>
+                                                    <td>1</td>
+                                                    <td><strong id="itemAmount-@(i)">@item.TotalAmount $</strong></td>
                                                 
                                                 
                                                 </tr>
@@ -80,15 +80,15 @@
                                 <tbody>
                                     <tr>
                                         <th>Subtotal</th>
-                                        <td id="subTotal">00</td>
+                                        <td id="subTotal">0</td>
                                     </tr>
                                     <tr>
                                         <th >Discount</th>
-                                        <td id="discount">0</td>
+                                        <td id="discount">0<strong>$</strong></td>
                                     </tr>
                                     <tr>
                                         <th >Total Amount</th>
-                                        <td id="totalAmount">00</td>
+                                        <td id="totalAmount">0</td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
@@ -144,10 +144,10 @@
             }
         }
         var subTotalEle = document.getElementById('subTotal');
-        subTotalEle.innerText = subAmount;
+        subTotalEle.innerText = subAmount + " $";
 
         var TotalAmountEle = document.getElementById('totalAmount');
-        TotalAmountEle.innerText = subAmount;
+        TotalAmountEle.innerText = subAmount + " $";
     }
     function TotalAmount()
     {

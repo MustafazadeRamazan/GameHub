@@ -54,7 +54,7 @@
                                     </div>
 
                                     <div class="aa-price-block">
-                                        <span class="aa-product-view-price">$ <b> @Model.UnitPrice</b></span>
+                                        <span class="aa-product-view-price"><b> @Model.UnitPrice <strong>$</strong></b></span>
                                         @if (Model.UnitInStock > 0)
                                         {
                                             <p class="aa-product-avilability"><span style="color:white ;background-color:green">In Stock (@Model.UnitInStock)</span></p>
@@ -86,10 +86,7 @@
                                         <a href="#" class="aa-color-white"></a>
                                     </div>*@
                                     <div class="aa-prod-quantity">
-                                        <h4>Quantity:</h4>
-                                        <form action="">
-                                            <input type="number" name="quantity" min="1" max="99" maxlength="2" value="1" />                                            
-                                        </form>                                       
+                                        <h4>Quantity: 1</h4>                                   
                                     </div>
                                     <div class="aa-prod-view-bottom">
                                         @if (Model.UnitInStock > 0)
