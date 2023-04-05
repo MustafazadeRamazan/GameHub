@@ -2,46 +2,43 @@
 @using PagedList.Mvc;
 
 @model IPagedList<GameHub.Models.Product>
-@{
-    ViewBag.Title = "Products";
-}
+@{ ViewBag.Title = "Accounts"; }
 @*<link href="~/Content/PagedList.css" rel="stylesheet" />*@
 
 <style>
-    .pagination > .active > a{
-        color:#fff; 
+    .pagination > .active > a {
+        color: #fff;
         background-color: #3fc35f;
         border: 1px solid #3fc35f;
     }
+
     .aa-sidebar-price-range #minValue #maxValue {
-    border: 1px solid #e8e7e6;
-    display: inline-block;
-    font-size: 14px;
-    height: 30px;
-    margin-right: 10px;
-    margin-top: 20px;
-    padding: 4px 10px;
-}
-  
+        border: 1px solid #e8e7e6;
+        display: inline-block;
+        font-size: 14px;
+        height: 30px;
+        margin-right: 10px;
+        margin-top: 20px;
+        padding: 4px 10px;
+    }
 </style>
 <!-- catg header banner section -->
-@if(!string.IsNullOrEmpty(Request.QueryString["categoryName"]))
-{ 
-    <section id="aa-catg-head-banner">
-        <img src="~/Content/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
-        <div class="aa-catg-head-banner-area">
-            <div class="container">
-                <div class="aa-catg-head-banner-content">
-                    <h2>@(Request.QueryString["categoryName"])</h2>
-                    <ol class="breadcrumb">
-                        <li><a href="@Url.Action("Index","Home")">Home</a></li>
-                        <li class="active">@(Request.QueryString["categoryName"])</li>
-                    </ol>
-                </div>
+@if (!string.IsNullOrEmpty(Request.QueryString["categoryName"]))
+{
+<section id="aa-catg-head-banner">
+    <img src="~/Content/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
+    <div class="aa-catg-head-banner-area">
+        <div class="container">
+            <div class="aa-catg-head-banner-content">
+                <h2>@(Request.QueryString["categoryName"])</h2>
+                <ol class="breadcrumb">
+                    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                    <li class="active">@(Request.QueryString["categoryName"])</li>
+                </ol>
             </div>
         </div>
-    </section>
-}
+    </div>
+</section>}
 <!-- / catg header banner section -->
 <!-- product category -->
 <section id="aa-product-category">
@@ -51,10 +48,10 @@
                 <div class="aa-product-catg-content">
                     <div class="aa-product-catg-head">
                         <div class="aa-product-catg-head-left">
-                            @using (Html.BeginForm("GetAllProducts", "Product", FormMethod.Post, new {@id="ssForm" ,  categoryName = Request.QueryString["categoryName"]}))
-                            { 
-                                
-                                <label for="">Sort by</label>
+                            @using (Html.BeginForm("GetAllProducts", "Product", FormMethod.Post, new { @id = "ssForm", categoryName = Request.QueryString["categoryName"] }))
+                            {
+
+                <label for="">Sort by</label>
                                 <select name="sortBy">
                                     <option value="Default" selected> Default</option>
                                     @*<option href="@Url.Action("GetAllProducts", new { categoryName = Request.QueryString["categoryName"], sortBy = Request.QueryString["sortBy"] })" value="Name">Name</option>*@
@@ -62,15 +59,13 @@
                                     <option value="Price">Price</option>
                                     <option value="Date">Date</option>
                                 </select>
-                            
-                                <label for="">Show</label>
-                                <select name="showNoProducts" onchange="">
-                                    <option value="6" selected>6</option>
-                                    <option value="9">9</option>
-                                    <option value="12">12</option>
-                                </select>
-                            
-                            }
+
+                                                <label for="">Show</label>
+                                                                <select name="showNoProducts" onchange="">
+                                                                    <option value="6" selected>6</option>
+                                                                    <option value="9">9</option>
+                                                                    <option value="12">12</option>
+                                                                </select>}
                         </div>
                         <div class="aa-product-catg-head-right">
                             <a id="grid-catg" href="/"><span class="fa fa-th"></span></a>
@@ -87,47 +82,46 @@
                                     { Html.RenderPartial("_Product", item); }
                                 }
                             }
-                            else { 
-                                
-                            <h3>Sorry! There is no Product available</h3>
-                            }
+                            else
+                            {
+
+                            <h3>Sorry! There is no Product available</h3>}
                             <!-- end start single product item -->
-                           
+
                         </ul>
-                       
+
                     </div>
                     <div class="aa-product-catg-pagination">
                         @*<nav>
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>*@
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>*@
                         @if (ViewBag.filterByPrice == true)
-                        { 
-                            @Html.PagedListPager(Model, page => Url.Action("FilterByPrice", new { minPrice=Request.QueryString["minPrice"],maxPrice=Request.QueryString["maxPrice"],page })
-                    , new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
-                        }
-                        else { 
-                        @Html.PagedListPager(Model, page => Url.Action("GetProductsByCategory", new { categoryName = Request.QueryString["categoryName"], page })
-                    , new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
-                        }
+                        {
+            @Html.PagedListPager(Model, page => Url.Action("FilterByPrice", new { minPrice = Request.QueryString["minPrice"], maxPrice = Request.QueryString["maxPrice"], page })
+         , new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded }) }
+                        else
+                        {
+            @Html.PagedListPager(Model, page => Url.Action("GetProductsByCategory", new { categoryName = Request.QueryString["categoryName"], page })
+             , new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })}
                     </div>
 
-                  
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
@@ -137,76 +131,73 @@
                         <h3>Category</h3>
                         <ul class="aa-catg-nav">
                             @foreach (var item in ViewBag.Categories)
-                            {       
-                                <li><a href="@Url.Action("GetProductsByCategory", new { categoryName = item })">@item</a></li>                            
-                            }
+                            {
+                <li><a href="@Url.Action("GetProductsByCategory", new { categoryName = item })">@item</a></li>
+}
                         </ul>
                     </div>
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
                         <h3>Tags</h3>
                         <div class="tag-cloud">
-                            <a href="#">Pubg Mobile</a>
-                            <a href="#">Warzone</a>
-                            <a href="#">Accounts</a>
-                            <a href="#">CS:GO</a>
-                            <a href="#">Skins</a>
+                            <a href="http://localhost:4040/Product/ViewDetails/5">Pubg Mobile</a>
+                            <a href="http://localhost:4040/Product/ViewDetails/13">Warzone</a>
+                            <a href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Fps%20Games">Accounts</a>
+                            <a href="http://localhost:4040/Product/ViewDetails/1">CS:GO</a>
+                            <a href="http://localhost:4040/Product/ViewDetails/4">Skins</a>
                         </div>
                     </div>
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
                         <h3>Shop By Price</h3>
                         <!-- price range -->
-                        <div class="aa-sidebar-price-range">                         
+                        <div class="aa-sidebar-price-range">
 
                             @using (Html.BeginForm("FilterByPrice", "Product", FormMethod.Get))
                             {
-                              
-                                <input type="range"  min="0" max="100" value="0" onchange="updateMinInput(this.value);"><br />
-                                <input type="range"  min="0" max="100" onchange="updateMaxInput(this.value);">
-                             <br />
-    <input type="number" name="minPrice" id="minValue" min="0" maxlength="6" max="10000" value="0" size="6" >
-    <input type="number" name="maxPrice" id="maxValue" min="0" maxlength="6" max="10000"  value="100" size="6" >    <br /><br />
-                                <button class="aa-filter-btn" type="submit">Filter</button>
 
-                            }
+                <input type="range" min="0" max="100" value="0" onchange="updateMinInput(this.value);"><br />
+                                <input type="range" min="0" max="100" value="1" onchange="updateMaxInput(this.value);">
+                                                <br />
+                                                                <input type="number" name="minPrice" id="minValue" min="0" maxlength="6" max="10000" value="0" size="6">
+                                                                                <input type="number" name="maxPrice" id="maxValue" min="0" maxlength="6" max="10000" value="100" size="6"> <br /><br />
+                                                                                                <button class="aa-filter-btn" type="submit">Filter</button>}
                         </div>
 
                     </div>
                     <!-- single sidebar -->
                     @*<div class="aa-sidebar-widget">
-                        <h3>Shop By Color</h3>
-                        <div class="aa-color-tag">
-                            <a class="aa-color-green" href="#"></a>
-                            <a class="aa-color-yellow" href="#"></a>
-                            <a class="aa-color-pink" href="#"></a>
-                            <a class="aa-color-purple" href="#"></a>
-                            <a class="aa-color-blue" href="#"></a>
-                            <a class="aa-color-orange" href="#"></a>
-                            <a class="aa-color-gray" href="#"></a>
-                            <a class="aa-color-black" href="#"></a>
-                            <a class="aa-color-white" href="#"></a>
-                            <a class="aa-color-cyan" href="#"></a>
-                            <a class="aa-color-olive" href="#"></a>
-                            <a class="aa-color-orchid" href="#"></a>
-                        </div>
-                    </div>*@
+                            <h3>Shop By Color</h3>
+                            <div class="aa-color-tag">
+                                <a class="aa-color-green" href="#"></a>
+                                <a class="aa-color-yellow" href="#"></a>
+                                <a class="aa-color-pink" href="#"></a>
+                                <a class="aa-color-purple" href="#"></a>
+                                <a class="aa-color-blue" href="#"></a>
+                                <a class="aa-color-orange" href="#"></a>
+                                <a class="aa-color-gray" href="#"></a>
+                                <a class="aa-color-black" href="#"></a>
+                                <a class="aa-color-white" href="#"></a>
+                                <a class="aa-color-cyan" href="#"></a>
+                                <a class="aa-color-olive" href="#"></a>
+                                <a class="aa-color-orchid" href="#"></a>
+                            </div>
+                        </div>*@
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
                         <h3>Top Sold Products</h3>
                         <div class="aa-recently-views">
                             <ul>
                                 @foreach (GameHub.Models.TopSoldProduct item in ViewBag.TopRatedProducts)
-                                {                                   
-                                
-                                <li>
-                                    <a href="@Url.Action("ViewDetails", "Product", new { id = item.product.ProductID })" class="aa-cartbox-img"><img alt="@item.product.AltText" src="@item.product.ImageURL"></a>
-                                    <div class="aa-cartbox-info">
-                                        <h4> <b><a href="@Url.Action("ViewDetails", "Product", new { id = item.product.ProductID })">@item.product.Name</a></b></h4>
-                                        <p>Sold: @item.CountSold</p>
-                                    </div>
-                                </li>
-                                }                                
+                                {
+
+                    <li>
+                        <a href="@Url.Action("ViewDetails", "Product", new { id = item.product.ProductID })" class="aa-cartbox-img"><img alt="@item.product.AltText" src="@item.product.ImageURL"></a>
+                        <div class="aa-cartbox-info">
+                            <h4> <b><a href="@Url.Action("ViewDetails", "Product", new { id = item.product.ProductID })">@item.product.Name</a></b></h4>
+                            <p>Sold: @item.CountSold</p>
+                        </div>
+                    </li>}
                             </ul>
                         </div>
                     </div>
@@ -215,20 +206,19 @@
                         <h3>Recently Views</h3>
                         <div class="aa-recently-views">
                             <ul>
-                               @foreach (GameHub.Models.Product item in ViewBag.RecentViewsProducts)
+                                @foreach (GameHub.Models.Product item in ViewBag.RecentViewsProducts)
                                 {
-                                <li>
-                                    <a href="@Url.Action("ViewDetails", "Product", new { id = item.ProductID })" class="aa-cartbox-img"><img alt="@item.AltText" src="@item.ImageURL"></a>
-                                    <div class="aa-cartbox-info">
-                                        <h4><b><a href="@Url.Action("ViewDetails", "Product", new { id = item.ProductID })">@item.Name</a></b></h4>
-                                        <p>@item.UnitPrice <strong>$</strong></p>
-                                    </div>
-                                </li>
-                               }                                
+                    <li>
+                        <a href="@Url.Action("ViewDetails", "Product", new { id = item.ProductID })" class="aa-cartbox-img"><img alt="@item.AltText" src="@item.ImageURL"></a>
+                        <div class="aa-cartbox-info">
+                            <h4><b><a href="@Url.Action("ViewDetails", "Product", new { id = item.ProductID })">@item.Name</a></b></h4>
+                            <p>@item.UnitPrice <strong>$</strong></p>
+                        </div>
+                    </li>}
                             </ul>
                         </div>
                     </div>
-                   
+
                 </aside>
             </div>
 

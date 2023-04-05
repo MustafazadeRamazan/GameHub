@@ -93,11 +93,6 @@
                                         {
                                              <a class="aa-add-to-cart-btn" href="@(Session["username"] != null ? Url.Action("AddToCart", "Product", new { id=Model.ProductID}) : Url.Action("Login", "Account"))">Add To Cart</a>
                                         }
-                                        else
-                                        {
-                                            <a class="aa-add-to-cart-btn" ))">Add To Cart</a>
-
-                                        }
                                             <a class="aa-add-to-cart-btn" href="@(Session["username"] != null ? Url.Action("WishList", "Product", new { id = Model.ProductID }) : Url.Action("Login", "Account"))">Wishlist</a> 
                                     </div>
                                 </div>

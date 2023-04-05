@@ -11,7 +11,7 @@
             <div class="aa-catg-head-banner-content">
                 <h2>Wishlist Page</h2>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="http://localhost:4040/">Home</a></li>
                     <li class="active">Wishlist</li>
                 </ol>
             </div>
@@ -49,16 +49,23 @@
                                                 <td><a class="remove" href="@Url.Action("Remove", "WishList", new { id=item.WishlistID})"><fa class="fa fa-close"></fa></a></td>
                                                 <td><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></td>
                                                 <td><a class="aa-cart-title">@item.Product.Name</a></td>
-                                                <td>@item.Product.UnitPrice</td>
+                                                <td>@item.Product.UnitPrice <strong>$</strong></td>
                                                 <td>
                                                     @if (item.Product.UnitInStock > 0)
                                                     {
                                                         <text>In Stock (@item.Product.UnitInStock)</text>
                                                     }
                                                     else
-                                                    { <text>Out of Stock (@item.Product.UnitInStock)</text>}
+                                                    { <text>Out of Stock</text>}
                                                 </td>
-                                                <td><a href="@Url.Action("AddToCart", "WishList", new { id=item.WishlistID})" class="aa-add-to-cart-btn">Add To Cart</a></td>
+                                                <td>
+                                                    @if (item.Product.UnitInStock > 0)
+                                                    {
+                                                        <a href="@Url.Action("AddToCart", "WishList", new { id=item.WishlistID})" class="aa-add-to-cart-btn">Add To Cart</a>
+                                                    }
+                                                    else
+                                                    { <a class="aa-add-card-btn">Out Of Stock</a>}
+                                                </td>
                                             </tr>                                       
                                             }
                                         }
