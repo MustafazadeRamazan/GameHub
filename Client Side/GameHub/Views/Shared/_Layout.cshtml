@@ -88,8 +88,8 @@
                                 <ul class="aa-head-top-nav-right">
                                     
                                     <li><a href="@(Session["username"] != null ? Url.Action("Index", "Account") : Url.Action("Login", "Account"))">My Account</a></li>                                    
-                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "WishList") : Url.Action("Login", "Account"))">Wishlist @if(@ViewBag.WlItemsNo > 0 ){ <text>(@ViewBag.WlItemsNo)</text> }</a></li>
-                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "MyCart") : Url.Action("Login", "Account"))">My Cart @if (@ViewBag.NoOfItem > 0){ <text>(@ViewBag.NoOfItem)</text> }</a></li>
+                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "WishList") : Url.Action("Login", "Account"))">Wishlist @*@if(@ViewBag.WlItemsNo > 0 ){ <text>(@ViewBag.WlItemsNo)</text> }*@</a></li>
+                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "MyCart") : Url.Action("Login", "Account"))">My Cart @*@if (@ViewBag.NoOfItem > 0){ <text>(@ViewBag.NoOfItem)</text> }*@</a></li>
                                     <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "CheckOut") : Url.Action("Login", "Account"))">Checkout</a></li>
                                     @if (Session["username"]==null)
                                     {                          
@@ -122,23 +122,24 @@
                                     <span><img src="~/Content/img/logo.png" /></span>
                                     <p><strong>GameHub</strong> <span>LEADING MARKETPLACE FOR GAMERS</span></p>
                                 </a>
-                                <!-- img based logo -->
-                                <!-- <a href="index.html"><img src="~/Content/img/logo.jpg" alt="logo img"></a> -->
                             </div>
                             <!-- / logo  -->
                             <!-- cart box -->
                             <div class="aa-cartbox">
-                                <a class="aa-cart-link" href="http://localhost:4040/MyCart">
-                                    <span class="fa fa-shopping-basket"></span>
-                                    <span class="aa-cart-title">SHOPPING CART</span>
-                                    <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
-                                </a>
+                                @if (Request.Url.AbsolutePath != "/Product/GetProductsByCategory" && Request.QueryString["categoryName"] != "Fps Games")
+                                {
+                                 <a class="aa-cart-link" href="http://localhost:4040/MyCart">
+                                     <span class="fa fa-shopping-basket"></span>
+                                     <span class="aa-cart-title">SHOPPING CART</span>
+                                     <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
+                                 </a>
+                                }
                                 <div class="aa-cartbox-summary">
                                     <ul>
-                                        @if(Session["username"]!=null)
+                                        @if (Session["username"] != null)
                                         {
                                             Html.RenderPartial("_CartBox");
-                                                                            
+
                                         }
                                     </ul>
                                     <a class="aa-cartbox-checkout aa-primary-btn" href="@Url.Action("Index","CheckOut")">Checkout</a>
