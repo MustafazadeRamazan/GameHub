@@ -7,13 +7,13 @@
     <title>GameHub | @ViewBag.Title</title>
 
     @Styles.Render("~/Content/css")
-    
+
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <script src="~/Content/js/jquery.min.js"></script>
 
     <!-- Ad intellisence for searching products-->
-    
+
     <link href="~/Content/Intellisence/css/jquery-ui.min.css" rel="stylesheet" />
     <script src="~/Content/Intellisence/js/jquery-1.10.2.min.js"></script>
     <script src="~/Content/Intellisence/js/jquery-ui.min.js"></script>
@@ -92,8 +92,7 @@
                                     <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "MyCart") : Url.Action("Login", "Account"))">My Cart @*@if (@ViewBag.NoOfItem > 0){ <text>(@ViewBag.NoOfItem)</text> }*@</a></li>
                                     <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "CheckOut") : Url.Action("Login", "Account"))">Checkout</a></li>
                                     @if (Session["username"]==null)
-                                    {                          
-                                        
+                                    {                                                         
                                         <li>@Html.ActionLink("Login", "Login", "Account")</li>
                                     }
                                     else
@@ -139,17 +138,19 @@
                                         @if (Session["username"] != null)
                                         {
                                             Html.RenderPartial("_CartBox");
-
                                         }
                                     </ul>
-                                    <a class="aa-cartbox-checkout aa-primary-btn" href="@Url.Action("Index","CheckOut")">Checkout</a>
+                                    @if (Session["username"] != null)
+                                    { 
+                                        <a class="aa-cartbox-checkout aa-primary-btn" href="@Url.Action("Index", "CheckOut")">Checkout</a>
+                                    }
                                 </div>
                             </div>
                             <!-- / cart box -->
                             <!-- search box -->
                             <div class="aa-search-box">
                                 <form action="@Url.Action("Search","Product")" method="get">
-                                    <input type="text" name="product" id="searchTxtBox" placeholder="Search product here . . . ">
+                                    <input required type="text" name="product" id="searchTxtBox" placeholder="Search product here . . . ">
                                     <button type="submit"><span class="fa fa-search"></span></button>
                                 </form>
                             </div>

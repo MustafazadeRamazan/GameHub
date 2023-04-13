@@ -40,22 +40,22 @@
                                 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
                                 {
                                     <label for="">First Name<span>*</span></label>
-                                    <input name="First_Name" type="text" placeholder="Enter first name">
+                                    <input required name="First_Name" type="text" placeholder="Enter first name">
 
                                     <label for="">Last Name<span>*</span></label>
-                                    <input name="Last_Name" type="text" placeholder="Enter last name">
+                                    <input required name="Last_Name" type="text" placeholder="Enter last name">
 
                                     <label for="">Username<span>*</span></label>
-                                    <input name="UserName" type="text" placeholder="Username">
+                                    <input required name="UserName" type="text" placeholder="Username">
 
                                     <label for="">Password<span>*</span></label>
-                                    <input name="Password" type="password" placeholder="Password">
+                                    <input required name="Password" type="password" placeholder="Password">
 
                                     <label for="">Email<span>*</span></label>
-                                    <input name="Email" type="text" placeholder="Enter your email">
+                                    <input required name="Email" type="text" placeholder="Enter your email">
 
                                     <label for="">Mobile<span>*</span></label>
-                                    <input name="Mobile1" type="text" placeholder="Mobile">
+                                    <input required min="0" name="Mobile1" type="number" placeholder="Mobile">
 
                                     <label for="">Address<span></span></label>
                                     <input name="Address1" type="text" placeholder="Address">

@@ -2625,9 +2625,14 @@ img {
 }
 
 /*---- Login form ----*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 .aa-login-form input[type="text"],
-.aa-login-form input[type="password"] {
+.aa-login-form input[type="password"],input[type="number"] {
   border: 1px solid #ccc;
   font-size: 16px;
   height: 40px;

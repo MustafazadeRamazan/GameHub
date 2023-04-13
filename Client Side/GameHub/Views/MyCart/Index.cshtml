@@ -66,7 +66,7 @@
                                         }
                                         else
                                         {
-                                            <text>Please login to view your cart</text>
+                                            <a href="http://localhost:4040/Account/Login"><h4 class="aa-cart-view-btn">Please login to view your cart</h4></a>
                                         }
                                         
                                     </tbody>
@@ -94,7 +94,10 @@
                                 <tfoot>
                          
                                     <tr>
-                                        <td colspan="3"><button type="submit" class="aa-cart-view-btn">Proced to Checkout</button></td> 
+                                        @if (Model.ToList().Count > 0)
+                                        {
+                                           <td colspan="3"><button type="submit" class="aa-cart-view-btn">Proced to Checkout</button></td> 
+                                        }
                                     </tr>
                        
                                 </tfoot>
