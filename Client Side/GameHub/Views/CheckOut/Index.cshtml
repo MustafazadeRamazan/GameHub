@@ -32,23 +32,7 @@
                             <div class="col-md-8">
                                 <div class="checkout-left">
                                     <div class="panel-group" id="accordion">
-                                        <!-- Coupon section -->
-                                        <div class="panel panel-default aa-checkout-coupon">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                                        Have a Coupon?
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseOne" class="panel-collapse collapse in">
-                                                <div class="panel-body">
-                                                    <input type="text" placeholder="Coupon Code" class="aa-coupon-code">
-                                                    <input type="submit" value="Apply Coupon" class="aa-browse-btn">
-                                                </div>
-                                            </div>
-                                        </div>
-                                       
+
                                         <!-- Billing Details -->
                                         <div class="panel panel-default aa-checkout-billaddress">
                                             <div class="panel-heading">
@@ -58,7 +42,7 @@
                                                     </a>
                                                 </h4>
                                             </div>
-                                            <div id="collapseThree" class="panel-collapse collapse">
+                                            <div id="collapseThree" class="panel-collapse collapse in">
                                                 <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-md-6">
@@ -121,7 +105,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
+                                        <!-- Coupon section -->
+                                        <div class="panel panel-default aa-checkout-coupon">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                        Have a Coupon?
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <input type="text" placeholder="Coupon Code" class="aa-coupon-code">
+                                                    <input type="submit" value="Apply Coupon" class="aa-browse-btn">
+                                                </div>
+                                            </div>
+                                        </div>                       
                                     </div>
                                 </div>
                             </div>
@@ -148,10 +148,6 @@
                                                 </tr>
                                                 }
                                              }
-                                            else
-                                            {
-                                                <text>Please login to Checkout</text>
-                                            }
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -185,6 +181,10 @@
                                         </div>
                                         <br /><br />
                                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
+                                        @if (Session["username"]==null)
+                                        {
+                                            <a href="http://localhost:4040/Account/Login"><h3 class="color:b aa-cart-view-btn">Please login to Checkout</h3></a>
+                                        }
                                         @if (Model.ToList().Count > 0)
                                         { 
                                         <input type="submit" value="Place Order" class="aa-browse-btn">
