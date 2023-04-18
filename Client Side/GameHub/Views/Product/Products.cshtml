@@ -26,7 +26,7 @@
 @if (!string.IsNullOrEmpty(Request.QueryString["categoryName"]))
 {
 <section id="aa-catg-head-banner">
-    <img src="~/Content/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
+    <img src="~/Content/img/gamebanner.jpg" alt="fashion img">
     <div class="aa-catg-head-banner-area">
         <div class="container">
             <div class="aa-catg-head-banner-content">
@@ -104,10 +104,17 @@
                     <div class="aa-sidebar-widget">
                         <h3>Category</h3>
                         <ul class="aa-catg-nav">
-                            @foreach (var item in ViewBag.Categories)
-                            {
-                <li><a href="@Url.Action("GetProductsByCategory", new { categoryName = item })">@item</a></li>
-}
+                            @{ 
+                                int count = 0;
+                                    foreach (var item in ViewBag.Categories)
+                                    {
+                                        if(count < 6) 
+                                        {
+                                            <li><a href="@Url.Action("GetProductsByCategory", new { categoryName = item })">@item</a></li>      
+                                        }
+                                        count++;
+                                    }
+                             }
                         </ul>
                     </div>
                     <!-- single sidebar -->
@@ -130,12 +137,12 @@
                             @using (Html.BeginForm("FilterByPrice", "Product", FormMethod.Get))
                             {
 
-                <input type="range" min="0" max="100" value="0" onchange="updateMinInput(this.value);"><br />
-                                <input type="range" min="0" max="100" value="1" onchange="updateMaxInput(this.value);">
-                                                <br />
-                                                                <input type="number" name="minPrice" id="minValue" min="0" maxlength="6" max="10000" value="0" size="6">
-                                                                                <input type="number" name="maxPrice" id="maxValue" min="0" maxlength="6" max="10000" value="100" size="6"> <br /><br />
-                                                                                                <button class="aa-filter-btn" type="submit">Filter</button>}
+                                <input type="range" min="0" max="100" value="0" onchange="updateMinInput(this.value);"><br />
+                                <input type="range" min="0" max="100" value="1" onchange="updateMaxInput(this.value);"> <br />
+
+                                <input type="number" name="minPrice" id="minValue" min="0" maxlength="6" max="5000" value="0" size="6">
+                                <input type="number" name="maxPrice" id="maxValue" min="0" maxlength="6" max="5000" value="100" size="6"> <br /><br />
+                                <button class="aa-filter-btn" type="submit">Filter</button>}
                         </div>
 
                     </div>
@@ -204,11 +211,11 @@
 <script type="text/javascript">
     function updateMinInput(val) {
         document.getElementById('minValue').value = 0;
-        document.getElementById('minValue').value = val * 10;
+        document.getElementById('minValue').value = val * 50;
     }
     function updateMaxInput(val) {
         document.getElementById('maxValue').value = 0;
-        document.getElementById('maxValue').value = val * 100;
+        document.getElementById('maxValue').value = val * 50;
     }
 </script>
 

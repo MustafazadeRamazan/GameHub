@@ -236,6 +236,7 @@
     <Content Include="Content\img\fashion-banner-game.jpg" />
     <Content Include="Content\img\flag\english.jpg" />
     <Content Include="Content\img\flag\turkishflag.jpg" />
+    <Content Include="Content\img\gamebanner.jpg" />
     <Content Include="Content\img\Game_Accounts\CallOfDutyMobile\codmobile.png" />
     <Content Include="Content\img\Game_Accounts\ClashOfClans\coc.png" />
     <Content Include="Content\img\Game_Accounts\ClashRoyale\clashroyale.png" />
