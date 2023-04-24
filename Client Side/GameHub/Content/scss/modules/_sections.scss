@@ -2149,9 +2149,11 @@
 
 /*---- Login form ----*/
 
-.aa-login-form{
+.aa-login-form {
 	input[type="text"],
-	input[type="password"]{
+	input[type="password"],
+	input[type="number"], 
+	input[type="email"] {
 		border: 1px solid #ccc;
 		font-size: 16px;
 		height: 40px;
@@ -2159,36 +2161,42 @@
 		padding: 10px;
 		width: 100%;
 	}
-	label{						
+
+	label {
 		font-weight: normal;
 		margin-top: 8px;
-		span{
+
+		span {
 			color: red;
 		}
 	}
-	.rememberme{
+
+	.rememberme {
 		cursor: pointer;
 		margin-top: 18px;
 	}
-	input[type="checkbox"]{
+
+	input[type="checkbox"] {
 		margin-top: 5px;
 	}
-	button{
+
+	button {
 		font-size: 14px;
 		padding: 8px 20px;
 		margin-right: 5px;
 		margin-top: 10px;
 		float: left;
 	}
-	.aa-lost-password{
-		color: #555;		
+
+	.aa-lost-password {
+		color: #555;
 		margin-top: 10px;
 		width: 100%;
-		a{
+
+		a {
 			color: #555;
 		}
 	}
-				
 }
 
 /*---- LOGIN MODAL ----*/

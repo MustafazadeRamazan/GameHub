@@ -59,7 +59,8 @@
                             else
                             {
 
-                            <h3>Sorry! There is no Product available</h3>}
+                            <h3>Sorry! There is no Product available</h3>
+                            }
                             <!-- end start single product item -->
 
                         </ul>
@@ -87,6 +88,10 @@
                             </nav>*@
                         @if (ViewBag.filterByPrice == true)
                         {
+                            if (Model == null || Model.Count == 0)
+                {
+                        <h3>Sorry! There is no Product available</h3>
+                }
             @Html.PagedListPager(Model, page => Url.Action("FilterByPrice", new { minPrice = Request.QueryString["minPrice"], maxPrice = Request.QueryString["maxPrice"], page })
          , new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded }) }
                         else
@@ -101,22 +106,15 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
                 <aside class="aa-sidebar">
                     <!-- single sidebar -->
-                    <div class="aa-sidebar-widget">
+                    @*<div class="aa-sidebar-widget">
                         <h3>Category</h3>
                         <ul class="aa-catg-nav">
-                            @{ 
-                                int count = 0;
-                                    foreach (var item in ViewBag.Categories)
-                                    {
-                                        if(count < 6) 
-                                        {
-                                            <li><a href="@Url.Action("GetProductsByCategory", new { categoryName = item })">@item</a></li>      
-                                        }
-                                        count++;
-                                    }
-                             }
+                            @foreach (var item in ViewBag.Categories)
+                            {
+                                <li><a href="@Url.Action("GetProductsByCategory", new { categoryName = item })">@item</a></li>
+                            }
                         </ul>
-                    </div>
+                    </div>*@
                     <!-- single sidebar -->
                     <div class="aa-sidebar-widget">
                         <h3>Tags</h3>

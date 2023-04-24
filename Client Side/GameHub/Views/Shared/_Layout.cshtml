@@ -197,13 +197,7 @@
                                     if (count < 6)
                                     {
                                     <li>
-                                        <a href="">@nav.Key<span class="caret"></span></a> 
-                                        <ul class="dropdown-menu">
-                                            @foreach (var subNav in nav.Value)
-                                            {
-                                                <li><a href="@Url.Action("GetProductsByCategory","Product", new { categoryName = subNav.Trim() })">@subNav.Trim()</a></li>
-                                            }
-                                        </ul>
+                                        <a href="@Url.Action("GetProductsByCategory","Product", new { categoryName = nav.Key })">@nav.Key</a>
                                     </li>
                                         count++;
                                     } 
@@ -229,7 +223,7 @@
                         <h3>Subscribe our newsletter </h3>
                         <p>Subscribe our newsletter to receive the latest news and exclusive offers every week. No Spam!</p>
                         <form action="" class="aa-subscribe-form">
-                            <input type="email" name="" id="" placeholder="Enter your Email">
+                            <input type="email" name="" id="" required placeholder="Enter your Email">
                             <input type="submit" value="Subscribe">
                         </form>
                     </div>

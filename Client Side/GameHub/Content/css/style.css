@@ -618,13 +618,13 @@ img {
 ====================*/
 
 #menu {
-  display: inline;
+  display: flex;
   float: left;
   width: 100%;
 }
 #menu .menu-area {
-  float: left;
-  display: inline;
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 #menu .menu-area .navbar-default {
@@ -2632,13 +2632,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .aa-login-form input[type="text"],
-.aa-login-form input[type="password"],input[type="number"] {
-  border: 1px solid #ccc;
-  font-size: 16px;
-  height: 40px;
-  margin-bottom: 15px;
-  padding: 10px;
-  width: 100%;
+.aa-login-form input[type="password"],
+.aa-login-form input[type="number"],
+.aa-login-form input[type="email"] {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
 }
 .aa-login-form label {
   font-weight: normal;
