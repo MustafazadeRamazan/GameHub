@@ -10,7 +10,7 @@ $(document).ready(
                 data: a,
                 xkey: 'period',
                 ykeys: ['sales'],
-                labels: ['Sales'],
+                labels: ['Sales $'],
                 pointSize: 2,
                 hideHover: 'auto',
                 resize: true
@@ -64,7 +64,7 @@ $(document).ready(
                 data: res,
                 xkey: 'Country',
                 ykeys: ['Sales_Amount'],
-                labels: ['Sales Amount'],
+                labels: ['Sales Amount $'],
                 barRatio: 0.4,
                 xLabelAngle: 35,
                 hideHover: 'auto',
