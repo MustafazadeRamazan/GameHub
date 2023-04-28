@@ -123,7 +123,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ImageURL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ImageURL, new { htmlAttributes = new { @class = "form-control", @hidden = "hidden", @id = "ImageURL" } })
+                @Html.EditorFor(model => model.ImageURL, new { htmlAttributes = new { @class = "form-control", @hidden = "hidden", @id = "ImageURL", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.ImageURL, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -226,7 +226,7 @@
     </div>
     <div class="col-md-4">
         <div>
-            <img id="profile-image" src="~/Content/Images/ProfileImage.svg" alt="" class="img-thumbnail" width="250" height="300" />
+            <img id="profile-image" src="~/Content/Images/ProfileImage.svg" alt="" class="img-thumbnail" width="160" height="160" />
         </div><br />
         <div>
             <input type="file" id="image-input" style="display:none" />
@@ -243,19 +243,15 @@
             var input = document.getElementById('ImageURL');
             var filePath = event.target.value;
             var fileName = filePath.split('\\').pop().split('/').pop();
-            input.value = "/Content/img/Game_Accounts/CsGo/" + fileName;
+            input.value = "/Content/img/Game_Accounts/" + fileName;
         }
-
-
-
-
 
 
         function clearImage() {
             var input = document.getElementById('ImageURL');
             var image = document.getElementById('profile-image');
             image.src = "/Content/Images/ProfileImage.svg";
-            input.value = ''; // this line clears the ImageUrl input field's value
+            input.value = '';
         }
 
         var imageInput = document.getElementById('image-input');

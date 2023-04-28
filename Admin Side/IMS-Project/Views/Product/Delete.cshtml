@@ -215,7 +215,14 @@
     </div>
     <div class="col-md-4">
         <div>
-            <img src="~/Content/Images/ProfileImage.svg" alt="" class="img-thumbnail" width="160" height="160" />
+            @if (string.IsNullOrEmpty(Model.ImageURL))
+            {
+                <img id="profile-image" src="~/Content/Images/no-image.png" alt="" class="img-thumbnail" width="160" height="160" />
+            }
+            else
+            {
+                <img id="profile-image" src="@Model.ImageURL" alt="" class="img-thumbnail" width="160" height="160" />
+            }
         </div>
     </div>
 </div>

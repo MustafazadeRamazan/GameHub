@@ -56,10 +56,9 @@
                                     { Html.RenderPartial("_Product", item); }
                                 }
                             }
-                            else
+                            @if (Model == null || Model.Count == 0)
                             {
-
-                            <h3>Sorry! There is no Product available</h3>
+                                <h2 style="text-align:center;">Sorry! There is no Product available</h2>
                             }
                             <!-- end start single product item -->
 
@@ -88,10 +87,6 @@
                             </nav>*@
                         @if (ViewBag.filterByPrice == true)
                         {
-                            if (Model == null || Model.Count == 0)
-                {
-                        <h3>Sorry! There is no Product available</h3>
-                }
             @Html.PagedListPager(Model, page => Url.Action("FilterByPrice", new { minPrice = Request.QueryString["minPrice"], maxPrice = Request.QueryString["maxPrice"], page })
          , new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded }) }
                         else
