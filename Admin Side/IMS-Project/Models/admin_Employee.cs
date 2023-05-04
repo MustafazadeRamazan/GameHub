@@ -11,7 +11,8 @@ namespace IMS_Project.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class admin_Employee
     {
         public admin_Employee()
@@ -20,15 +21,23 @@ namespace IMS_Project.Models
         }
     
         public int EmpID { get; set; }
+        [Required]
         public string FirstName { get; set; }
+        [Required]
         public string LastName { get; set; }
         public Nullable<int> Age { get; set; }
+        [Required]
         public Nullable<System.DateTime> DateofBirth { get; set; }
+        [Required]
         public string Gender { get; set; }
+        [Required]
         public string Email { get; set; }
+        [Required]
         public string Address { get; set; }
         public string Phone { get; set; }
+        [Required]
         public string Mobile { get; set; }
+        [Required]
         public string PhotoPath { get; set; }
     
         public virtual ICollection<admin_Login> admin_Login { get; set; }

@@ -227,6 +227,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Images\no-image.png" />
     <Content Include="Content\Images\ProfileImage.svg" />
+    <Content Include="Content\Images\profileimage11.png" />
     <Content Include="Content\img\Game_Accounts\blackforce.png" />
     <Content Include="Content\img\Game_Accounts\clashroyale.png" />
     <Content Include="Content\img\Game_Accounts\coc.png" />

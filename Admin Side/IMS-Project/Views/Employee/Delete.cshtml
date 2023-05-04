@@ -33,13 +33,13 @@
                 @Html.DisplayFor(model => model.LastName)
             </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Age)
-            </dt>
+            @*<dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Age)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>*@
 
             <dt>
                 @Html.DisplayNameFor(model => model.DateofBirth)
@@ -73,13 +73,13 @@
                 @Html.DisplayFor(model => model.Address)
             </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Phone)
-            </dt>
+            @*<dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Phone)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>*@
 
             <dt>
                 @Html.DisplayNameFor(model => model.Mobile)
@@ -89,11 +89,27 @@
                 @Html.DisplayFor(model => model.Mobile)
             </dd>
 
+            <dt>
+                @Html.DisplayNameFor(model => model.PhotoPath)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhotoPath)
+            </dd>
+
+
         </dl>
     </div>
     <div class="col-md-4">
         <div>
-            <img src="~/Content/Images/ProfileImage.svg" alt="" class="img-thumbnail" width="160" height="160" />
+            @if (string.IsNullOrEmpty(Model.PhotoPath))
+            {
+                <img id="profile-image" src="~/Content/Images/no-image.png" alt="" class="img-thumbnail" width="160" height="160" />
+            }
+            else
+            {
+                <img id="profile-image" src="@Model.PhotoPath" alt="" class="img-thumbnail" width="160" height="160" />
+            }
         </div>
     </div>
 </div> 
