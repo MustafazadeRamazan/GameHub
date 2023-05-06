@@ -50,7 +50,7 @@
                 @Html.DisplayFor(model => model.Age)
             </dd>
 
-            <dt>
+            @*<dt>
                 @Html.DisplayNameFor(model => model.Gender)
             </dt>
 
@@ -64,7 +64,7 @@
 
             <dd>
                 @Html.DisplayFor(model => model.DateofBirth)
-            </dd>
+            </dd>*@
 
             <dt>
                 @Html.DisplayNameFor(model => model.Organization)
@@ -114,15 +114,15 @@
                 @Html.DisplayFor(model => model.Email)
             </dd>
 
-            <dt>
+            @*<dt>
                 @Html.DisplayNameFor(model => model.AltEmail)
             </dt>
 
             <dd>
                 @Html.DisplayFor(model => model.AltEmail)
-            </dd>
+            </dd>*@
 
-            <dt>
+            @*<dt>
                 @Html.DisplayNameFor(model => model.Phone1)
             </dt>
 
@@ -136,7 +136,7 @@
 
             <dd>
                 @Html.DisplayFor(model => model.Phone2)
-            </dd>
+            </dd>*@
 
             <dt>
                 @Html.DisplayNameFor(model => model.Mobile1)
@@ -146,13 +146,13 @@
                 @Html.DisplayFor(model => model.Mobile1)
             </dd>
 
-            <dt>
+            @*<dt>
                 @Html.DisplayNameFor(model => model.Mobile2)
             </dt>
 
             <dd>
                 @Html.DisplayFor(model => model.Mobile2)
-            </dd>
+            </dd>*@
 
             <dt>
                 @Html.DisplayNameFor(model => model.Address1)
@@ -162,13 +162,13 @@
                 @Html.DisplayFor(model => model.Address1)
             </dd>
 
-            <dt>
+            @*<dt>
                 @Html.DisplayNameFor(model => model.Address2)
             </dt>
 
             <dd>
                 @Html.DisplayFor(model => model.Address2)
-            </dd>
+            </dd>*@
 
             <dt>
                 @Html.DisplayNameFor(model => model.Picture)
@@ -178,7 +178,7 @@
                 @Html.DisplayFor(model => model.Picture)
             </dd>
 
-            <dt>
+            @*<dt>
                 @Html.DisplayNameFor(model => model.status)
             </dt>
 
@@ -208,13 +208,20 @@
 
             <dd>
                 @Html.DisplayFor(model => model.Notes)
-            </dd>
+            </dd>*@
 
         </dl>
     </div>
     <div class="col-md-4">
         <div>
-            <img src="~/Content/Images/ProfileImage.svg" alt="" class="img-thumbnail" width="160" height="160" />
+            @if (string.IsNullOrEmpty(Model.Picture))
+            {
+                <img id="profile-image" src="~/Content/Images/no-image.png" alt="" class="img-thumbnail" width="160" height="160" />
+            }
+            else
+            {
+                <img id="profile-image" src="@Model.Picture" alt="" class="img-thumbnail" width="160" height="160" />
+            }
         </div>
     </div>
 </div>

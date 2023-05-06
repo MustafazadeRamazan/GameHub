@@ -12,32 +12,35 @@
 <div class="row">
 
     <table class="table table-hover table-bordered table-striped">
-  <tr>
-      <th>
-          @Html.DisplayNameFor(model => model.CustomerID)
-      </th>
-    <th>
-        @Html.DisplayNameFor(model => model.First_Name)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.Last_Name)
-    </th>    
-    <th>
-        @Html.DisplayNameFor(model => model.Age)
-    </th> 
-    <th>
-        @Html.DisplayNameFor(model => model.Country)
-    </th>  
-    <th>
-        @Html.DisplayNameFor(model => model.Email)
-    </th>   
-      
-    <th>
-        @Html.DisplayNameFor(model => model.Mobile1)
-    </th>   
-   
-    <th></th>
-</tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile1)
+            </th>
+
+            <th></th>
+        </tr>
 
 @foreach (var item in Model)
 {
@@ -46,29 +49,32 @@
             @Html.DisplayFor(modelItem => item.CustomerID)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.First_Name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Last_Name)
         </td>
-       
+
         <td>
             @Html.DisplayFor(modelItem => item.Age)
-        </td>        
-       
+        </td>
+
         <td>
             @Html.DisplayFor(modelItem => item.Country)
         </td>
-       
+
         <td>
             @Html.DisplayFor(modelItem => item.Email)
-        </td>       
-        
+        </td>
+
         <td>
             @Html.DisplayFor(modelItem => item.Mobile1)
-        </td>       
-    
-        
+        </td>
+
+
         <td>
             <a class="btn btn-sm btn-primary" href="@Url.Action("Edit", "Customer", new { id = item.CustomerID })" aria-label="Edit" data-toggle="tooltip" data-placement="top" title="Edit">
                 <i class="fa fa-edit" aria-hidden="true"></i>

@@ -7,88 +7,73 @@
 <div>
     <div class="col-md-8">
 
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DateofBirth)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DateofBirth)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Mobile)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PhotoPath)
+            </dt>
+            <dd>
+                @{
+                    try
+                    {
+                        if (Model.PhotoPath != null)
+                        {
+                            @Html.DisplayFor(model => model.PhotoPath)
+                        }
+                        else
+                        {
+                            Response.Redirect("http://localhost:2680/Employee");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Redirect("http://localhost:2680/Employee");
+                    }
+                }
+            </dd>
+        </dl>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-
-        @*<dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Age)
-        </dd>*@
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DateofBirth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DateofBirth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gender)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gender)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-        @*<dt>
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Phone)
-        </dd>*@
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Mobile)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Mobile)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhotoPath)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhotoPath)
-        </dd>
-
-    </dl>
 
     </div>
     <div class="col-md-4">
