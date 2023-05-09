@@ -61,6 +61,7 @@ namespace IMS_Project.Controllers
                 //}
                 db.Products.Add(prod);
                 db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Product: {prod.Name} Created Successfully";
                 return RedirectToAction("Index", "Product");
             }
             GetViewBagData();
@@ -89,6 +90,7 @@ namespace IMS_Project.Controllers
             {
                 db.Entry(prod).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Product ID: {prod.ProductID} Updated Successfully";
                 return RedirectToAction("Index", "Product");
             }
             GetViewBagData();
@@ -124,10 +126,20 @@ namespace IMS_Project.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Product product = db.Products.Find(id);
-            db.Products.Remove(product);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                db.Products.Remove(product);
+                db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Product: {product.Name}, ID: {product.ProductID}  Deleted Successfully";
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                TempData["AlertMessageError"] = $"An error occurred while deleting the Product: {product.Name}, ID: {product.ProductID}";
+                return RedirectToAction("Index");
+            }
         }
+
 
         protected override void Dispose(bool disposing)
         {

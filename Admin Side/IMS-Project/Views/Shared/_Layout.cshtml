@@ -105,22 +105,22 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
                     <ul class="dropdown-menu alert-dropdown">
                         <li>
-                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                            <a href="#">Alert Name <span class="label label-default">Test</span></a>
                         </li>
                         <li>
-                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                            <a href="#">Alert Name <span class="label label-primary">Test</span></a>
                         </li>
                         <li>
-                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                            <a href="#">Alert Name <span class="label label-success">Test</span></a>
                         </li>
                         <li>
-                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                            <a href="#">Alert Name <span class="label label-info">Test</span></a>
                         </li>
                         <li>
-                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                            <a href="#">Alert Name <span class="label label-warning">Test</span></a>
                         </li>
                         <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                            <a href="#">Alert Name <span class="label label-danger">Test</span></a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -183,8 +183,8 @@
                     <li class="@(ViewBag.Title == "Settings" ? "active" : "")">
                         <a href="@Url.Action("Index", "Settings")"><i class="fa fa-fw fa-gear"></i>Settings</a>
                     </li>
-                    <li class="@(ViewBag.Title == "Logout" ? "active" : "")">
-                        <a href="@Url.Action("Logout", "Login")"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                    <li>
+                        <a href="@Url.Action("Logout","admin_Login")"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
                     </li>
                 </ul>
             </div>
@@ -197,20 +197,51 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                           @ViewBag.Title
+                            @ViewBag.Title
                             <small>@ViewBag.SubTitle</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="@Url.Action("Index","Dashboard")">Home</a>
                             </li>
-                            <li >
+                            <li>
                                 <i class=""></i> <a href="@Url.Action("Index",@ViewBag.Title)">@ViewBag.Title</a>
                             </li>
-                            <li >
+                            <li>
                                 <i class=""></i> @ViewBag.SubTitle
                             </li>
                         </ol>
+                                                @if (TempData["AlertMessageSuccess"] != null)
+                        {
+                    <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <strong>@TempData["AlertMessageSuccess"].ToString()</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <script>
+                            window.setTimeout(function () {
+                                $(".alert-success").fadeTo(500, 0).slideUp(500, function () {
+                                    $(this).remove();
+                                });
+                            }, 3000);
+                        </script>
+                    </div>}
+                        @if (TempData["AlertMessageError"] != null)
+                        {
+                            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                                <strong>@TempData["AlertMessageError"].ToString()</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <script>
+                                    window.setTimeout(function () {
+                                        $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
+                                            $(this).remove();
+                                        });
+                                    }, 4000);
+                                </script>
+                            </div>
+                        }
                         @RenderBody()
                     </div>
                 </div>

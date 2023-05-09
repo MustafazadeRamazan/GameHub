@@ -38,7 +38,7 @@ namespace GameHub.Controllers
             }
             else
             {
-                TempData["AlertMessageHome"] = "Successfully registered";
+                TempData["AlertMessage"] = "Successfully registered";
             }
             return View();
         }

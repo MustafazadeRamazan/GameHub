@@ -35,6 +35,7 @@ namespace IMS_Project.Controllers
             {
                 db.Entry(emp).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Profile Updated Successfully";
                 return RedirectToAction("Index");
             }
             return View();

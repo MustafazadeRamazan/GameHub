@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Login-IMS</title>
+    <title>Admin Login</title>
     @Styles.Render("~/Content/css")
     <style>
         .adminHeading {
@@ -20,6 +20,23 @@
     </style>
 </head>
 <body>
+
+@if (TempData["AlertMessageSuccess"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <strong>@TempData["AlertMessageSuccess"].ToString()</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <script>
+            window.setTimeout(function () {
+                $(".alert-success").fadeTo(500, 0).slideUp(500, function () {
+                    $(this).remove();
+                });
+            }, 3000);
+        </script>
+    </div>
+}
     <div class="container">
         @using (Html.BeginForm("Login", "admin_Login", FormMethod.Post, new { @id = "loginForm" }))
         { 
@@ -31,6 +48,22 @@
                 <div class="panel-heading">
                     Login To Your Account
                 </div><br />
+                    @if (TempData["AlertMessageError"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <strong>@TempData["AlertMessageError"].ToString()</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <script>
+            window.setTimeout(function () {
+                $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
+                    $(this).remove();
+                });
+            }, 4000);
+        </script>
+    </div>
+}
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="panel-body">
                     <div  class="input-group">

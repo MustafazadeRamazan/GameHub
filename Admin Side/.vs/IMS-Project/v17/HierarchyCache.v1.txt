@@ -1,0 +1,533 @@
+﻿++Solution 'IMS-Project' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:IMS-Project.sln
+++IMS-Project
+i:{00000000-0000-0000-0000-000000000000}:IMS-Project
+++Properties
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\properties\
+++PublishProfiles
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\properties\publishprofiles\
+++AssemblyInfo.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\properties\assemblyinfo.cs
+++References
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++App_Data
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\app_data\
+++App_Start
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\app_start\
+++BundleConfig.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\app_start\bundleconfig.cs
+++FilterConfig.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\app_start\filterconfig.cs
+++RouteConfig.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\app_start\routeconfig.cs
+++Content
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\
+++css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\css\
+++plugins
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\plugins\
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\
+++bootstrap-rtl.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\bootstrap-rtl.css
+++bootstrap-rtl.min.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\bootstrap-rtl.min.css
+++bootstrap.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\bootstrap.css
+++bootstrap.min.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\bootstrap.min.css
+++sb-admin-rtl.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\sb-admin-rtl.css
+++sb-admin.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\sb-admin.css
+++font-awesome
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\
+++fonts
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\fonts\
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\fonts\
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\fonts\
+++Images
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\images\
+++img
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\
+++js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\
+++Scripts
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\
+++jquery-ui.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\jquery-ui.css
+++jquery.ui.autocomplete.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\jquery.ui.autocomplete.css
+++Controllers
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\
+++admin_LoginController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\admin_logincontroller.cs
+++CustomerController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\customercontroller.cs
+++DashboardController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\dashboardcontroller.cs
+++EmployeeController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\employeecontroller.cs
+++Image.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\image.cs
+++OrderController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\ordercontroller.cs
+++ProductController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\productcontroller.cs
+++ProfileController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\profilecontroller.cs
+++SettingsController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\settingscontroller.cs
+++SupplierController.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\controllers\suppliercontroller.cs
+++Models
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\
+++Charts.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\charts.cs
+++EmployeeExtend.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\employeeextend.cs
+++GameHubDataModel.edmx
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\gamehubdatamodel.edmx
+++GameHubDataModel.Designer.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\gamehubdatamodel.designer.cs
+++GameHubDataModel.edmx.diagram
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\gamehubdatamodel.edmx.diagram
+++KahreedoDataModel.Context.tt
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\kahreedodatamodel.context.tt
+++KahreedoDataModel.tt
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\kahreedodatamodel.tt
+++admin_Employee.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\admin_employee.cs
+++admin_Login.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\admin_login.cs
+++Category.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\category.cs
+++Customer.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\customer.cs
+++genMainSlider.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\genmainslider.cs
+++genPromoRight.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\genpromoright.cs
+++KahreedoDataModel.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\kahreedodatamodel.cs
+++Order.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\order.cs
+++OrderDetail.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\orderdetail.cs
+++Payment.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\payment.cs
+++PaymentType.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\paymenttype.cs
+++Product.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\product.cs
+++Review.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\review.cs
+++Role.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\role.cs
+++ShippingDetail.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\shippingdetail.cs
+++SubCategory.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\subcategory.cs
+++Supplier.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\supplier.cs
+++sysdiagram.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\sysdiagram.cs
+++Wishlist.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\wishlist.cs
+++LoginExtend.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\loginextend.cs
+++SupplierExtend.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\supplierextend.cs
+++TemData.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\temdata.cs
+++_references.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\_references.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\_references.js
+++bootstrap.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\bootstrap.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\bootstrap.js
+++bootstrap.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\bootstrap.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\bootstrap.min.js
+++jquery-1.10.2.intellisense.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery-1.10.2.intellisense.js
+++jquery-1.10.2.min.map
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery-1.10.2.min.map
+++jquery-2.0.0.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery-2.0.0.min.js
+++jquery-ui-1.8.24.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery-ui-1.8.24.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery-ui-1.8.24.min.js
+++jquery.validate-vsdoc.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery.validate-vsdoc.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery.validate-vsdoc.js
+++jquery.validate.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery.validate.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery.validate.js
+++jquery.validate.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery.validate.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\jquery.validate.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery.validate.min.js
+++jquery.validate.unobtrusive.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery.validate.unobtrusive.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery.validate.unobtrusive.js
+++jquery.validate.unobtrusive.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\jquery.validate.unobtrusive.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\jquery.validate.unobtrusive.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery.validate.unobtrusive.min.js
+++modernizr-2.6.2.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\modernizr-2.6.2.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\modernizr-2.6.2.js
+++respond.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\respond.js
+++respond.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\scripts\respond.min.js
+++Views
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\
+++admin_Login
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\admin_login\
+++Index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\admin_login\index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\customer\index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\dashboard\index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\employee\index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\order\index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\product\index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\profile\index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\settings\index.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\supplier\index.cshtml
+++Customer
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\customer\
+++Create.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\customer\create.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\employee\create.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\product\create.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\supplier\create.cshtml
+++Delete.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\customer\delete.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\employee\delete.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\product\delete.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\supplier\delete.cshtml
+++Details.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\customer\details.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\employee\details.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\order\details.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\product\details.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\supplier\details.cshtml
+++Edit.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\customer\edit.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\employee\edit.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\product\edit.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\profile\edit.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\supplier\edit.cshtml
+++Dashboard
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\dashboard\
+++About.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\dashboard\about.cshtml
+++blank-page.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\dashboard\blank-page.cshtml
+++Contact.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\dashboard\contact.cshtml
+++Employee
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\employee\
+++Order
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\order\
+++Product
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\product\
+++Profile
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\profile\
+++Settings
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\settings\
+++Shared
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\shared\
+++_Layout.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\shared\_layout.cshtml
+++Error.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\shared\error.cshtml
+++Supplier
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\supplier\
+++_Order.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\_order.cshtml
+++_ViewStart.cshtml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\_viewstart.cshtml
+++Web.config
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\views\web.config
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\web.config
+++Global.asax
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\global.asax
+++logo.ico
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\logo.ico
+++packages.config
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\packages.config
+++Project_Readme.html
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\project_readme.html
+++IMS-Project1 - FTP (2).pubxml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\properties\publishprofiles\ims-project1 - ftp (2).pubxml
+++IMS-Project1 - FTP.pubxml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\properties\publishprofiles\ims-project1 - ftp.pubxml
+++IMS-Project1 - Web Deploy.pubxml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\properties\publishprofiles\ims-project1 - web deploy.pubxml
+++Antlr3.Runtime
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++EntityFramework
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++Microsoft.CSharp
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++Microsoft.Web.Infrastructure
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++Newtonsoft.Json
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.ComponentModel.DataAnnotations
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Configuration
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Core
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Data
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Data.DataSetExtensions
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Data.Entity
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Drawing
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.EnterpriseServices
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Net.Http
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Net.Http.WebRequest
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Runtime.Serialization
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Security
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Abstractions
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.ApplicationServices
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.DynamicData
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Entity
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Extensions
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Helpers
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Mvc
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Optimization
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Razor
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Routing
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.Services
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.WebPages
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.WebPages.Deployment
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Web.WebPages.Razor
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Xml
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++System.Xml.Linq
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++WebGrease
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:
+++morris.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\css\plugins\morris.css
+++less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\
+++scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\
+++glyphicons-halflings-regular.eot
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\fonts\glyphicons-halflings-regular.eot
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\fonts\glyphicons-halflings-regular.eot
+++glyphicons-halflings-regular.svg
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\fonts\glyphicons-halflings-regular.svg
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\fonts\glyphicons-halflings-regular.svg
+++glyphicons-halflings-regular.ttf
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\fonts\glyphicons-halflings-regular.ttf
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\fonts\glyphicons-halflings-regular.ttf
+++glyphicons-halflings-regular.woff
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\fonts\glyphicons-halflings-regular.woff
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\fonts\glyphicons-halflings-regular.woff
+++glyphicons-halflings-regular.woff2
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\fonts\glyphicons-halflings-regular.woff2
+++no-image.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\images\no-image.png
+++ProfileImage.svg
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\images\profileimage.svg
+++profileimage11.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\images\profileimage11.png
+++Game_Accounts
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\
+++jquery-1.8.2.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\jquery-1.8.2.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery-1.8.2.min.js
+++jquery-3.1.0.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\jquery-3.1.0.min.js
+++jquery.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\jquery.js
+++MyCustom.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\mycustom.js
+++jquery-1.8.2.intellisense.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery-1.8.2.intellisense.js
+++jquery-1.8.2.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery-1.8.2.js
+++jquery-ui-1.8.24.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery-ui-1.8.24.js
+++jquery.unobtrusive-ajax.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery.unobtrusive-ajax.js
+++jquery.unobtrusive-ajax.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\jquery.unobtrusive-ajax.min.js
+++knockout-2.2.0.debug.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\knockout-2.2.0.debug.js
+++knockout-2.2.0.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\scripts\knockout-2.2.0.js
+++KahreedoDataModel.Context.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\models\kahreedodatamodel.context.cs
+++Global.asax.cs
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\global.asax.cs
+++Web.Debug.config
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\web.debug.config
+++Web.Release.config
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\web.release.config
+++font-awesome.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\css\font-awesome.css
+++font-awesome.min.css
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\css\font-awesome.min.css
+++fontawesome-webfont.eot
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\fonts\fontawesome-webfont.eot
+++fontawesome-webfont.svg
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\fonts\fontawesome-webfont.svg
+++fontawesome-webfont.ttf
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\fonts\fontawesome-webfont.ttf
+++fontawesome-webfont.woff
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\fonts\fontawesome-webfont.woff
+++FontAwesome.otf
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\fonts\fontawesome.otf
+++bordered-pulled.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\bordered-pulled.less
+++core.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\core.less
+++fixed-width.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\fixed-width.less
+++font-awesome.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\font-awesome.less
+++icons.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\icons.less
+++larger.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\larger.less
+++list.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\list.less
+++mixins.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\mixins.less
+++path.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\path.less
+++rotated-flipped.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\rotated-flipped.less
+++spinning.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\spinning.less
+++stacked.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\stacked.less
+++variables.less
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\less\variables.less
+++_bordered-pulled.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_bordered-pulled.scss
+++_core.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_core.scss
+++_fixed-width.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_fixed-width.scss
+++_icons.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_icons.scss
+++_larger.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_larger.scss
+++_list.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_list.scss
+++_mixins.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_mixins.scss
+++_path.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_path.scss
+++_rotated-flipped.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_rotated-flipped.scss
+++_spinning.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_spinning.scss
+++_stacked.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_stacked.scss
+++_variables.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\_variables.scss
+++font-awesome.scss
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\font-awesome\scss\font-awesome.scss
+++blackforce.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\blackforce.png
+++clashroyale.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\clashroyale.png
+++coc.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\coc.png
+++codmobile.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\codmobile.png
+++cops.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\cops.png
+++csgoaccount1.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\csgoaccount1.png
+++csgoaccount2.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\csgoaccount2.png
+++csgoaccount3.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\csgoaccount3.png
+++csgoaccount5.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\csgoaccount5.png
+++csgoaccount6.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\csgoaccount6.png
+++fifa23.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\fifa23.png
+++gta5.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\gta5.png
+++hayday.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\hayday.png
+++mlegends1.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\mlegends1.png
+++mlegends2.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\mlegends2.png
+++pmobile.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\pmobile.png
+++pmobile2.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\pmobile2.png
+++pmobile3.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\pmobile3.png
+++pmobile4.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\pmobile4.png
+++raceking.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\raceking.png
+++unityproject1.png
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\img\game_accounts\unityproject1.png
+++flot
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\flot\
+++morris
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\morris\
+++excanvas.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\flot\excanvas.min.js
+++flot-data.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\flot\flot-data.js
+++jquery.flot.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\flot\jquery.flot.js
+++jquery.flot.pie.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\flot\jquery.flot.pie.js
+++jquery.flot.resize.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\flot\jquery.flot.resize.js
+++jquery.flot.tooltip.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\flot\jquery.flot.tooltip.min.js
+++morris-data.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\morris\morris-data.js
+++morris.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\morris\morris.js
+++morris.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\morris\morris.min.js
+++raphael.min.js
+i:{70b8b0f7-1772-41de-adeb-953fe8c58a7c}:c:\users\workm\desktop\gamehub\admin side\ims-project\content\js\plugins\morris\raphael.min.js

@@ -29,6 +29,7 @@ namespace IMS_Project.Controllers
             {
                 db.admin_Employee.Add(emp);
                 db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Employee: {emp.FirstName} Created Successfully";
                 return RedirectToAction("Index");
             }
            
@@ -56,6 +57,7 @@ namespace IMS_Project.Controllers
             {
                 db.Entry(emp).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Employee ID: {emp.EmpID} Updated Successfully";
                 return RedirectToAction("Index");
             }
             //ViewBag.RoleID = new SelectList(db.Roles, "RoleID", "RoleName", emp.RoleID);
@@ -91,9 +93,24 @@ namespace IMS_Project.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             admin_Employee admin_Employee = db.admin_Employee.Find(id);
-            db.admin_Employee.Remove(admin_Employee);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                //if (id == 1)
+                //{
+                //    Session.Clear();
+                //    TempData["AlertMessageSuccess"] = "Successfully Deleted Account!";
+                //    return RedirectToAction("Index", "admin_Login");
+                //}
+                db.admin_Employee.Remove(admin_Employee);
+                db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Employee {admin_Employee.FirstName}, ID: {admin_Employee.EmpID}  Deleted Successfully";
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                TempData["AlertMessageError"] = $"You cannot delete the primary employee: {admin_Employee.FirstName}, ID: {admin_Employee.EmpID}";
+                return RedirectToAction("Index");
+            }
         }
 
         protected override void Dispose(bool disposing)

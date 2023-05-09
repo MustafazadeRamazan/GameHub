@@ -11,7 +11,8 @@ namespace IMS_Project.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Product
     {
         public Product()
@@ -22,19 +23,24 @@ namespace IMS_Project.Models
         }
     
         public int ProductID { get; set; }
+        [Required]
         public string Name { get; set; }
         public int SupplierID { get; set; }
         public int CategoryID { get; set; }
         public Nullable<int> SubCategoryID { get; set; }
         public string QuantityPerUnit { get; set; }
+        [Required]
         public decimal UnitPrice { get; set; }
         public Nullable<decimal> OldPrice { get; set; }
         public string UnitWeight { get; set; }
         public string Size { get; set; }
         public Nullable<decimal> Discount { get; set; }
+        [Required]
         public Nullable<int> UnitInStock { get; set; }
         public Nullable<int> UnitOnOrder { get; set; }
+        [Required]
         public Nullable<bool> ProductAvailable { get; set; }
+        [Required]
         public string ImageURL { get; set; }
         public string AltText { get; set; }
         public Nullable<bool> AddBadge { get; set; }

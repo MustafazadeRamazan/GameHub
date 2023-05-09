@@ -21,23 +21,26 @@ namespace IMS_Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                var model = (from m in db.admin_Login
-                             where m.UserName == login.UserName && m.Password == login.Password
+                var model = (from m in db.admin_Employee
+                             where m.FirstName == login.UserName && m.LastName == login.Password
                             select m).Any();
                 if (model)
                 {                 
-                    var loginInfo = db.admin_Login.Where(x=>x.UserName==login.UserName && x.Password==login.Password).FirstOrDefault();
+                    var loginInfo = db.admin_Employee.Where(x=>x.FirstName==login.UserName && x.LastName==login.Password).FirstOrDefault();
 
-                    Session["username"] = loginInfo.UserName;
+                    Session["username"] = loginInfo.FirstName;
                     TemData.EmpID = loginInfo.EmpID;
-                   return RedirectToAction("Index", "Dashboard");
+                    TempData["AlertMessageSuccess"] = $"Welcome Back! {login.UserName}";
+                    return RedirectToAction("Index", "Dashboard");
                 }       
             }
+            TempData["AlertMessageError"] = "The username or password is incorrect, please try again.";
             return View("Index");
         }
         public ActionResult Logout()
         {
             Session.Clear();
+            TempData["AlertMessageSuccess"] = "Successfully Logged Out!";
             return RedirectToAction("Index", "admin_Login");
         }
     }

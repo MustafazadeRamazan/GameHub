@@ -32,6 +32,7 @@ namespace IMS_Project.Controllers
             {
                 db.Suppliers.Add(supp);
                 db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Supplier {supp.CompanyName} Created Successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -53,6 +54,7 @@ namespace IMS_Project.Controllers
             {
                 db.Entry(supp).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Supplier ID: {supp.SupplierID} Updated Successfully";
                 return RedirectToAction("Index");
             }
             return View(supp);
@@ -84,9 +86,19 @@ namespace IMS_Project.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Supplier supp = db.Suppliers.Find(id);
-            db.Suppliers.Remove(supp);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                db.Suppliers.Remove(supp);
+                db.SaveChanges();
+                TempData["AlertMessageSuccess"] = $"Supplier {supp.CompanyName} Deleted Successfully";
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                TempData["AlertMessageError"] = $"An error occurred while deleting the supplier {supp.CompanyName}";
+                return RedirectToAction("Index");
+            }
         }
+
     }
 }
