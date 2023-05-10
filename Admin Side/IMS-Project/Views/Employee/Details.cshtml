@@ -63,6 +63,15 @@
                 @Html.DisplayFor(model => model.Email)
             </dd>
 
+            
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+
+            <dd>
+                @Html.Raw("<span class='masked-password'>**********</span>")
+            </dd>
+
             <dt>
                 @Html.DisplayNameFor(model => model.Address)
             </dt>
@@ -70,14 +79,6 @@
             <dd>
                 @Html.DisplayFor(model => model.Address)
             </dd>
-
-            @*<dt>
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Phone)
-        </dd>*@
 
             <dt>
                 @Html.DisplayNameFor(model => model.Mobile)

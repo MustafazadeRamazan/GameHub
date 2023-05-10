@@ -22,15 +22,15 @@ namespace IMS_Project.Controllers
             if (ModelState.IsValid)
             {
                 var model = (from m in db.admin_Employee
-                             where m.FirstName == login.UserName && m.LastName == login.Password
+                             where m.Email == login.UserName && m.Phone == login.Password
                             select m).Any();
                 if (model)
                 {                 
-                    var loginInfo = db.admin_Employee.Where(x=>x.FirstName==login.UserName && x.LastName==login.Password).FirstOrDefault();
+                    var loginInfo = db.admin_Employee.Where(x=>x.Email == login.UserName && x.Phone==login.Password).FirstOrDefault();
 
                     Session["username"] = loginInfo.FirstName;
                     TemData.EmpID = loginInfo.EmpID;
-                    TempData["AlertMessageSuccess"] = $"Welcome Back! {login.UserName}";
+                    TempData["AlertMessageSuccess"] = $"Welcome Back! {loginInfo.FirstName} {loginInfo.LastName}";
                     return RedirectToAction("Index", "Dashboard");
                 }       
             }

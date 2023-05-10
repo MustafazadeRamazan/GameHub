@@ -95,12 +95,6 @@ namespace IMS_Project.Controllers
             admin_Employee admin_Employee = db.admin_Employee.Find(id);
             try
             {
-                //if (id == 1)
-                //{
-                //    Session.Clear();
-                //    TempData["AlertMessageSuccess"] = "Successfully Deleted Account!";
-                //    return RedirectToAction("Index", "admin_Login");
-                //}
                 db.admin_Employee.Remove(admin_Employee);
                 db.SaveChanges();
                 TempData["AlertMessageSuccess"] = $"Employee {admin_Employee.FirstName}, ID: {admin_Employee.EmpID}  Deleted Successfully";

@@ -34,12 +34,14 @@ namespace IMS_Project.Models
         public string Email { get; set; }
         [Required]
         public string Address { get; set; }
+        [Required]
+        [Display(Name = "Password")]
         public string Phone { get; set; }
         [Required]
         public string Mobile { get; set; }
         [Required]
         public string PhotoPath { get; set; }
-    
+
         public virtual ICollection<admin_Login> admin_Login { get; set; }
     }
 }

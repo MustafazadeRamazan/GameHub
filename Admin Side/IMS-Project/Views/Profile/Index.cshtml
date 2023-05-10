@@ -39,6 +39,12 @@
                 @Html.DisplayFor(model => model.Email)
             </dd>
             <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+            <dd>
+                @Html.Raw("<span class='masked-password'>**********</span>")
+            </dd>
+            <dt>
                 @Html.DisplayNameFor(model => model.Address)
             </dt>
             <dd>
@@ -54,23 +60,20 @@
                 @Html.DisplayNameFor(model => model.PhotoPath)
             </dt>
             <dd>
-                @{
-                    try
+                @{ try
                     {
                         if (Model.PhotoPath != null)
                         {
-                            @Html.DisplayFor(model => model.PhotoPath)
-                        }
-                        else
-                        {
-                            Response.Redirect("http://localhost:2680/Employee");
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        Response.Redirect("http://localhost:2680/Employee");
-                    }
-                }
+        @Html.DisplayFor(model => model.PhotoPath) }
+    else
+    {
+        Response.Redirect("http://localhost:2680/Employee");
+    }
+}
+catch (Exception)
+{
+    Response.Redirect("http://localhost:2680/Employee");
+} }
             </dd>
         </dl>
 

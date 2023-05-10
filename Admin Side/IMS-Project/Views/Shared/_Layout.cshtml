@@ -165,9 +165,12 @@
                     <li class="@(ViewBag.Title == "Customer" ? "active" : "")">
                         <a href="@Url.Action("Index", "Customer")"><i class="fa fa-fw fa-male"></i> Customer</a>
                     </li>
-                    <li class="@(ViewBag.Title == "Employee" ? "active" : "")">
-                        <a href="@Url.Action("Index", "Employee")"><i class="fa fa-fw fa-user"></i>Employee</a>
-                    </li>
+                    @if(Session["username"].ToString() == "AdminRamazan")
+                    {
+                      <li class="@(ViewBag.Title == "Employee" ? "active" : "")">
+                      <a href="@Url.Action("Index", "Employee")"><i class="fa fa-fw fa-user"></i>Employee</a>
+                      </li>
+                    }
                     @*<li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
@@ -179,10 +182,12 @@
                             </li>
                         </ul>
                     </li>*@
-                    
-                    <li class="@(ViewBag.Title == "Settings" ? "active" : "")">
+                    @if(Session["username"].ToString() == "AdminRamazan")
+                    {
+                        <li class="@(ViewBag.Title == "Settings" ? "active" : "")">
                         <a href="@Url.Action("Index", "Settings")"><i class="fa fa-fw fa-gear"></i>Settings</a>
-                    </li>
+                        </li>
+                    }
                     <li>
                         <a href="@Url.Action("Logout","admin_Login")"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
                     </li>
@@ -211,7 +216,7 @@
                                 <i class=""></i> @ViewBag.SubTitle
                             </li>
                         </ol>
-                                                @if (TempData["AlertMessageSuccess"] != null)
+                        @if (TempData["AlertMessageSuccess"] != null)
                         {
                     <div class="alert alert-success alert-dismissible fade in" role="alert">
                         <strong>@TempData["AlertMessageSuccess"].ToString()</strong>
