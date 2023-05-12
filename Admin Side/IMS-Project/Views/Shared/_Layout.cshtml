@@ -165,7 +165,7 @@
                     <li class="@(ViewBag.Title == "Customer" ? "active" : "")">
                         <a href="@Url.Action("Index", "Customer")"><i class="fa fa-fw fa-male"></i> Customer</a>
                     </li>
-                    @if(Session["username"].ToString() == "AdminRamazan")
+                    @if(Session["username"].ToString() == "Admin")
                     {
                       <li class="@(ViewBag.Title == "Employee" ? "active" : "")">
                       <a href="@Url.Action("Index", "Employee")"><i class="fa fa-fw fa-user"></i>Employee</a>
@@ -182,7 +182,7 @@
                             </li>
                         </ul>
                     </li>*@
-                    @if(Session["username"].ToString() == "AdminRamazan")
+                    @if(Session["username"].ToString() == "Admin")
                     {
                         <li class="@(ViewBag.Title == "Settings" ? "active" : "")">
                         <a href="@Url.Action("Index", "Settings")"><i class="fa fa-fw fa-gear"></i>Settings</a>

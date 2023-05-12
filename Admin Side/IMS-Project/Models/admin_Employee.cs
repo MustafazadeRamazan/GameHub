@@ -31,6 +31,7 @@ namespace IMS_Project.Models
         [Required]
         public string Gender { get; set; }
         [Required]
+        [Display(Name = "Role")]
         public string Email { get; set; }
         [Required]
         public string Address { get; set; }

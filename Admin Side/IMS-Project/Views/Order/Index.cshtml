@@ -14,59 +14,59 @@
             @Html.DisplayNameFor(model => model.Customer.CustomerID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Payment.PaymentID)
+            @Html.DisplayNameFor(model => model.Customer.First_Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ShippingDetail.ShippingID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Discount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Taxes)
+            @Html.DisplayNameFor(model => model.Customer.Last_Name)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TotalAmount)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Customer.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DispatchedDate)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.OrderDate)
-        </th>        
-              
+        </th>
+
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrderID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Customer.CustomerID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Payment.PaymentID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShippingDetail.ShippingID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Discount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Taxes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrderDate)
-        </td>             
-      
-        <td>          
-            @Html.ActionLink("View Details", "Details", new { id=item.OrderID })
-         
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.OrderID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Customer.CustomerID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Customer.First_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Customer.Last_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TotalAmount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Customer.Country)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DispatchedDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OrderDate)
+    </td>
+
+    <td>
+        @Html.ActionLink("View Details", "Details", new { id = item.OrderID })
+
+    </td>
+</tr>
 }
 
 </table>

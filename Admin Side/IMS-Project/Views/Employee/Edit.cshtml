@@ -63,7 +63,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email" } })
+                @Html.DropDownList("Email", new List<SelectListItem>() {
+                                        new SelectListItem(){Text="Admin",Value="Admin"},
+                                        new SelectListItem(){Text="Employee",Value="Employee"},
+                                        new SelectListItem(){Text="Worker",Value="Worker"}
+
+                        }, "--Select Role--", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
             </div>
         </div>
