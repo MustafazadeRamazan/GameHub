@@ -1,9 +1,7 @@
 ﻿@using IMS_Project.Models;
-@model Tuple<Order,IEnumerable<OrderDetail>>
-@{
-    ViewBag.Title = "Order";
-    ViewBag.SubTitle = "Details";
-}
+@model Tuple<Order, IEnumerable<OrderDetail>>
+@{ ViewBag.Title = "Order";
+    ViewBag.SubTitle = "Details"; }
 
 <div class="row">
     <div class="col-md-6">
@@ -40,20 +38,20 @@
             </dd>
 
         </dl>
-     </div>
+    </div>
     <div class="col-md-6">
         <dl class="dl-horizontal ">
             <dt>
-                @Html.DisplayName("Payment ID : ")
+                @Html.DisplayName("Order Dispatched : ")
             </dt>
             <dd>
-                @Html.DisplayFor(model => model.Item1.PaymentID)
+                @Html.DisplayFor(model => model.Item1.DIspatched)
             </dd>
             <dt>
-                @Html.DisplayName("Shipping ID : ")
+                @Html.DisplayName("Order Finished : ")
             </dt>
             <dd>
-                @Html.DisplayFor(model => model.Item1.ShippingID)
+                @Html.DisplayFor(model => model.Item1.Deliver)
             </dd>
             <dt>
                 @Html.DisplayName("Customer Country : ")
@@ -79,60 +77,68 @@
     </div>
 </div>
 
-    <div class="row">
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="padding:5px 15px">
-                <h4>Items</h4>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="">
-                        <div class="table-responsive col-md-off ">
-                            <table class="table table-hover ">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Product Name</th>
-                                        <th>Quantity</th>
-                                        <th>Unit Price</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="padding:5px 15px">
+            <h4>Items</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="">
+                    <div class="table-responsive col-md-off ">
+                        <table class="table table-hover ">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Price</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
 
-                                <tbody>
-                                    @{int i = 0;}
-                                    @foreach (var item in Model.Item2)
-                                    {
-                                        i++;
-                                        <tr>
-                                            <td>@i.ToString()</td>
-                                            <td>@item.Product.Name</td>
-                                            <td>@item.Quantity</td>
-                                            <td>@item.UnitPrice $</td>
-                                            <td>@item.TotalAmount $</td>
-                                        </tr>
-                                    }
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="5"><h2></h2></td>
-                                        
-                                    </tr>
-                                    <tr class="bg-info">
-                                        <th>Total Amount:</th>
-                                        <th></th>
-                                        <th>@ViewBag.TotalItems</th>
-                                        <th></th>
-                                        <th>@ViewBag.TAmount $</th>
-                                    </tr>
-                                </tfoot>
+                            <tbody>
+                                @{int i = 0;}
+                                @foreach (var item in Model.Item2)
+                                {
+                                    i++;
+                    <tr>
+                        <td>@i.ToString()</td>
+                        <td>@item.Product.Name</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.UnitPrice $</td>
+                        <td>@item.TotalAmount $</td>
+                    </tr>}
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5"><h2></h2></td>
 
-                            </table>
-                        </div>
-                    </div>                   
+                                </tr>
+                                <tr class="bg-info">
+                                    <th>Total Amount:</th>
+                                    <th></th>
+                                    <th>@ViewBag.TotalItems</th>
+                                    <th></th>
+                                    <th>@ViewBag.TAmount $</th>
+                                </tr>
+                            </tfoot>
+
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-@Html.ActionLink("Back", "Index", "Order", new {@class="btn btn-success" })
+</div>
+@Html.ActionLink("Back", "Index", "Order", new { @class = "btn btn-success" })
 
+@if (ViewBag.ShowDispatchButton)
+{
+    <button onclick="location.href='@Url.Action("Dispatch", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-warning"><i class="fa fa-send"></i> Order Dispatched</button>
+}
+
+@if (ViewBag.ShowFinishButton)
+{
+    <button onclick="location.href='@Url.Action("Finish", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Order Finished</button>
+}

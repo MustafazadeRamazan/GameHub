@@ -73,6 +73,8 @@ namespace GameHub.Controllers
                 o.TotalAmount = Convert.ToInt32( getCheckoutDetails["totalAmount"]);
                 o.isCompleted = true;
                 o.OrderDate = DateTime.Now;
+                o.DIspatched = false;
+                o.Deliver = false;
                 db.Orders.Add(o);
                 db.SaveChanges();
 

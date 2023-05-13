@@ -26,7 +26,48 @@ namespace IMS_Project.Controllers
             ViewBag.Discount = 0;
             ViewBag.TAmount = SumAmount - 0;
             ViewBag.Amount = SumAmount;
+
+            if (ord.DIspatched == false)
+            {
+                ViewBag.ShowDispatchButton = true;
+            }
+            else
+            {
+                ViewBag.ShowDispatchButton = false;
+            }
+
+            if (ord.DIspatched == true && ord.Deliver == false)
+            {
+                ViewBag.ShowFinishButton = true;
+            }
+            else
+            {
+                ViewBag.ShowFinishButton = false;
+            }
+
             return View(tuple);
+        }
+
+        public ActionResult Dispatch(int id)
+        {
+            Order ord = db.Orders.Find(id);
+            ord.DispatchedDate = DateTime.Now;
+            ord.DIspatched = true;
+            db.SaveChanges();
+
+            TempData["AlertMessageSuccess"] = $"Order {ord.OrderID} Dispatched Successfully";
+            return RedirectToAction("Details", new { id = ord.OrderID });
+        }
+
+        public ActionResult Finish(int id)
+        {
+            Order ord = db.Orders.Find(id);
+            ord.DeliveryDate = DateTime.Now;
+            ord.Deliver = true;
+            db.SaveChanges();
+
+            TempData["AlertMessageSuccess"] = $"Order {ord.OrderID} Finished Successfully";
+            return RedirectToAction("Details", new { id = ord.OrderID });
         }
     }
 }
