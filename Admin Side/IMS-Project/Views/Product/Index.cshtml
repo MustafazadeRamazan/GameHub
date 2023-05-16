@@ -6,7 +6,7 @@
 
 
 <div>
-    @if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Employee")
+    @if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Manager")
     {
 
 <a href="@Url.Action("Create", "Product")" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</a>
@@ -99,7 +99,7 @@
 
 
         <td>
-                        @if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Employee")
+                        @if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Manager")
                         {
             <a class="btn btn-sm btn-primary" href="@Url.Action("Edit", "Product", new { id = item.ProductID })" aria-label="Edit">
                 <i class="fa fa-edit" aria-hidden="true"></i>
@@ -108,7 +108,7 @@
             <a class="btn btn-sm btn-info" href="@Url.Action("Details", "Product", new { id = item.ProductID })" aria-label="Details">
                 <i class="fa fa-info" aria-hidden="true"></i>
             </a>
-                        @if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Employee")
+                        @if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Manager")
                         {
             <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", "Product", new { id = item.ProductID })" aria-label="Delete">
                 <i class="fa fa-trash-o" aria-hidden="true"></i>

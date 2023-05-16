@@ -34,7 +34,7 @@ namespace IMS_Project.Controllers
                     return RedirectToAction("Index", "Dashboard");
                 }       
             }
-            TempData["AlertMessageError"] = "The username or password is incorrect, please try again.";
+            TempData["AlertMessageError"] = "The username or password is incorrect.";
             return View("Index");
         }
         public ActionResult Logout()

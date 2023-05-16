@@ -29,7 +29,7 @@ namespace IMS_Project.Controllers
             {
                 db.admin_Employee.Add(emp);
                 db.SaveChanges();
-                TempData["AlertMessageSuccess"] = $"Employee: {emp.FirstName} Created Successfully";
+                TempData["AlertMessageSuccess"] = $"{emp.Email}: {emp.FirstName} Created Successfully";
                 return RedirectToAction("Index");
             }
            
@@ -57,7 +57,7 @@ namespace IMS_Project.Controllers
             {
                 db.Entry(emp).State = EntityState.Modified;
                 db.SaveChanges();
-                TempData["AlertMessageSuccess"] = $"Employee ID: {emp.EmpID} Updated Successfully";
+                TempData["AlertMessageSuccess"] = $"{emp.Email} ID: {emp.EmpID} Updated Successfully";
                 return RedirectToAction("Index");
             }
             //ViewBag.RoleID = new SelectList(db.Roles, "RoleID", "RoleName", emp.RoleID);
@@ -97,12 +97,12 @@ namespace IMS_Project.Controllers
             {
                 db.admin_Employee.Remove(admin_Employee);
                 db.SaveChanges();
-                TempData["AlertMessageSuccess"] = $"Employee {admin_Employee.FirstName}, ID: {admin_Employee.EmpID}  Deleted Successfully";
+                TempData["AlertMessageSuccess"] = $"{admin_Employee.Email}: {admin_Employee.FirstName}, ID: {admin_Employee.EmpID}  Deleted Successfully";
                 return RedirectToAction("Index");
             }
             catch (Exception)
             {
-                TempData["AlertMessageError"] = $"You cannot delete the primary employee: {admin_Employee.FirstName}, ID: {admin_Employee.EmpID}";
+                TempData["AlertMessageError"] = $"You cannot delete the primary Admin: {admin_Employee.FirstName}, ID: {admin_Employee.EmpID}";
                 return RedirectToAction("Index");
             }
         }

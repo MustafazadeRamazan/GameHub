@@ -1,8 +1,6 @@
 ﻿@model IMS_Project.Models.admin_Login
 
-@{
-    Layout = null;
-}
+@{ Layout = null; }
 <!DOCTYPE html>
 
 <html>
@@ -11,103 +9,239 @@
     <title>Admin Login</title>
     @Styles.Render("~/Content/css")
     <style>
-        .adminHeading {
-            font-size: 36px;
-    margin-left: 450px;
-    color: white;
-    margin-bottom: 50px;
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(#141e30, #243b55);
+        }
+
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            background: rgb(40, 54, 79);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0,0,0,.6);
+            border-radius: 10px;
+        }
+
+            .login-box h2 {
+                margin: 0 0 30px;
+                padding: 0;
+                color: #fff;
+                text-align: center;
+            }
+
+            .login-box .user-box {
+                position: relative;
+            }
+
+                .login-box .user-box input {
+                    width: 100%;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    color: #fff;
+                    margin-bottom: 30px;
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    outline: none;
+                    background: transparent;
+                }
+
+                .login-box .user-box label {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    color: #fff;
+                    pointer-events: none;
+                    transition: .5s;
+                }
+
+                .login-box .user-box input:focus ~ label,
+                .login-box .user-box input:valid ~ label {
+                    top: -20px;
+                    left: 0;
+                    color: #03e9f4;
+                    font-size: 12px;
+                }
+
+            .login-box form a {
+                position: relative;
+                display: inline-block;
+                padding: 10px 20px;
+                color: #03e9f4;
+                font-size: 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+                overflow: hidden;
+                transition: .5s;
+                margin-top: 40px;
+                letter-spacing: 4px
+            }
+
+            .login-box a:hover {
+                background: #03e9f4;
+                color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+            }
+
+            .login-box a span {
+                position: absolute;
+                display: block;
+            }
+
+                .login-box a span:nth-child(1) {
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(90deg, transparent, #03e9f4);
+                    animation: btn-anim1 1s linear infinite;
+                }
+
+        @@keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+
+            50%, 100% {
+                left: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #03e9f4);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: .25s
+        }
+
+        @@keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+
+            50%, 100% {
+                top: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #03e9f4);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: .5s
+        }
+
+        @@keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+
+            50%, 100% {
+                right: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #03e9f4);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: .75s
+        }
+
+        @@keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+
+            50%, 100% {
+                bottom: 100%;
+            }
         }
     </style>
 </head>
 <body>
-
-@if (TempData["AlertMessageSuccess"] != null)
-{
-    <div class="alert alert-success alert-dismissible fade in" role="alert">
-        <strong>@TempData["AlertMessageSuccess"].ToString()</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <script>
-            window.setTimeout(function () {
-                $(".alert-success").fadeTo(500, 0).slideUp(500, function () {
-                    $(this).remove();
-                });
-            }, 3000);
-        </script>
-    </div>
-}
-    <div class="container">
-        @using (Html.BeginForm("Login", "admin_Login", FormMethod.Post, new { @id = "loginForm" }))
-        { 
-            @Html.ValidationSummary(true)
-            @Html.AntiForgeryToken()
-    <h1 class="adminHeading">Admin Panel</h1>
-        <div class="row col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    Login To Your Account
-                </div><br />
-                    @if (TempData["AlertMessageError"] != null)
-{
-    <div class="alert alert-danger alert-dismissible fade in" role="alert">
-        <strong>@TempData["AlertMessageError"].ToString()</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <script>
-            window.setTimeout(function () {
-                $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
-                    $(this).remove();
-                });
-            }, 4000);
-        </script>
-    </div>
-}
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="panel-body">
-                    <div  class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", @name = "username", @placeholder = "Username" } })
-                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger " })   
-                    
-                    </div>
-                    <br />
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>                       
-                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @name = "password",@type="password", @placeholder = "Password" } })
-                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                        
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="col-md-6 col-xs-6">
-                            <div class="checkbox ">
-                                <label>
-                                    <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xs-6">
-                            <div class="form-group">
-                                <div class="pull-right">
-                                    <button type="submit" id="btn-login" class="btn btn-success">Login</button>
-                                    
-                                </div><br /><br />
-                                <div class="pull-right">
-                                    <a href="#" class="small">Forgot password ?</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-                    
-
-                </div>
+    <div class="login-box">
+        @if (TempData["AlertMessageSuccess"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade in" role="alert">
+                <strong>@TempData["AlertMessageSuccess"].ToString()</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <script>
+                    window.setTimeout(function () {
+                        $(".alert-success").fadeTo(500, 0).slideUp(500, function () {
+                            $(this).remove();
+                        });
+                    }, 3000);
+                </script>
             </div>
-        </div>
         }
+        <form id="myForm" action="/admin_Login/Login" method="post">
+            @using (Html.BeginForm("Login", "admin_Login", FormMethod.Post, new { @id = "loginForm" }))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <h2>Admin Panel</h2>
+                <div>
+                    @if (TempData["AlertMessageError"] != null)
+                    {
+                     <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                         <strong>@TempData["AlertMessageError"].ToString()</strong>
+                         <script>
+                             window.setTimeout(function () {
+                                 $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
+                                     $(this).remove();
+                                 });
+                             }, 2000);
+                         </script>
+                     </div>
+                     }
+                </div>
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="user-box">
+            <input type="text" id="username" name="username" required>
+            <label for="username">Username</label>
+
+
+        </div>
+                <br />
+                <div class="user-box">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <a href="#" id="btn-login" onclick="document.getElementById('myForm').submit();">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Login
+                </a>
+                }
+        </form>
     </div>
     @Scripts.Render("~/Content/js")
 </body>
