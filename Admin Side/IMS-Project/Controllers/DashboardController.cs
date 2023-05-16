@@ -15,7 +15,7 @@ namespace IMS_Project.Controllers
         {          
 
             ViewBag.latestOrders = db.Orders.OrderByDescending(x => x.OrderID).Take(10).ToList();
-            ViewBag.NewOrders = db.Orders.OrderByDescending(x => x.OrderID).ToList().Count();
+            ViewBag.NewOrders = db.Orders.Count(a => a.DIspatched == false && a.Deliver == false);
             ViewBag.DispatchedOrders = db.Orders.Count(a => a.DIspatched == true && a.Deliver == false);
             ViewBag.ShippedOrders = db.Orders.Where(a => a.DIspatched == true && a.Shipped == true && a.Deliver == false).Count();
             ViewBag.DeliveredOrders = db.Orders.Count(a => a.DIspatched == true && a.Deliver == true);
