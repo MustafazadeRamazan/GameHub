@@ -30,48 +30,57 @@
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th></th>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Stock Status</th>
-                                            <th></th>
-                                        </tr>
+                                        @if (Session["username"] != null)
+                                        {
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th>Product</th>
+                                                <th>Price</th>
+                                                <th>Stock Status</th>
+                                                <th></th>
+                                            </tr>
+                                        }
                                     </thead>
                                     <tbody>
-                                        @if (Session["username"]!=null)
-                                        {                              
+                                        @if (Session["username"] != null)
+                                        {
+                                            bool itemExists = false;
                                             foreach (var item in Model)
-                                            {                                   
-                                        
-                                            <tr>
-                                                <td><a class="remove" href="@Url.Action("Remove", "WishList", new { id=item.WishlistID})"><fa class="fa fa-close"></fa></a></td>
-                                                <td><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></td>
-                                                <td><a class="aa-cart-title">@item.Product.Name</a></td>
-                                                <td>@item.Product.UnitPrice <strong>$</strong></td>
-                                                <td>
-                                                    @if (item.Product.UnitInStock > 0)
-                                                    {
-                                                        <text>In Stock (@item.Product.UnitInStock)</text>
-                                                    }
-                                                    else
-                                                    { <text>Out of Stock</text>}
-                                                </td>
-                                                <td>
-                                                    @if (item.Product.UnitInStock > 0)
-                                                    {
-                                                        <a href="@Url.Action("AddToCart", "WishList", new { id=item.WishlistID})" class="aa-add-to-cart-btn">Add To Cart</a>
-                                                    }
-                                                    else
-                                                    { <a class="aa-add-card-btn">Out Of Stock</a>}
-                                                </td>
-                                            </tr>                                       
+                                            {
+                                                itemExists = true;
+                                                    <tr>
+                                                        <td><a class="remove" href="@Url.Action("Remove", "WishList", new { id = item.WishlistID })"><fa class="fa fa-close"></fa></a></td>
+                                                        <td><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></td>
+                                                        <td><a class="aa-cart-title">@item.Product.Name</a></td>
+                                                        <td>@item.Product.UnitPrice <strong>$</strong></td>
+                                                        <td>
+                                                            @if (item.Product.UnitInStock > 0)
+                                                            {
+                                                                <text>In Stock (@item.Product.UnitInStock)</text> 
+                                                            }
+                                                            else
+                                                            { <text>Out of Stock</text>}
+                                                        </td>
+                                                        <td>
+                                                            @if (item.Product.UnitInStock > 0)
+                                                            {
+                                                                <a href="@Url.Action("AddToCart", "WishList", new { id = item.WishlistID })" class="aa-add-to-cart-btn">Add To Cart</a> 
+                                                            }
+                                                            else
+                                                            { <a class="aa-add-card-btn">Out Of Stock</a>}
+                                                        </td>
+                                                    </tr>
+                                            }
+
+                                            if (itemExists == false)
+                                            {
+                                                <h2 class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Sorry! There is no Product available</h2>
                                             }
                                         }
                                         else
                                         {
-                                            <text>Please login to view wishlist</text> 
+                                            <h2 class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Please login to view wishlist</h2>
                                         }
                                     </tbody>
                                 </table>

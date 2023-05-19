@@ -127,12 +127,11 @@
                             <div class="aa-cartbox">
                                 @if (Request.Url.AbsolutePath != "/Product/GetProductsByCategory" && Request.QueryString["categoryName"] != "Fps Games")
                                 {
-                                 <a class="aa-cart-link" href="http://localhost:4040/MyCart">
-                                     <span class="fa fa-shopping-basket"></span>
-                                     <span class="aa-cart-title">SHOPPING CART</span>
-                                     <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
-                                 </a>
-                                }
+                    <a class="aa-cart-link" href="http://localhost:4040/MyCart">
+                        <span class="fa fa-shopping-basket"></span>
+                        <span class="aa-cart-title">SHOPPING CART</span>
+                        <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
+                    </a>}
                                 <div class="aa-cartbox-summary">
                                     <ul>
                                         @if (Session["username"] != null)
@@ -141,9 +140,8 @@
                                         }
                                     </ul>
                                     @if (Session["username"] != null)
-                                    { 
-                                        <a class="aa-cartbox-checkout aa-primary-btn" href="@Url.Action("Index", "CheckOut")">Checkout</a>
-                                    }
+                                    {
+                        <a class="aa-cartbox-checkout aa-primary-btn" href="@Url.Action("Index", "CheckOut")">Checkout</a>}
                                 </div>
                             </div>
                             <!-- / cart box -->
@@ -158,6 +156,21 @@
                         </div>
                     </div>
                 </div>
+                @if (TempData["AlertMessageSuccess"] != null)
+                {
+            <div class="alert alert-success alert-dismissible fade in" role="alert">
+                <strong>@TempData["AlertMessageSuccess"].ToString()</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <script>
+                    window.setTimeout(function () {
+                        $(".alert-success").fadeTo(500, 0).slideUp(500, function () {
+                            $(this).remove();
+                        });
+                    }, 3000);
+                </script>
+            </div>}
             </div>
         </div>
         <!-- / header bottom  -->

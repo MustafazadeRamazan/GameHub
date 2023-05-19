@@ -28,7 +28,7 @@ namespace IMS_Project.Controllers
         {
             ViewBag.SupplierID = new SelectList(db.Suppliers, "SupplierID", "CompanyName");
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "Name");
-            ViewBag.SubCategoryID = new SelectList(db.SubCategories, "SubCategoryID", "Name");
+            //ViewBag.SubCategoryID = new SelectList(db.SubCategories, "SubCategoryID", "Name");
 
         }
 

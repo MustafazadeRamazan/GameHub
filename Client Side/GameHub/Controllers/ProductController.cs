@@ -75,6 +75,7 @@ namespace GameHub.Controllers
         public ActionResult AddToCart(int id)
         {
             OrderDetail OD = new OrderDetail();
+            string name = db.Products.Find(id).Name;
             OD.ProductID = id;
             int Qty = 1;
             decimal price = db.Products.Find(id).UnitPrice;
@@ -89,6 +90,7 @@ namespace GameHub.Controllers
             }
             TempShpData.items.Add(OD);
             AddRecentViewProduct(id);
+            TempData["AlertMessageSuccess"] = $"{name} added to Cart";
             return Redirect(TempData["returnURL"].ToString());
 
         }
@@ -99,6 +101,13 @@ namespace GameHub.Controllers
             var prod = db.Products.Find(id);
             var reviews = db.Reviews.Where(x => x.ProductID == id).ToList();
             ViewBag.Reviews = reviews;
+            var usr = db.Customers.Find(TempShpData.UserID);
+            if(usr != null)
+            {
+                ViewBag.CustomerName = usr.First_Name;
+                ViewBag.CustomerSurName = usr.Last_Name;
+                ViewBag.CustomerPhoto = usr.Picture;
+            }
             ViewBag.TotalReviews = reviews.Count();
             ViewBag.RelatedProducts = db.Products.Where(y => y.CategoryID == prod.CategoryID).ToList();
             AddRecentViewProduct(id);
@@ -117,6 +126,7 @@ namespace GameHub.Controllers
         {
             
             Wishlist wl = new Wishlist();
+            string name = db.Products.Find(id).Name;
             wl.ProductID = id;
             wl.CustomerID = TempShpData.UserID;
 
@@ -126,8 +136,10 @@ namespace GameHub.Controllers
             ViewBag.WlItemsNo = db.Wishlists.Where(x => x.CustomerID == TempShpData.UserID).ToList().Count();
             if (TempData["returnURL"].ToString()=="/")
             {
+                TempData["AlertMessageSuccess"] = $"{name} added to WishList";
                 return RedirectToAction("Index","Home");
             }
+            TempData["AlertMessageSuccess"] = $"{name} added to WishList";
             return Redirect(TempData["returnURL"].ToString());
         }
 
@@ -150,6 +162,7 @@ namespace GameHub.Controllers
         {
 
             Review r = new Review();
+            string name = db.Products.Find(productID).Name;
             r.CustomerID = TempShpData.UserID;
             r.ProductID = productID;
             r.Name = getReview["name"];
@@ -160,6 +173,7 @@ namespace GameHub.Controllers
 
             db.Reviews.Add(r);
             db.SaveChanges();
+            TempData["AlertMessageSuccess"] = $"Review added to {name}";
             return RedirectToAction("ViewDetails/" + productID + "");
 
         }

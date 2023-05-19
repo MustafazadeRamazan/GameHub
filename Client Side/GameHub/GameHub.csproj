@@ -232,6 +232,15 @@
     <Content Include="Content\css\theme-color\purple-theme.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\no-image.png" />
+    <Content Include="Content\Images\ProfileImage.svg" />
+    <Content Include="Content\Images\profileimage11.png" />
+    <Content Include="Content\Images\profileimage12.png" />
+    <Content Include="Content\Images\profileimage13.png" />
+    <Content Include="Content\Images\profileimage3.png" />
+    <Content Include="Content\Images\profileimage4.png" />
+    <Content Include="Content\Images\profileimage6.png" />
+    <Content Include="Content\Images\ramoshop.jpg" />
     <Content Include="Content\img\close-icon.png" />
     <Content Include="Content\img\fashion-banner-game.jpg" />
     <Content Include="Content\img\flag\english.jpg" />

@@ -51,9 +51,19 @@
                             <!-- start single product item -->
                             @if (Model != null || Model.Count > 0)
                             {
+                                bool productavailable = false;
                                 foreach (var item in Model)
                                 {
-                                    { Html.RenderPartial("_Product", item); }
+                                    if (item.ProductAvailable == true)
+                                    {
+                                        productavailable = true;
+                                        Html.RenderPartial("_Product", item);
+                                    }
+
+                                }
+                                if (productavailable == false)
+                                {
+                                   <h2 style="text-align:center;">Sorry! There is no Product available</h2>
                                 }
                             }
                             @if (Model == null || Model.Count == 0)

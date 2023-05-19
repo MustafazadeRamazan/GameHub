@@ -10,13 +10,19 @@
             <div class="col-md-12">
                 <div class="aa-myaccount-area">
                     <div class="row">
-                    @if (TempData["AlertMessage"] != null)
+                    @if (TempData["AlertMessageError"] != null)
                     {
-                       <div class="alert alert-danger alert-dismissible fade in">
-                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                         <strong> @TempData["AlertMessage"].ToString()</strong>
-                       </div>
-                    }
+                     <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                         <strong>@TempData["AlertMessageError"].ToString()</strong>
+                         <script>
+                             window.setTimeout(function () {
+                                 $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
+                                     $(this).remove();
+                                 });
+                             }, 2000);
+                         </script>
+                     </div>
+                     }
                         <div class="col-md-6">
                             <div class="aa-myaccount-login">
                                 <h4>Login</h4>
@@ -51,11 +57,11 @@
                                     <label for="">Age<span>*</span></label>
                                     <input required min="13" name="Age" type="number" placeholder="Age">
 
-                                    <label for="">Password<span>*</span></label>
-                                    <input required name="Password" type="password" placeholder="Password">
-
                                     <label for="">Email<span>*</span></label>
                                     <input name="Email" type="email" required placeholder="Enter your email">
+
+                                    <label for="">Password<span>*</span></label>
+                                    <input required name="Password" type="password" placeholder="Password">
 
                                     <label for="">Mobile<span>*</span></label>
                                     <input required min="0" name="Mobile1" type="number" placeholder="Mobile">

@@ -34,16 +34,16 @@
             <th>
                 @Html.DisplayNameFor(model => model.Category.Name)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.SubCategory.Name)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Supplier.CompanyName)
             </th>
 
-            @*<th>
-                @Html.DisplayNameFor(model => model.OfferBadgeClass)
-            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Reviews)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.UnitInStock)
             </th>
@@ -77,15 +77,15 @@
         <td>
             @Html.DisplayFor(modelItem => item.Category.Name)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.SubCategory.Name)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Supplier.CompanyName)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.OfferBadgeClass)
-        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Reviews.Count)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.UnitInStock)
         </td>

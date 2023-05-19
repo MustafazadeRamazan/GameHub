@@ -25,6 +25,7 @@ namespace GameHub.Controllers
         {
             db.Wishlists.Remove(db.Wishlists.Find(id));
             db.SaveChanges();
+            TempData["AlertMessageSuccess"] = $"Wishlist Updated Successfully";
             return RedirectToAction("Index");
 
         }
@@ -34,6 +35,7 @@ namespace GameHub.Controllers
             OrderDetail OD = new OrderDetail();
 
             int pid = db.Wishlists.Find(id).ProductID;
+            string name = db.Wishlists.Find(id).Product.Name;
             OD.ProductID = pid;
             int Qty = 1;
             decimal price = db.Products.Find(pid).UnitPrice;
@@ -51,7 +53,9 @@ namespace GameHub.Controllers
             db.Wishlists.Remove(db.Wishlists.Find(id));
             db.SaveChanges();
 
-            return Redirect(TempData["returnURL"].ToString());
+            TempData["AlertMessageSuccess"] = $"{name} added to Cart";
+            //return Redirect(TempData["returnURL"].ToString());
+            return RedirectToAction("Index");
 
         }
     }

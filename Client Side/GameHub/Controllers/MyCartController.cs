@@ -24,6 +24,7 @@ namespace GameHub.Controllers
         public ActionResult Remove(int id)
         {
             TempShpData.items.RemoveAll(x=>x.ProductID==id);
+            TempData["AlertMessageSuccess"] = $"Cart Page Updated Successfully";
             return RedirectToAction("Index");
 
         }

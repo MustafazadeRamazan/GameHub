@@ -33,12 +33,9 @@ namespace GameHub.Controllers
                 db.SaveChanges();
 
                 Session["username"] = cust.UserName;
-                TempShpData.UserID = GetUser(cust.UserName).CustomerID;          
+                TempShpData.UserID = GetUser(cust.UserName).CustomerID;
+                TempData["AlertMessageSuccess"] = $"{cust.First_Name} Successfully registered!";
                 return RedirectToAction("Index","Home");
-            }
-            else
-            {
-                TempData["AlertMessage"] = "Successfully registered";
             }
             return View();
         }
@@ -67,11 +64,12 @@ namespace GameHub.Controllers
                 {
                     TempShpData.UserID = cust.CustomerID;
                     Session["username"] = cust.UserName;
+                    TempData["AlertMessageSuccess"] = $"{cust.First_Name} Welcome back!";
                     return RedirectToAction("Index", "Home");
                 }
                 else
                 {
-                    TempData["AlertMessage"] = "Username Or Password wrong.";
+                    TempData["AlertMessageError"] = "Username Or Password wrong.";
                 }
                       
             }
@@ -84,7 +82,8 @@ namespace GameHub.Controllers
              Session["username"] = null;
              TempShpData.UserID = 0;
              TempShpData.items = null;
-             return RedirectToAction("Index", "Home");
+            TempData["AlertMessageSuccess"] = "Successfully Logged Out!";
+            return RedirectToAction("Index", "Home");
          }
 
        
@@ -106,6 +105,7 @@ namespace GameHub.Controllers
                 db.Entry(cust).State = EntityState.Modified;
                 db.SaveChanges();
                 Session["username"] = cust.UserName;
+                TempData["AlertMessageSuccess"] = $"Profile Updated Successfully";
                 return RedirectToAction("Index", "Home");
             }
             return View();
