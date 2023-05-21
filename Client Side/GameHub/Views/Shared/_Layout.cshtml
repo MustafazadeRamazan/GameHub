@@ -127,11 +127,15 @@
                             <div class="aa-cartbox">
                                 @if (Request.Url.AbsolutePath != "/Product/GetProductsByCategory" && Request.QueryString["categoryName"] != "Fps Games")
                                 {
-                    <a class="aa-cart-link" href="http://localhost:4040/MyCart">
-                        <span class="fa fa-shopping-basket"></span>
-                        <span class="aa-cart-title">SHOPPING CART</span>
-                        <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
-                    </a>}
+                                    if (Request.Url.AbsolutePath != "/Product/Search" && Request.QueryString["product="] != "Cs+Go+Full+Account")
+                                    {
+                                        <a class="aa-cart-link" href="http://localhost:4040/MyCart">
+                                            <span class="fa fa-shopping-basket"></span>
+                                            <span class="aa-cart-title">SHOPPING CART</span>
+                                            <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
+                                        </a>
+                                    }
+                                }
                                 <div class="aa-cartbox-summary">
                                     <ul>
                                         @if (Session["username"] != null)

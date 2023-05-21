@@ -47,14 +47,14 @@ namespace GameHub.Controllers
 
                 ShippingDetail shpDetails = new ShippingDetail();
                 shpDetails.ShippingID = shpID;
-                shpDetails.FirstName = getCheckoutDetails["FirstName"];
-                shpDetails.LastName = getCheckoutDetails["LastName"];
-                shpDetails.Email = getCheckoutDetails["Email"];
-                shpDetails.Mobile = getCheckoutDetails["Mobile"];
+                shpDetails.FirstName = "user";
+                shpDetails.LastName = "user";
+                shpDetails.Email = "user";
+                shpDetails.Mobile = "user";
                 shpDetails.Address = getCheckoutDetails["Address"];
-                shpDetails.Province = getCheckoutDetails["Province"];
-                shpDetails.City = getCheckoutDetails["City"];
-                shpDetails.PostCode = getCheckoutDetails["PostCode"];
+                shpDetails.Province = "user";
+                shpDetails.City = "user";
+                shpDetails.PostCode = "user";
                 db.ShippingDetails.Add(shpDetails);
                 db.SaveChanges();
 
