@@ -69,7 +69,7 @@ namespace GameHub.Controllers
                 }
                 else
                 {
-                    TempData["AlertMessageError"] = "Username Or Password wrong.";
+                    TempData["AlertMessageErrorLogin"] = "Username Or Password wrong.";
                 }
                       
             }

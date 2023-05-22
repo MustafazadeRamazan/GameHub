@@ -46,9 +46,11 @@
                                     <tbody>
                                         @if (Session["username"]!=null)
                                         {
+                                            bool itemExists = false;
                                             int i = 0;
                                             foreach (var item in Model)
                                             {
+                                                itemExists = true;
                                                 <tr>
                                                     @Html.Hidden("shcartID-"+i+"",item.ProductID)
                                                 
@@ -56,12 +58,21 @@
                                                     <td><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></td>
                                                     <td><a class="aa-cart-title">@item.Product.Name</a></td>
                                                     <td id="itemPrice-@(i)">@item.UnitPrice <strong>$</strong></td>
-                                                    <td>1</td>
+                                                    <td>
+                                                        <a href="http://localhost:4040/MyCart" onclick="decreaseQuantity('@item.ProductID')">-</a>
+                                                        <span id="quantity-@item.ProductID">@item.Quantity</span>
+                                                        <a href="http://localhost:4040/MyCart" onclick="increaseQuantity('@item.ProductID')">+</a>
+                                                    </td>
                                                     <td><strong id="itemAmount-@(i)">@item.TotalAmount $</strong></td>
                                                 
                                                 
                                                 </tr>
                                                 i++;
+                                            }
+                                            if (itemExists == false)
+                                            {
+                                                <h2 class="text-center">Sorry! There is no Product available</h2>
+                                                <br />
                                             }
                                         }
                                         else
@@ -113,6 +124,47 @@
 </section>
 <!-- / Cart view section -->
 <script type="text/javascript">
+
+    function increaseQuantity(productId) {
+        $.ajax({
+            url: '/MyCart/IncreaseQuantity',
+            type: 'POST',
+            data: { id: productId }
+        });
+    }
+
+
+    function decreaseQuantity(productId) {
+        $.ajax({
+            url: '/MyCart/DecreaseQuantity',
+            type: 'POST',
+            data: { id: productId }
+        });
+    }
+
+
+
+function updateItemQuantity(productId, quantity) {
+    // Send an AJAX request to update the item quantity on the server
+    $.ajax({
+        url: '@Url.Action("UpdateItemQuantity", "MyCart")',
+        type: 'POST',
+        data: { id: productId, quantity: quantity },
+        success: function(response) {
+            // Handle the response if needed
+            if (response.success) {
+                var itemAmountElement = $('#itemAmount-' + productId);
+                var unitPrice = parseFloat(itemAmountElement.text()) / parseInt(quantityElement.text());
+                var newTotalAmount = unitPrice * quantity;
+                itemAmountElement.text(newTotalAmount.toFixed(2) + ' $');
+            }
+        },
+        error: function(xhr) {
+            // Handle the error if needed
+        }
+    });
+}
+
     $(function () {
         $(':input[type="number"]').change(function () {
 

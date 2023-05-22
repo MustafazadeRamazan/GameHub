@@ -23,35 +23,74 @@ namespace GameHub.Controllers
 
         public ActionResult Remove(int id)
         {
+            var product = db.Products.Find(id);
             TempShpData.items.RemoveAll(x=>x.ProductID==id);
-            TempData["AlertMessageSuccess"] = $"Cart Page Updated Successfully";
+            TempData["AlertMessageSuccess"] = $"{product.Name} removed from the cart";
             return RedirectToAction("Index");
 
         }
+
+        [HttpPost]
+        public ActionResult UpdateItemQuantity(int id, int quantity)
+        {
+            var itemToUpdate = TempShpData.items.FirstOrDefault(x => x.ProductID == id);
+            if (itemToUpdate != null)
+            {
+                itemToUpdate.Quantity = quantity;
+                itemToUpdate.TotalAmount = itemToUpdate.UnitPrice * quantity;
+            }
+            return Json(new { success = true });
+        }
+        [HttpPost]
+        public ActionResult IncreaseQuantity(int id)
+        {
+            var product = db.Products.Find(id);
+            var itemToUpdate = TempShpData.items.FirstOrDefault(x => x.ProductID == id);
+            if (itemToUpdate != null)
+            {
+                if (product.UnitInStock > itemToUpdate.Quantity)
+                {
+                    itemToUpdate.Quantity++;
+                    itemToUpdate.TotalAmount = itemToUpdate.UnitPrice * itemToUpdate.Quantity;
+                    TempData["AlertMessageSuccess"] = $"Quantity of {product.Name} increased in the cart";
+                }
+                else
+                {
+                    TempData["AlertMessageError"] = $"Quantity of {product.Name} is out of stock";
+                    return Json(new { success = false });
+                }
+            }
+            return Json(new { success = true });
+        }
+
+        [HttpPost]
+        public ActionResult DecreaseQuantity(int id)
+        {
+            var product = db.Products.Find(id);
+            var itemToUpdate = TempShpData.items.FirstOrDefault(x => x.ProductID == id);
+            if (itemToUpdate != null)
+            {
+                if (itemToUpdate.Quantity > 1)
+                {
+                    itemToUpdate.Quantity--;
+                    itemToUpdate.TotalAmount = itemToUpdate.UnitPrice * itemToUpdate.Quantity;
+                    TempData["AlertMessageSuccess"] = $"Cart Page Updated Successfully";
+                }
+                else
+                {
+                    TempShpData.items.RemoveAll(x => x.ProductID == id);
+                    TempData["AlertMessageSuccess"] = $"{product.Name} removed from the cart";
+                    return Json(new { success = true, removeItem = true });
+                }
+            }
+            return Json(new { success = true });
+        }
+
+
         [HttpPost]
         public ActionResult ProcedToCheckout(FormCollection formcoll)
         {
-            var a = TempShpData.items.ToList();
-            for (int i = 0; i < formcoll.Count/2; i++)
-            {
-
-                int pID = Convert.ToInt32(formcoll["shcartID-" + i + ""]);
-                var ODetails = TempShpData.items.FirstOrDefault(x => x.ProductID == pID);
-               
-
-                int qty = Convert.ToInt32(formcoll["Qty-" + i + ""]);
-                ODetails.Quantity = qty;
-                ODetails.UnitPrice = ODetails.UnitPrice;
-                ODetails.TotalAmount = qty * ODetails.UnitPrice;
-                TempShpData.items.RemoveAll(x => x.ProductID == pID);
-
-                if (TempShpData.items==null)
-                {
-                    TempShpData.items = new List<OrderDetail>();                   
-                }
-                TempShpData.items.Add(ODetails);
-                
-            }
+            TempShpData.items.ToList();
 
             return RedirectToAction("Index", "CheckOut");
         }

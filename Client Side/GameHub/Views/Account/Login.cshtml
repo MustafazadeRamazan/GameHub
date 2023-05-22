@@ -10,10 +10,10 @@
             <div class="col-md-12">
                 <div class="aa-myaccount-area">
                     <div class="row">
-                    @if (TempData["AlertMessageError"] != null)
+                    @if (TempData["AlertMessageErrorLogin"] != null)
                     {
                      <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                         <strong>@TempData["AlertMessageError"].ToString()</strong>
+                         <strong>@TempData["AlertMessageErrorLogin"].ToString()</strong>
                          <script>
                              window.setTimeout(function () {
                                  $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {

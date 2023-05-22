@@ -175,6 +175,19 @@
                     }, 3000);
                 </script>
             </div>}
+                @if (TempData["AlertMessageError"] != null)
+                    {
+                     <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                         <strong>@TempData["AlertMessageError"].ToString()</strong>
+                         <script>
+                             window.setTimeout(function () {
+                                 $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
+                                     $(this).remove();
+                                 });
+                             }, 3000);
+                         </script>
+                     </div>
+                     }
             </div>
         </div>
         <!-- / header bottom  -->

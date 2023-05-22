@@ -23,40 +23,57 @@ namespace GameHub.Controllers
         //REMOVE ITEM FROM WISHLIST
         public ActionResult Remove(int id)
         {
+            int productId = db.Wishlists.Find(id).ProductID;
+            var product = db.Products.Find(productId);
             db.Wishlists.Remove(db.Wishlists.Find(id));
             db.SaveChanges();
-            TempData["AlertMessageSuccess"] = $"Wishlist Updated Successfully";
+            TempData["AlertMessageSuccess"] = $"{product.Name} removed from the wishlists";
             return RedirectToAction("Index");
 
         }
         //ADD TO CART WISHLIST
         public ActionResult AddToCart(int id)
         {
-            OrderDetail OD = new OrderDetail();
-
-            int pid = db.Wishlists.Find(id).ProductID;
-            string name = db.Wishlists.Find(id).Product.Name;
-            OD.ProductID = pid;
-            int Qty = 1;
-            decimal price = db.Products.Find(pid).UnitPrice;
-            OD.Quantity = Qty;
-            OD.UnitPrice = price;
-            OD.TotalAmount = Qty * price;
-            OD.Product = db.Products.Find(pid);
+            int productId = db.Wishlists.Find(id).ProductID;
+            var product = db.Products.Find(productId);
 
             if (TempShpData.items == null)
             {
                 TempShpData.items = new List<OrderDetail>();
             }
-            TempShpData.items.Add(OD);
+
+            OrderDetail existingItem = TempShpData.items.FirstOrDefault(item => item.ProductID == productId);
+            if (existingItem != null)
+            {
+                if (product.UnitInStock > existingItem.Quantity)
+                {
+                    existingItem.Quantity++;
+                    existingItem.TotalAmount = existingItem.Quantity * existingItem.UnitPrice;
+                    TempData["AlertMessageSuccess"] = $"Quantity of {product.Name} increased in the cart";
+                }
+                else
+                {
+                    TempData["AlertMessageError"] = $"Quantity of {product.Name} is out of stock";
+                    return RedirectToAction("Index");
+                }
+            }
+            else
+            {
+                OrderDetail newOrderDetail = new OrderDetail();
+                newOrderDetail.ProductID = productId;
+                newOrderDetail.Quantity = 1;
+                newOrderDetail.UnitPrice = db.Products.Find(productId).UnitPrice;
+                newOrderDetail.TotalAmount = newOrderDetail.Quantity * newOrderDetail.UnitPrice;
+                newOrderDetail.Product = db.Products.Find(productId);
+                TempShpData.items.Add(newOrderDetail);
+                TempData["AlertMessageSuccess"] = $"{product.Name} added to the cart";
+            }
 
             db.Wishlists.Remove(db.Wishlists.Find(id));
             db.SaveChanges();
 
-            TempData["AlertMessageSuccess"] = $"{name} added to Cart";
-            //return Redirect(TempData["returnURL"].ToString());
             return RedirectToAction("Index");
-
         }
+
     }
 }

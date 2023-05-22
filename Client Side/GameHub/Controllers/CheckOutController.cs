@@ -56,13 +56,11 @@ namespace GameHub.Controllers
                 shpDetails.City = "user";
                 shpDetails.PostCode = "user";
                 db.ShippingDetails.Add(shpDetails);
-                db.SaveChanges();
 
                 Payment pay = new Payment();
                 pay.PaymentID = payID;
                 pay.Type = Convert.ToInt32(getCheckoutDetails["PayMethod"]);
                 db.Payments.Add(pay);
-                db.SaveChanges();
 
                 Order o = new Order();
                 o.OrderID = orderID;
@@ -76,18 +74,24 @@ namespace GameHub.Controllers
                 o.DIspatched = false;
                 o.Deliver = false;
                 db.Orders.Add(o);
-                db.SaveChanges();
 
                 foreach (var OD in TempShpData.items)
                 {
                     OD.OrderID = orderID;
                     OD.Order = db.Orders.Find(orderID);
                     OD.Product = db.Products.Find(OD.ProductID);
-                    db.OrderDetails.Add(OD);
-                    db.SaveChanges();
+                    if(OD.Product.UnitInStock >= OD.Quantity)
+                    {
+                        OD.Product.UnitInStock -= OD.Quantity;
+                        db.OrderDetails.Add(OD);
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        TempData["AlertMessageError"] = $"{OD.Product.Name} is out of stock";
+                        return RedirectToAction("Index", "CheckOut");
+                    }
                 }
-
-               
                 return RedirectToAction("Index","ThankYou");
             
         }

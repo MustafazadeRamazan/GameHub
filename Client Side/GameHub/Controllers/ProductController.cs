@@ -74,26 +74,47 @@ namespace GameHub.Controllers
         //ADD TO CART
         public ActionResult AddToCart(int id)
         {
-            OrderDetail OD = new OrderDetail();
             string name = db.Products.Find(id).Name;
-            OD.ProductID = id;
-            int Qty = 1;
-            decimal price = db.Products.Find(id).UnitPrice;
-            OD.Quantity = Qty;
-            OD.UnitPrice = price;
-            OD.TotalAmount = Qty * price;
-            OD.Product = db.Products.Find(id);
+            var product = db.Products.Find(id);
 
             if (TempShpData.items == null)
             {
                 TempShpData.items = new List<OrderDetail>();
             }
-            TempShpData.items.Add(OD);
-            AddRecentViewProduct(id);
-            TempData["AlertMessageSuccess"] = $"{name} added to Cart";
-            return Redirect(TempData["returnURL"].ToString());
 
+            // Check if the product already exists in the cart
+            OrderDetail existingItem = TempShpData.items.FirstOrDefault(item => item.ProductID == id);
+            if (existingItem != null)
+            {
+                if (product.UnitInStock > existingItem.Quantity)
+                {
+                    // Increase the quantity of the existing item
+                    existingItem.Quantity++;
+                    existingItem.TotalAmount = existingItem.Quantity * existingItem.UnitPrice;
+                    TempData["AlertMessageSuccess"] = $"Quantity of {name} increased in the cart";
+                }
+                else
+                {
+                    TempData["AlertMessageError"] = $"Quantity of {name} is out of stock";
+                }
+            }
+            else
+            {
+                OrderDetail newOrderDetail = new OrderDetail();
+                newOrderDetail.ProductID = id;
+                newOrderDetail.Quantity = 1;
+                newOrderDetail.UnitPrice = db.Products.Find(id).UnitPrice;
+                newOrderDetail.TotalAmount = newOrderDetail.Quantity * newOrderDetail.UnitPrice;
+                newOrderDetail.Product = db.Products.Find(id);
+                TempShpData.items.Add(newOrderDetail);
+                TempData["AlertMessageSuccess"] = $"{name} added to the cart";
+            }
+
+            AddRecentViewProduct(id);
+
+            return Redirect(TempData["returnURL"].ToString());
         }
+
 
         //VIEW DETAILS
         public ActionResult ViewDetails(int id)
@@ -106,7 +127,6 @@ namespace GameHub.Controllers
             {
                 ViewBag.CustomerName = usr.First_Name;
                 ViewBag.CustomerSurName = usr.Last_Name;
-                ViewBag.CustomerPhoto = usr.Picture;
             }
             ViewBag.TotalReviews = reviews.Count();
             ViewBag.RelatedProducts = db.Products.Where(y => y.CategoryID == prod.CategoryID).ToList();
