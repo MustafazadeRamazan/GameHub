@@ -56,7 +56,7 @@
                                                 
                                                     <td><a class="remove" href="@Url.Action("Remove", "MyCart", new { id = item.ProductID })"><fa class="fa fa-close"></fa></a></td>
                                                     <td><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></td>
-                                                    <td><a class="aa-cart-title">@item.Product.Name</a></td>
+                                                    <td><a class="aa-cart-title" href="@Url.Action("ViewDetails", "Product", new { id = item.ProductID })">@item.Product.Name</a></td>
                                                     <td id="itemPrice-@(i)">@item.UnitPrice <strong>$</strong></td>
                                                     <td>
                                                         <a href="http://localhost:4040/MyCart" onclick="decreaseQuantity('@item.ProductID')">-</a>

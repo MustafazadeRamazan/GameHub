@@ -55,25 +55,26 @@
                                                                 <input name="LastName" type="text" required placeholder="Last Name*">
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div>*@
                                                     
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input name="Email" type="email" required placeholder="Email Address*">
+                                                                <label style="margin-left:2px">Email Address:</label>
+                                                                <input name="Email" type="email" required placeholder="Your order will be sent to the email address*">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        @*<div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
                                                                 <input name="Mobile" type="number" required placeholder="Mobile*">
                                                             </div>
-                                                        </div>
-                                                    </div>*@
+                                                        </div>*@
+                                                    </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <label style="margin-left:2px">Email Address:</label>
-                                                                <textarea name="Address" cols="8" required rows="3" placeholder="Your order will be sent to the email address you entered*"></textarea>
+                                                                <label style="margin-left:2px">Your Note:</label>
+                                                                <textarea name="Address" cols="8" required rows="3" placeholder="Your order will be sent to the note you entered*"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -134,6 +135,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Product</th>
+                                                    <th>Price</th>
                                                     <th>Total</th>
                                                 </tr>
                                             </thead>
@@ -145,24 +147,28 @@
                                                 
                                                 <tr>
                                                     <td>@item.Product.Name <strong> x  @item.Quantity</strong></td>
+                                                    <td><strong>@item.UnitPrice $</strong></td>
                                                     <td>@item.TotalAmount <strong>$</strong></td>
                                                 </tr>
                                                 }
                                              }
                                             </tbody>
                                             <tfoot>
-                                                <tr>
+                                                @*<tr>
                                                     <th>Subtotal</th>
+                                                    <td></td>
                                                     <td>@ViewBag.SubTotal <strong>$</strong></td>
-                                                </tr>
+                                                </tr>*@
                                                 <tr>
                                                     @Html.Hidden("discount", null,new { @value=ViewBag.Discount })
                                                     <th>Discount</th>
+                                                    <td></td>
                                                     <td>@ViewBag.Discount <strong>$</strong></td>
                                                 </tr>
                                                 <tr>
-                                                    @Html.Hidden("totalAmount", null,new { @value=ViewBag.TotalAmount })
+                                                    @Html.Hidden("totalAmount", null, new { @value = ViewBag.TotalAmount })
                                                     <th>Total</th>
+                                                    <td></td>
                                                     <td>@ViewBag.TotalAmount <strong>$</strong></td>
                                                 </tr>
                                             </tfoot>

@@ -36,11 +36,23 @@
             <dd>
                 @Html.DisplayFor(model => model.Item1.Customer.Mobile1)
             </dd>
+            <dt>
+                @Html.DisplayName("Customer Country : ")
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Item1.Customer.Country)
+            </dd>
 
         </dl>
     </div>
     <div class="col-md-6">
         <dl class="dl-horizontal ">
+            <dt>
+                @Html.DisplayName("Order Date : ")
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Item1.OrderDate)
+            </dd>
             <dt>
                 @Html.DisplayName("Order Dispatched : ")
             </dt>
@@ -54,23 +66,23 @@
                 @Html.DisplayFor(model => model.Item1.Deliver)
             </dd>
             <dt>
-                @Html.DisplayName("Customer Country : ")
+                @Html.DisplayName("Shipping to Email : ")
             </dt>
             <dd>
-                @Html.DisplayFor(model => model.Item1.Customer.Country)
+                @Html.DisplayFor(model => model.Item1.ShippingDetail.Email)
             </dd>
             <dt>
-                @Html.DisplayName("Shipping Address : ")
+                @Html.DisplayName("Customer Note : ")
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.Item1.ShippingDetail.Address)
             </dd>
-            <dt>
-                @Html.DisplayName("Order Date : ")
+            @*<dt>
+                @Html.DisplayName("Order Canceled : ")
             </dt>
             <dd>
-                @Html.DisplayFor(model => model.Item1.OrderDate)
-            </dd>
+                @Html.DisplayFor(model => model.Item1.CancelOrder)
+            </dd>*@
 
 
         </dl>
@@ -131,14 +143,17 @@
         </div>
     </div>
 </div>
-@Html.ActionLink("Back", "Index", "Order", new { @class = "btn btn-success" })
+@Html.ActionLink("Back", "Index", "Order", new { @class = "btn btn-primary" })
 
 @if (ViewBag.ShowDispatchButton)
 {
-    <button onclick="location.href='@Url.Action("Dispatch", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-warning"><i class="fa fa-send"></i> Order Dispatched</button>
-}
+<button onclick="location.href='@Url.Action("Dispatch", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-success"><i class="fa fa-send"></i> Order Dispatched</button>}
 
 @if (ViewBag.ShowFinishButton)
 {
-    <button onclick="location.href='@Url.Action("Finish", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Order Finished</button>
-}
+<button onclick="location.href='@Url.Action("Finish", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Order Finished</button>}
+
+@*@if (ViewBag.ShowCancelButton)
+{
+<button onclick="location.href='@Url.Action("CancelOrder", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-warning" style="float: right;"><i class="fa fa-times"></i> Cancel Order</button>
+}*@

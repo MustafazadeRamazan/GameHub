@@ -26,24 +26,35 @@ namespace IMS_Project.Controllers
             ViewBag.Discount = 0;
             ViewBag.TAmount = SumAmount - 0;
             ViewBag.Amount = SumAmount;
+            //ViewBag.ShowCancelButton = true;
 
-            if (ord.DIspatched == false)
-            {
-                ViewBag.ShowDispatchButton = true;
-            }
-            else
-            {
-                ViewBag.ShowDispatchButton = false;
-            }
+            //if(ord.CancelOrder == true)
+            //{
+            //    ViewBag.ShowCancelButton = false;
+            //    ViewBag.ShowDispatchButton = false;
+            //    ViewBag.ShowCancelButton = false;
+            //}
 
-            if (ord.DIspatched == true && ord.Deliver == false)
-            {
-                ViewBag.ShowFinishButton = true;
-            }
-            else
-            {
-                ViewBag.ShowFinishButton = false;
-            }
+            //if(ord.CancelOrder != true)
+            //{
+                if (ord.DIspatched == false)
+                {
+                    ViewBag.ShowDispatchButton = true;
+                }
+                else
+                {
+                    ViewBag.ShowDispatchButton = false;
+                }
+
+                if (ord.DIspatched == true && ord.Deliver == false)
+                {
+                    ViewBag.ShowFinishButton = true;
+                }
+                else
+                {
+                    ViewBag.ShowFinishButton = false;
+                }
+            //}
 
             return View(tuple);
         }
@@ -55,7 +66,7 @@ namespace IMS_Project.Controllers
             ord.DIspatched = true;
             db.SaveChanges();
 
-            TempData["AlertMessageSuccess"] = $"Order {ord.OrderID} Dispatched Successfully";
+            TempData["AlertMessageSuccess"] = $"Order ID:{ord.OrderID} Dispatched Successfully";
             return RedirectToAction("Details", new { id = ord.OrderID });
         }
 
@@ -66,8 +77,18 @@ namespace IMS_Project.Controllers
             ord.Deliver = true;
             db.SaveChanges();
 
-            TempData["AlertMessageSuccess"] = $"Order {ord.OrderID} Finished Successfully";
+            TempData["AlertMessageSuccess"] = $"Order ID:{ord.OrderID} Finished Successfully";
             return RedirectToAction("Details", new { id = ord.OrderID });
         }
+
+        //public ActionResult CancelOrder(int id)
+        //{
+        //    Order ord = db.Orders.Find(id);
+        //    ord.CancelOrder = true;
+        //    db.SaveChanges();
+
+        //    TempData["AlertMessageSuccess"] = $"Order ID:{ord.OrderID} Canceled Successfully";
+        //    return RedirectToAction("Details", new { id = ord.OrderID });
+        //}
     }
 }

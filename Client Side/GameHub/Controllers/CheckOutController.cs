@@ -49,7 +49,7 @@ namespace GameHub.Controllers
                 shpDetails.ShippingID = shpID;
                 shpDetails.FirstName = "user";
                 shpDetails.LastName = "user";
-                shpDetails.Email = "user";
+                shpDetails.Email = getCheckoutDetails["Email"];
                 shpDetails.Mobile = "user";
                 shpDetails.Address = getCheckoutDetails["Address"];
                 shpDetails.Province = "user";
