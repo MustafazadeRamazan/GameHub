@@ -87,7 +87,8 @@
                             <div class="aa-header-top-right">
                                 <ul class="aa-head-top-nav-right">
                                     
-                                    <li><a href="@(Session["username"] != null ? Url.Action("Index", "Account") : Url.Action("Login", "Account"))">My Account</a></li>                                    
+                                    <li><a href="@(Session["username"] != null ? Url.Action("Index", "Account") : Url.Action("Login", "Account"))">My Account</a></li>    
+                                    <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "Order") : Url.Action("Login", "Account"))">My Orders @*@if(@ViewBag.WlItemsNo > 0 ){ <text>(@ViewBag.WlItemsNo)</text> }*@</a></li>
                                     <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "WishList") : Url.Action("Login", "Account"))">Wishlist @*@if(@ViewBag.WlItemsNo > 0 ){ <text>(@ViewBag.WlItemsNo)</text> }*@</a></li>
                                     <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "MyCart") : Url.Action("Login", "Account"))">My Cart @*@if (@ViewBag.NoOfItem > 0){ <text>(@ViewBag.NoOfItem)</text> }*@</a></li>
                                     <li class="hidden-xs"><a href="@(Session["username"] != null ? Url.Action("Index", "CheckOut") : Url.Action("Login", "Account"))">Checkout</a></li>
@@ -129,11 +130,17 @@
                                 {
                                     if (Request.Url.AbsolutePath != "/Product/Search" && Request.QueryString["product="] != "Cs+Go+Full+Account")
                                     {
-                                        <a class="aa-cart-link" href="http://localhost:4040/MyCart">
-                                            <span class="fa fa-shopping-basket"></span>
-                                            <span class="aa-cart-title">SHOPPING CART</span>
-                                            <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
-                                        </a>
+                                        if (Request.Url.AbsolutePath != "/Order")
+                                        {
+                                            if (!Request.Url.AbsolutePath.StartsWith("/Order/Details"))
+                                            {
+                                                <a class="aa-cart-link" href="http://localhost:4040/MyCart">
+                                                    <span class="fa fa-shopping-basket"></span>
+                                                    <span class="aa-cart-title">SHOPPING CART</span>
+                                                    <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
+                                                </a>
+                                            }
+                                        }
                                     }
                                 }
                                 <div class="aa-cartbox-summary">
@@ -145,7 +152,7 @@
                                     </ul>
                                     @if (Session["username"] != null)
                                     {
-                        <a class="aa-cartbox-checkout aa-primary-btn" href="@Url.Action("Index", "CheckOut")">Checkout</a>}
+                            <a class="aa-cartbox-checkout aa-primary-btn" href="@Url.Action("Index", "CheckOut")">Checkout</a>}
                                 </div>
                             </div>
                             <!-- / cart box -->
@@ -245,22 +252,7 @@
     @RenderBody()
    
     <!-- Subscribe section -->
-    <section id="aa-subscribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="aa-subscribe-area">
-                        <h3>Subscribe our newsletter </h3>
-                        <p>Subscribe our newsletter to receive the latest news and exclusive offers every week. No Spam!</p>
-                        <form action="" class="aa-subscribe-form">
-                            <input type="email" name="" id="" required placeholder="Enter your Email">
-                            <input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- / Subscribe section -->
     <!-- footer -->
     <footer id="aa-footer">

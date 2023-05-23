@@ -1,0 +1,168 @@
+﻿@using GameHub.Models;
+@model Tuple<Order, IEnumerable<OrderDetail>>
+@{ ViewBag.Title = "My Orders";
+    ViewBag.SubTitle = "Details"; 
+}
+
+<section id="aa-catg-head-banner">
+    <img src="~/Content/img/gamebanner.jpg" alt="fashion img">
+    <div class="aa-catg-head-banner-area">
+        <div class="container">
+            <div class="aa-catg-head-banner-content">
+                <h2>Your Order</h2>
+                <ol class="breadcrumb">
+                    <li><a href="http://localhost:4040/">Home</a></li>
+                    <li class="active">Order</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class="row">
+                <div class="">
+                    <div class="col-md-12 ">
+                        <table class="table table-hover ">
+                            <br />
+                            <div class="col-md-6">
+                                <dl class="dl-horizontal ">
+                                    <dt>
+                                        @Html.DisplayName("Order ID : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.OrderID)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Your Name : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.Customer.First_Name)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Your Surname : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.Customer.Last_Name)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Your Email : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.Customer.Email)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Your Number : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.Customer.Mobile1)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Your Country : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.Customer.Country)
+                                    </dd>
+
+                                </dl>
+                            </div>
+                            <div class="col-md-6">
+                                <dl class="dl-horizontal ">
+                                    <dt>
+                                        @Html.DisplayName("Order Date : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.OrderDate)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Order Dispatched : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.DIspatched)
+                                        @Html.DisplayFor(model => model.Item1.DispatchedDate)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Order Finished : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.Deliver)
+                                        @Html.DisplayFor(model => model.Item1.DeliveryDate)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Shipping to Email : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.ShippingDetail.Email)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayName("Your Note : ")
+                                    </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Item1.ShippingDetail.Address)
+                                    </dd>
+                                    @*<dt>
+                                    @Html.DisplayName("Order Canceled : ")
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Item1.CancelOrder)
+                                </dd>*@
+
+
+                                </dl>
+                            </div>
+                            <thead>
+                                <tr>
+                                    <th style="padding-left: 25px">ID</th>
+                                    <th style="padding-left: 25px">Product Name</th>
+                                    <th style="padding-left: 25px">Quantity</th>
+                                    <th style="padding-left: 25px">Unit Price</th>
+                                    <th style="padding-left: 25px">Total</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @{int i = 0;}
+                                @foreach (var item in Model.Item2)
+                                {
+                                    i++;
+                    <tr>
+                        <td style="padding-left: 25px">@i.ToString()</td>
+                        <td style="padding-left: 25px">@item.Product.Name</td>
+                        <td style="padding-left: 25px">@item.Quantity</td>
+                        <td style="padding-left: 25px">@item.UnitPrice $</td>
+                        <td style="padding-left: 25px">@item.TotalAmount $</td>
+                    </tr>
+}
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5"><h2></h2></td>
+
+                                </tr>
+                                <tr class="bg-info">
+                                    <th style="padding-left: 25px">Total Amount:</th>
+                                    <th style="padding-left: 25px"></th>
+                                    <th style="padding-left: 25px">@ViewBag.TotalItems</th>
+                                    <th style="padding-left: 25px"></th>
+                                    <th style="padding-left: 25px">@ViewBag.TAmount $</th>
+                                </tr>
+                            </tfoot>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="" style="padding-left: 25px;">
+                @Html.ActionLink("Back", "Index", "Order", new { @class = "btn btn-primary", @style = "width: 100px;" })
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*@if (ViewBag.ShowCancelButton)
+{
+<button onclick="location.href='@Url.Action("CancelOrder", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-warning" style="float: right;"><i class="fa fa-times"></i> Cancel Order</button>
+}*@

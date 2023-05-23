@@ -26,7 +26,6 @@ namespace IMS_Project.Models
         public Nullable<int> ShippingID { get; set; }
         public Nullable<int> Discount { get; set; }
         public Nullable<int> Taxes { get; set; }
-        [DisplayFormat(DataFormatString = "{0:C}")]
         public Nullable<int> TotalAmount { get; set; }
         public Nullable<System.DateTime> OrderDate { get; set; }
         public Nullable<bool> DIspatched { get; set; }

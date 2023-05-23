@@ -1,0 +1,83 @@
+﻿@model IEnumerable<GameHub.Models.Order>
+
+@{ ViewBag.Title = "Order History"; }
+
+<section id="aa-catg-head-banner" style="margin-bottom:20px;">
+    <img src="~/Content/img/gamebanner.jpg" alt="fashion img">
+    <div class="aa-catg-head-banner-area">
+        <div class="container">
+            <div class="aa-catg-head-banner-content">
+                <h2>Order History</h2>
+                <ol class="breadcrumb">
+                    <li><a href="http://localhost:4040/">Home</a></li>
+                    <li class="active">Order History</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<table class="table table-bordered" style="text-align: center;">
+    @if (Session["username"] != null)
+    {
+        bool itemExists = false;
+    <tr>
+        <th style="text-align: center;">
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th style="text-align: center;">
+            @Html.DisplayNameFor(model => model.Customer.CustomerID)
+        </th>
+        <th style="text-align: center;">
+            @Html.DisplayNameFor(model => model.Customer.UserName)
+        </th>
+        <th style="text-align: center;">
+            Order Count
+        </th>
+        <th style="text-align: center;">
+            Order Finished
+        </th>
+        <th style="text-align: center;">
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </th>
+    
+        <th></th>
+    </tr> 
+    foreach (var item in Model)
+    {
+            itemExists = true;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.CustomerID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDetails.Count)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Deliver)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalAmount) $
+                </td>
+            
+                <td>
+                    <a href="@Url.Action("Details", new { id = item.OrderID })" class="btn btn-primary">View Order</a>
+                </td>
+            </tr> 
+    }
+            if (itemExists == false)
+            {
+               <h2 class="text-center" style="margin-bottom:20px;">Sorry! There is no order history available</h2>
+            }
+}
+            else
+            {
+            <td><a href="http://localhost:4040/Account/Login"><h4 class="aa-cart-view-btn">Please login to view your order history</h4></a></td>
+            }
+</table>
