@@ -60,7 +60,26 @@
                     @Html.DisplayFor(modelItem => item.OrderDetails.Count)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Deliver)
+                    @if (item.CancelOrder == true)
+                    {
+                        <label style="color: red;">Order Canceled</label>
+                    }
+                    else
+                    {
+                        if (item.Deliver == true)
+                        {
+                            <label style="color:green;">✔</label>
+                        }
+                        else if(item.DIspatched == true && item.Deliver == false)
+                        {
+                            <label>⌛</label>
+                        }
+                        else
+                        {
+                            <label style="color: red;">-</label>
+                        }
+                        //@Html.DisplayFor(modelItem => item.Deliver)
+                    }
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.TotalAmount) $

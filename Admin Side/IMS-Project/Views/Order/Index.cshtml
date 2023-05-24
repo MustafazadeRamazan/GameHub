@@ -53,13 +53,47 @@
         @Html.DisplayFor(modelItem => item.OrderDate)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.DIspatched)
+        @if (item.CancelOrder == true)
+        {
+            <label style="color: red;">⠀⠀⠀✖</label>
+        }
+        else
+        {
+                        if(item.DIspatched == true)
+                    {
+                        <label style="color:green;">⠀⠀⠀✔</label>
+                    }
+                    else
+                    {
+                        <label>⠀⠀⠀⌛</label>
+                    }
+            //@Html.DisplayFor(modelItem => item.DIspatched)
+        }
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.DispatchedDate)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.Deliver)
+        @if (item.CancelOrder == true)
+        {
+            <label style="color: red;">⠀⠀⠀✖</label>
+        }
+        else
+        {
+            if(item.Deliver == true)
+                    {
+                        <label style="color:green;">⠀⠀⠀✔</label>
+            }
+            else if(item.DIspatched == true && item.Deliver == false)
+                        {
+                            <label>⠀⠀⠀⌛</label>
+                        }
+            else
+            {
+                        <label style="color: red;">⠀⠀⠀-</label>
+                    }
+            //@Html.DisplayFor(modelItem => item.Deliver)
+        }
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.DeliveryDate)

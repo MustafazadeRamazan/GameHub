@@ -73,6 +73,7 @@ namespace GameHub.Controllers
                 o.OrderDate = DateTime.Now;
                 o.DIspatched = false;
                 o.Deliver = false;
+                o.CancelOrder = false;
                 db.Orders.Add(o);
 
                 foreach (var OD in TempShpData.items)

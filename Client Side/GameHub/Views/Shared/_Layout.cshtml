@@ -130,7 +130,7 @@
                                 {
                                     if (Request.Url.AbsolutePath != "/Product/Search" && Request.QueryString["product="] != "Cs+Go+Full+Account")
                                     {
-                                        if (Request.Url.AbsolutePath != "/Order")
+                                        if (!Request.Url.AbsolutePath.StartsWith("/Order"))
                                         {
                                             if (!Request.Url.AbsolutePath.StartsWith("/Order/Details"))
                                             {

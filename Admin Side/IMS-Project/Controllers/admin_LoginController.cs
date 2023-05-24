@@ -43,5 +43,12 @@ namespace IMS_Project.Controllers
             TempData["AlertMessageSuccess"] = "Successfully Logged Out!";
             return RedirectToAction("Index", "admin_Login");
         }
+
+        public ActionResult SessionExpired()
+        {
+            Session.Clear();
+            TempData["AlertMessageError"] = "Session Expired, please login again";
+            return RedirectToAction("Index", "admin_Login");
+        }
     }
 }

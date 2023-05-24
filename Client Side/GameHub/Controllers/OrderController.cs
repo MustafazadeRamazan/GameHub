@@ -30,7 +30,36 @@ namespace GameHub.Controllers
             ViewBag.TAmount = SumAmount - 0;
             ViewBag.Amount = SumAmount;
 
+            if (ord.CancelOrder == true)
+            {
+                ViewBag.ShowFinishButton = false;
+            }
+
+            if (ord.CancelOrder == false)
+            {
+
+                if (ord.DIspatched == true && ord.Deliver == false)
+                {
+                    ViewBag.ShowFinishButton = true;
+                }
+                else
+                {
+                    ViewBag.ShowFinishButton = false;
+                }
+            }
+
             return View(tuple);
+        }
+
+        public ActionResult Finish(int id)
+        {
+            Order ord = db.Orders.Find(id);
+            ord.DeliveryDate = DateTime.Now;
+            ord.Deliver = true;
+            db.SaveChanges();
+
+            TempData["AlertMessageSuccess"] = $"Thank You for Shopping With Us!";
+            return RedirectToAction("Details", new { id = ord.OrderID });
         }
 
 

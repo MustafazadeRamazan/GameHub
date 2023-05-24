@@ -26,17 +26,17 @@ namespace IMS_Project.Controllers
             ViewBag.Discount = 0;
             ViewBag.TAmount = SumAmount - 0;
             ViewBag.Amount = SumAmount;
-            //ViewBag.ShowCancelButton = true;
+            ViewBag.ShowCancelButton = true;
 
-            //if(ord.CancelOrder == true)
-            //{
-            //    ViewBag.ShowCancelButton = false;
-            //    ViewBag.ShowDispatchButton = false;
-            //    ViewBag.ShowCancelButton = false;
-            //}
+            if (ord.CancelOrder == true)
+            {
+                ViewBag.ShowFinishButton = false;
+                ViewBag.ShowDispatchButton = false;
+                ViewBag.ShowCancelButton = false;
+            }
 
-            //if(ord.CancelOrder != true)
-            //{
+            if (ord.CancelOrder == false)
+            {
                 if (ord.DIspatched == false)
                 {
                     ViewBag.ShowDispatchButton = true;
@@ -44,6 +44,7 @@ namespace IMS_Project.Controllers
                 else
                 {
                     ViewBag.ShowDispatchButton = false;
+                    ViewBag.ShowCancelButton = false;
                 }
 
                 if (ord.DIspatched == true && ord.Deliver == false)
@@ -54,7 +55,7 @@ namespace IMS_Project.Controllers
                 {
                     ViewBag.ShowFinishButton = false;
                 }
-            //}
+            }
 
             return View(tuple);
         }
@@ -81,14 +82,14 @@ namespace IMS_Project.Controllers
             return RedirectToAction("Details", new { id = ord.OrderID });
         }
 
-        //public ActionResult CancelOrder(int id)
-        //{
-        //    Order ord = db.Orders.Find(id);
-        //    ord.CancelOrder = true;
-        //    db.SaveChanges();
+        public ActionResult CancelOrder(int id)
+        {
+            Order ord = db.Orders.Find(id);
+            ord.CancelOrder = true;
+            db.SaveChanges();
 
-        //    TempData["AlertMessageSuccess"] = $"Order ID:{ord.OrderID} Canceled Successfully";
-        //    return RedirectToAction("Details", new { id = ord.OrderID });
-        //}
+            TempData["AlertMessageSuccess"] = $"Order ID:{ord.OrderID} Canceled Successfully";
+            return RedirectToAction("Details", new { id = ord.OrderID });
+        }
     }
 }

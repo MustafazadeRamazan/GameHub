@@ -1,8 +1,7 @@
 ﻿@using GameHub.Models;
 @model Tuple<Order, IEnumerable<OrderDetail>>
 @{ ViewBag.Title = "My Orders";
-    ViewBag.SubTitle = "Details"; 
-}
+    ViewBag.SubTitle = "Details"; }
 
 <section id="aa-catg-head-banner">
     <img src="~/Content/img/gamebanner.jpg" alt="fashion img">
@@ -11,7 +10,7 @@
             <div class="aa-catg-head-banner-content">
                 <h2>Your Order</h2>
                 <ol class="breadcrumb">
-                    <li><a href="http://localhost:4040/">Home</a></li>
+                    <li><a href="http://localhost:4040/Order">Order History</a></li>
                     <li class="active">Order</li>
                 </ol>
             </div>
@@ -30,10 +29,15 @@
                             <div class="col-md-6">
                                 <dl class="dl-horizontal ">
                                     <dt>
-                                        @Html.DisplayName("Order ID : ")
+                                        @Html.DisplayName("Order Canceled : ")
                                     </dt>
                                     <dd>
-                                        @Html.DisplayFor(model => model.Item1.OrderID)
+                                        @if (Model.Item1.CancelOrder == true)
+                                        {
+                            <label style="color:red;">✔⠀⠀</label> }
+                                        else
+                                        {
+                            <label style="color:green;">✖⠀⠀</label>}
                                     </dd>
                                     <dt>
                                         @Html.DisplayName("Your Name : ")
@@ -80,14 +84,36 @@
                                         @Html.DisplayName("Order Dispatched : ")
                                     </dt>
                                     <dd>
-                                        @Html.DisplayFor(model => model.Item1.DIspatched)
+                                        @if (Model.Item1.DIspatched == true)
+                                        {
+                            <label style="color:green;">✔⠀⠀</label> }
+                                        else if (Model.Item1.CancelOrder == true)
+                                        {
+                                            <label style="color:red;">✖⠀⠀</label>
+                                        }
+                                        else
+                                        {
+                            <label style="color: red;">-</label>}
                                         @Html.DisplayFor(model => model.Item1.DispatchedDate)
                                     </dd>
                                     <dt>
                                         @Html.DisplayName("Order Finished : ")
                                     </dt>
                                     <dd>
-                                        @Html.DisplayFor(model => model.Item1.Deliver)
+                                        @if (Model.Item1.Deliver == true)
+                                        {
+                            <label style="color:green;">✔⠀⠀</label> }
+                                        else if (Model.Item1.DIspatched == true && Model.Item1.Deliver == false)
+                                        {
+                                            <label>⌛⠀⠀</label>
+                                        }
+                                        else if (Model.Item1.CancelOrder == true)
+                                        {
+                                            <label style="color:red;">✖⠀⠀</label>
+                                        }
+                                        else
+                                        {
+                            <label style="color: red;">-</label>}
                                         @Html.DisplayFor(model => model.Item1.DeliveryDate)
                                     </dd>
                                     <dt>
@@ -102,12 +128,6 @@
                                     <dd>
                                         @Html.DisplayFor(model => model.Item1.ShippingDetail.Address)
                                     </dd>
-                                    @*<dt>
-                                    @Html.DisplayName("Order Canceled : ")
-                                </dt>
-                                <dd>
-                                    @Html.DisplayFor(model => model.Item1.CancelOrder)
-                                </dd>*@
 
 
                                 </dl>
@@ -133,8 +153,13 @@
                         <td style="padding-left: 25px">@item.Quantity</td>
                         <td style="padding-left: 25px">@item.UnitPrice $</td>
                         <td style="padding-left: 25px">@item.TotalAmount $</td>
-                    </tr>
-}
+                    </tr> if (item.Order.DIspatched == true && item.Order.Deliver == true)
+                                    {
+                    <label class="text-center" style="color: rgb(76, 255, 0,0.5); position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%) rotate(30deg); font-size: 70px;">Was Delivered!</label> }
+                                    if (item.Order.CancelOrder == true)
+                                    {
+                    <label class="text-center" style="color: rgb(255, 0, 0,0.5); position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%) rotate(30deg); font-size: 70px;">Order Canceled!</label>}
+                                }
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -154,15 +179,12 @@
                     </div>
                 </div>
             </div>
-            <div class="" style="padding-left: 25px;">
+            <div style="padding-left: 25px;">
                 @Html.ActionLink("Back", "Index", "Order", new { @class = "btn btn-primary", @style = "width: 100px;" })
-
+                @if (ViewBag.ShowFinishButton)
+                {
+    <button style="margin-left: 15px;" onclick="location.href='@Url.Action("Finish", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Order Delivered Me!</button>}
             </div>
         </div>
     </div>
 </div>
-
-@*@if (ViewBag.ShowCancelButton)
-{
-<button onclick="location.href='@Url.Action("CancelOrder", "Order", new { id = Model.Item1.OrderID })'" class="btn btn-warning" style="float: right;"><i class="fa fa-times"></i> Cancel Order</button>
-}*@
