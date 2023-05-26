@@ -11,7 +11,7 @@
             <div class="aa-catg-head-banner-content">
                 <h2>Checkout Page</h2>
                 <ol class="breadcrumb">
-                    <li><a href="http://localhost:4040/">Home</a></li>
+                    <li><a href="@Url.Action("Index","Home")">Home</a></li>
                     <li class="active">Checkout</li>
                 </ol>
             </div>
@@ -190,7 +190,7 @@
                                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
                                         @if (Session["username"]==null)
                                         {
-                                            <a href="http://localhost:4040/Account/Login"><h3 class="color:b aa-cart-view-btn">Please login to Checkout</h3></a>
+                                            <a href="@Url.Action("Login", "Account")"><h3 class="color:b aa-cart-view-btn">Please login to Checkout</h3></a>
                                         }
                                         @if (Model.ToList().Count > 0)
                                         { 

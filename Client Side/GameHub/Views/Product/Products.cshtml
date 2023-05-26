@@ -54,12 +54,17 @@
                             {
                                 foreach (var item in Model)
                                 {
+                                    if (item.UnitInStock == 0)
+                                    {
+                                        item.AddBadge = true;
+                                        item.OfferBadgeClass = "aa-sold-out";
+                                        item.OfferTitle = "SOLD OUT";
+                                    }
                                     if (item.ProductAvailable == true)
                                     {
                                         productavailable = true;
                                         Html.RenderPartial("_Product", item);
                                     }
-
                                 }
                             }
                             @if (productavailable == false || Model == null || Model.Count == 0)
@@ -120,11 +125,10 @@
                     <div class="aa-sidebar-widget">
                         <h3>Tags</h3>
                         <div class="tag-cloud">
-                            <a href="http://localhost:4040/Product/ViewDetails/5">Pubg Mobile</a>
-                            <a href="http://localhost:4040/Product/ViewDetails/13">Warzone</a>
-                            <a href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Fps%20Games">Accounts</a>
-                            <a href="http://localhost:4040/Product/ViewDetails/1">CS:GO</a>
-                            <a href="http://localhost:4040/Product/ViewDetails/4">Skins</a>
+                                @foreach (GameHub.Models.TopSoldProduct item in ViewBag.TopRatedProducts)
+                                {
+                                    <a href="@Url.Action("ViewDetails", "Product", new { id = item.product.ProductID })" class="aa-cartbox-img">@item.product.Name</a>
+                                }
                         </div>
                     </div>
                     <!-- single sidebar -->

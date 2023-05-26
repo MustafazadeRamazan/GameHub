@@ -202,9 +202,15 @@
 
                             <!-- start single product item -->
                             @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.RelatedProducts)
-                                    {
-                                        { Html.RenderPartial("_Product", item); }
-                                    }
+                            {
+                                if (item.UnitInStock == 0)
+                                {
+                                    item.AddBadge = true;
+                                    item.OfferBadgeClass = "aa-sold-out";
+                                    item.OfferTitle = "SOLD OUT";
+                                }
+                                { Html.RenderPartial("_Product", item); }
+                            }
                             <!-- end start single product item -->                 
                            
                         </ul>                       

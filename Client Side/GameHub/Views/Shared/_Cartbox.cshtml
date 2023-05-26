@@ -4,9 +4,9 @@
     foreach (var item in @ViewBag.cartBox)
     {
         <li>
-            <a class="aa-cartbox-img" href="http://localhost:4040/MyCart"><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></a>
+            <a class="aa-cartbox-img" href="@Url.Action("Index", "MyCart")"><img src="@item.Product.ImageURL" alt="@item.Product.AltText"></a>
             <div class="aa-cartbox-info">
-                <h4><a href="http://localhost:4040/MyCart">@item.Product.Name</a></h4>
+                <h4><a href="@Url.Action("Index", "MyCart")">@item.Product.Name</a></h4>
                 <p>@item.Quantity x @item.TotalAmount <strong>$</strong></p>
             </div>
             <a class="aa-remove-product" href="@Url.Action("Remove", "MyCart", new { id=item.ProductID})"><span class="fa fa-times"></span></a>

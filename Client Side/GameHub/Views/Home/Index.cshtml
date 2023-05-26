@@ -19,7 +19,7 @@
                 <span data-seq>@item.OfferTag</span>
                 <h2 data-seq>@item.Title</h2>
                 <p data-seq>@item.Description</p>
-                <a data-seq href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Fps%20Games" class="aa-shop-now-btn aa-secondary-btn">@item.BtnText</a>
+                <a data-seq href="@Url.Action("GetProductsByCategory", "Product", new { categoryName = "Fps Games" })" class="aa-shop-now-btn aa-secondary-btn">@item.BtnText</a>
             </div>
         </li>}
                     <!-- end single slide item -->
@@ -102,12 +102,18 @@
                                         <!-- start single product item -->
                                         @foreach (var item in (List<GameHub.Models.Product>)ViewBag.FpsGames)
                                         {
+                                            if (item.UnitInStock == 0)
+                                            {
+                                                item.AddBadge = true;
+                                                item.OfferBadgeClass = "aa-sold-out";
+                                                item.OfferTitle = "SOLD OUT";
+                                            }
                                             { Html.RenderPartial("_Product", item); }
                                         }
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Fps%20Games">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="@Url.Action("GetProductsByCategory", "Product", new { categoryName = "Fps Games" })">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
                                 </div>
 
                                 <!-- start women product category -->
@@ -116,12 +122,18 @@
                                         <!-- start single product item -->
                                         @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.GameProjects)
                                         {
+                                            if (item.UnitInStock == 0)
+                                            {
+                                                item.AddBadge = true;
+                                                item.OfferBadgeClass = "aa-sold-out";
+                                                item.OfferTitle = "SOLD OUT";
+                                            }
                                             { Html.RenderPartial("_Product", item); }
                                         }
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Game%20Projects">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="@Url.Action("GetProductsByCategory", "Product", new { categoryName = "Game Projects" })">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
                                 </div>
 
                                 <!-- start sports product category -->
@@ -130,12 +142,18 @@
                                         <!-- start single product item -->
                                         @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.SportsProduct)
                                         {
+                                            if (item.UnitInStock == 0)
+                                            {
+                                                item.AddBadge = true;
+                                                item.OfferBadgeClass = "aa-sold-out";
+                                                item.OfferTitle = "SOLD OUT";
+                                            }
                                             { Html.RenderPartial("_Product", item); }
                                         }
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Sport%20Games">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="@Url.Action("GetProductsByCategory", "Product", new { categoryName = "Sport Games" })">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
 
                                 </div>
 
@@ -145,12 +163,18 @@
                                         <!-- start single product item -->
                                         @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.ActionAdventure)
                                         {
+                                            if (item.UnitInStock == 0)
+                                            {
+                                                item.AddBadge = true;
+                                                item.OfferBadgeClass = "aa-sold-out";
+                                                item.OfferTitle = "SOLD OUT";
+                                            }
                                             { Html.RenderPartial("_Product", item); }
                                         }
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Action%20Adventure">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="@Url.Action("GetProductsByCategory", "Product", new { categoryName = "Action Adventure" })">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
 
                                 </div>
                                 <!-- / ActionAdventure product category -->
@@ -159,96 +183,21 @@
                                         <!-- start single product item -->
                                         @foreach (var item in (List<GameHub.Models.Product>)@ViewBag.SurvivalGames)
                                         {
+                                            if (item.UnitInStock == 0)
+                                            {
+                                                item.AddBadge = true;
+                                                item.OfferBadgeClass = "aa-sold-out";
+                                                item.OfferTitle = "SOLD OUT";
+                                            }
                                             { Html.RenderPartial("_Product", item); }
                                         }
                                         <!-- end start single product item -->
 
                                     </ul>
-                                    <a class="aa-browse-btn" href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Survival%20Games">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
+                                    <a class="aa-browse-btn" href="@Url.Action("GetProductsByCategory", "Product", new { categoryName = "Survival Games" })">Browse all Account <span class="fa fa-long-arrow-right"></span></a>
 
                                 </div>
                             </div>
-                            <!-- quick view modal -->
-                            <div class="modal fade" id="quick-view-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-body">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <div class="row">
-                                                <!-- Modal view slider -->
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="aa-product-view-slider">
-                                                        <div class="simpleLens-gallery-container" id="demo-1">
-                                                            <div class="simpleLens-container">
-                                                                <div class="simpleLens-big-image-container">
-                                                                    <a class="simpleLens-lens-image" data-lens-image="img/view-slider/large/polo-shirt-1.png">
-                                                                        <img src="~/Content/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="simpleLens-thumbnails-container">
-                                                                <a href="#" class="simpleLens-thumbnail-wrapper"
-                                                                   data-lens-image="img/view-slider/large/polo-shirt-1.png"
-                                                                   data-big-image="img/view-slider/medium/polo-shirt-1.png">
-                                                                    <img src="~/Content/img/view-slider/thumbnail/polo-shirt-1.png">
-                                                                </a>
-                                                                <a href="#" class="simpleLens-thumbnail-wrapper"
-                                                                   data-lens-image="img/view-slider/large/polo-shirt-3.png"
-                                                                   data-big-image="img/view-slider/medium/polo-shirt-3.png">
-                                                                    <img src="~/Content/img/view-slider/thumbnail/polo-shirt-3.png">
-                                                                </a>
-
-                                                                <a href="#" class="simpleLens-thumbnail-wrapper"
-                                                                   data-lens-image="img/view-slider/large/polo-shirt-4.png"
-                                                                   data-big-image="img/view-slider/medium/polo-shirt-4.png">
-                                                                    <img src="~/Content/img/view-slider/thumbnail/polo-shirt-4.png">
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Modal view content -->
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="aa-product-view-content">
-                                                        <h3>T-Shirt</h3>
-                                                        <div class="aa-price-block">
-                                                            <span class="aa-product-view-price">34.99$</span>
-                                                            <p class="aa-product-avilability">Avilability: <span>In stock</span></p>
-                                                        </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>
-                                                        <h4>Size</h4>
-                                                        <div class="aa-prod-view-size">
-                                                            <a href="#">S</a>
-                                                            <a href="#">M</a>
-                                                            <a href="#">L</a>
-                                                            <a href="#">XL</a>
-                                                        </div>
-                                                        <div class="aa-prod-quantity">
-                                                            <form action="">
-                                                                <select name="" id="">
-                                                                    <option value="0" selected="1">1</option>
-                                                                    <option value="1">2</option>
-                                                                    <option value="2">3</option>
-                                                                    <option value="3">4</option>
-                                                                    <option value="4">5</option>
-                                                                    <option value="5">6</option>
-                                                                </select>
-                                                            </form>
-                                                            <p class="aa-prod-category">
-                                                                Category: <a href="#">Polo T-Shirt</a>
-                                                            </p>
-                                                        </div>
-                                                        <div class="aa-prod-view-bottom">
-                                                            <a href="#" class="aa-add-to-cart-btn"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
-                                                            <a href="#" class="aa-add-to-cart-btn">View Details</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- / quick view modal -->
                         </div>
                     </div>
                 </div>

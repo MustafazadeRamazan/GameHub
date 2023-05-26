@@ -9,7 +9,7 @@
             <div class="aa-catg-head-banner-content">
                 <h2>Order History</h2>
                 <ol class="breadcrumb">
-                    <li><a href="http://localhost:4040/">Home</a></li>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
                     <li class="active">Order History</li>
                 </ol>
             </div>
@@ -97,6 +97,6 @@
 }
             else
             {
-            <td><a href="http://localhost:4040/Account/Login"><h4 class="aa-cart-view-btn">Please login to view your order history</h4></a></td>
+            <td><a href="@Url.Action("Login", "Account")"><h4 class="aa-cart-view-btn">Please login to view your order history</h4></a></td>
             }
 </table>

@@ -134,7 +134,7 @@
                                         {
                                             if (!Request.Url.AbsolutePath.StartsWith("/Order/Details"))
                                             {
-                                                <a class="aa-cart-link" href="http://localhost:4040/MyCart">
+                                                <a class="aa-cart-link" href="@Url.Action("Index", "MyCart")">
                                                     <span class="fa fa-shopping-basket"></span>
                                                     <span class="aa-cart-title">SHOPPING CART</span>
                                                     <span class="aa-cart-notify">@(ViewBag.NoOfItem==null ? 0 :ViewBag.NoOfItem)</span>
@@ -268,8 +268,8 @@
                                         <h3>Main Menu</h3>
                                         <ul class="aa-footer-nav">
                                             <li><a href="/">Home</a></li>
-                                            <li><a href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Fps%20Games">Our Services</a></li>
-                                            <li><a href="http://localhost:4040/Product/GetProductsByCategory?categoryName=Fps%20Games">Our Products</a></li>
+                                            <li><a href="@Url.Action("GetProductsByCategory", "Product", new { categoryName = "Fps Games" })">Our Services</a></li>
+                                            <li><a href="@Url.Action("GetProductsByCategory", "Product", new { categoryName = "Fps Games" })">Our Products</a></li>
                                             <li><a href="#">About Us</a></li>
                                             <li><a href="#">Contact Us</a></li>
                                         </ul>

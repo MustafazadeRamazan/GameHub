@@ -11,7 +11,7 @@
             <div class="aa-catg-head-banner-content">
                 <h2>Cart Page</h2>
                 <ol class="breadcrumb">
-                    <li><a href="http://localhost:4040/">Home</a></li>
+                    <li><a href="@Url.Action("Index","Home")">Home</a></li>
                     <li class="active">Cart</li>
                 </ol>
             </div>
@@ -59,9 +59,9 @@
                                                     <td><a class="aa-cart-title" href="@Url.Action("ViewDetails", "Product", new { id = item.ProductID })">@item.Product.Name</a></td>
                                                     <td id="itemPrice-@(i)">@item.UnitPrice <strong>$</strong></td>
                                                     <td>
-                                                        <a href="http://localhost:4040/MyCart" onclick="decreaseQuantity('@item.ProductID')">-</a>
+                                                        <a href="@Url.Action("Index", "MyCart")" onclick="decreaseQuantity('@item.ProductID')">-</a>
                                                         <span id="quantity-@item.ProductID">@item.Quantity</span>
-                                                        <a href="http://localhost:4040/MyCart" onclick="increaseQuantity('@item.ProductID')">+</a>
+                                                        <a href="@Url.Action("Index", "MyCart")" onclick="increaseQuantity('@item.ProductID')">+</a>
                                                     </td>
                                                     <td><strong id="itemAmount-@(i)">@item.TotalAmount $</strong></td>
                                                 
@@ -77,7 +77,7 @@
                                         }
                                         else
                                         {
-                                            <a href="http://localhost:4040/Account/Login"><h4 class="aa-cart-view-btn">Please login to view your cart</h4></a>
+                                            <a href="@Url.Action("Login", "Account")"><h4 class="aa-cart-view-btn">Please login to view your cart</h4></a>
                                         }
                                         
                                     </tbody>
