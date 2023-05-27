@@ -61,26 +61,34 @@
             </dt>
             <dd>
                 @{ try
+                    {   
+                        @Html.DisplayFor(model => model.PhotoPath) 
+                    }
+                    catch (Exception)
                     {
-                        if (Model.PhotoPath != null)
-                        {
-        @Html.DisplayFor(model => model.PhotoPath) }
-    else
-    {
-        Response.Redirect("http://localhost:2680/Employee");
-    }
-}
-catch (Exception)
-{
-    Response.Redirect("http://localhost:2680/Employee");
-} }
+                        <script>window.location.href = "@Url.Action("Index", "Employee")";</script>
+                    } 
+                 }
             </dd>
         </dl>
 
 
     </div>
     <div class="col-md-4">
-         <img id="profile-image" src="@Model.PhotoPath" alt="" class="img-thumbnail" width="160" height="160" />
+                            @if(Session["username"] == null)
+                    {
+                        <script>
+                            window.location.href = '@Url.Action("SessionExpired", "admin_Login")';
+                        </script>
+                    }
+        @if (string.IsNullOrEmpty(Model.PhotoPath))
+        {
+        <img id="profile-image" src="~/Content/Images/no-image.png" alt="" class="img-thumbnail" width="160" height="160" />
+        }
+        else
+        {
+        <img id="profile-image" src="@Model.PhotoPath" alt="" class="img-thumbnail" width="160" height="160" />
+        }
     </div>
 </div>
 <p class="pull-right">

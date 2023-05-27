@@ -48,20 +48,94 @@ namespace IMS_Project.Controllers
             return View("Edit", cust);
         }
 
+        private bool IsUsernameExists(string username)
+        {
+            var customers = db.Customers.ToList();
+            foreach (var customer in customers)
+            {
+                if (customer.UserName == username)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool IsEmailExists(string email)
+        {
+            var customers = db.Customers.ToList();
+            foreach (var customer in customers)
+            {
+                if (customer.Email == email)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         //Post Edit
         [HttpPost]
         public ActionResult Edit(Customer cust)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(cust).State = EntityState.Modified;
+                Customer existingCustomer = db.Customers.Find(cust.CustomerID);
+
+                // Check if the provided email already exists in the database, excluding the case where the email belongs to the current customer being updated.
+                if (existingCustomer.Email != cust.Email && IsEmailExists(cust.Email))
+                {
+                    TempData["AlertMessageError"] = $"Customer ID: {cust.CustomerID} Email already exists. Please choose a different email.";
+                    return RedirectToAction("Index", "Customer");
+                }
+
+                // Split the new username by space if necessary
+                string[] newUsername = cust.UserName.Split(' ');
+
+                // If the username is changed, check if the new username(s) already exist.
+                if (!string.Equals(existingCustomer.UserName, cust.UserName, StringComparison.OrdinalIgnoreCase) && IsAnyUsernameExists(newUsername))
+                {
+                    TempData["AlertMessageError"] = $"Customer ID: {cust.CustomerID} Username already exists. Please choose a different username.";
+                    return RedirectToAction("Index", "Customer");
+                }
+
+                existingCustomer.First_Name = cust.First_Name;
+                existingCustomer.Last_Name = cust.Last_Name;
+                existingCustomer.UserName = cust.UserName;
+                existingCustomer.Age = cust.Age;
+                existingCustomer.Picture = cust.Picture;
+                existingCustomer.State = cust.State;
+                existingCustomer.City = cust.City;
+                existingCustomer.PostalCode = cust.PostalCode;
+                existingCustomer.Address1 = cust.Address1;
+                existingCustomer.Email = cust.Email;
+                existingCustomer.Password = cust.Password;
+                existingCustomer.Mobile1 = cust.Mobile1;
+                existingCustomer.Country = cust.Country;
+
+                db.Entry(existingCustomer).State = EntityState.Modified;
                 db.SaveChanges();
+
                 TempData["AlertMessageSuccess"] = $"Customer ID: {cust.CustomerID} Updated Successfully";
                 return RedirectToAction("Index", "Customer");
             }
 
             return View(cust);
         }
+
+        private bool IsAnyUsernameExists(string[] usernames)
+        {
+            foreach (string username in usernames)
+            {
+                if (IsUsernameExists(username))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
 
         //Get Details
         public ActionResult Details(int id)

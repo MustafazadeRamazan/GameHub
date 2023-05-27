@@ -5,6 +5,12 @@
 }
 
 <div>
+                        @if(Session["username"] == null)
+                    {
+                        <script>
+                            window.location.href = '@Url.Action("SessionExpired", "admin_Login")';
+                        </script>
+                    }
                @if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Manager")
                {
     <a href="@Url.Action("Create", "Customer")" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</a>  

@@ -103,6 +103,12 @@
     </td>
 
     <td>
+                            @if(Session["username"] == null)
+                    {
+                        <script>
+                            window.location.href = '@Url.Action("SessionExpired", "admin_Login")';
+                        </script>
+                    }
         @Html.ActionLink("View Details", "Details", new { id = item.OrderID })
 
     </td>
