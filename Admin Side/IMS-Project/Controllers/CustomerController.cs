@@ -27,11 +27,55 @@ namespace IMS_Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customer);
-                db.SaveChanges();
-                TempData["AlertMessageSuccess"] = $"Customer: {customer.First_Name} Created Successfully";
+                string[] usernames = { customer.UserName }; // Assign the original username to the array
+
+                if (customer.UserName.Contains(' '))
+                {
+                    usernames = customer.UserName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); // Split the username if it contains a space
+                }
+
+                bool isEmailExists = IsEmailExists(customer.Email);
+
+                foreach (string username in usernames)
+                {
+                    if (IsUsernameExists(username))
+                    {
+                        TempData["AlertMessageError"] = "Username already exists. Please choose a different username.";
+                        return RedirectToAction("Index", "Customer");
+                    }
+                }
+
+                if (isEmailExists)
+                {
+                    TempData["AlertMessageError"] = "Email already exists. Please choose a different email.";
+                    return RedirectToAction("Index", "Customer");
+                }
+
+
+                foreach (string username in usernames)
+                {
+                    Customer customers = new Customer
+                    {
+                        First_Name = customer.First_Name,
+                        Last_Name = customer.Last_Name,
+                        UserName = username,
+                        Age = customer.Age,
+                        Email = customer.Email,
+                        Password = customer.Password,
+                        Mobile1 = customer.Mobile1,
+                        Country = customer.Country
+                    };
+
+                    db.Customers.Add(customers);
+                    db.SaveChanges();
+                    TempData["AlertMessageSuccess"] = $"Customer: {customers.First_Name} Created Successfully";
+                    break;
+                }
+
                 return RedirectToAction("Index", "Customer");
+
             }
+
             return View();
         }
 

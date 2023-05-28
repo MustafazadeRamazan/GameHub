@@ -29,7 +29,12 @@ namespace GameHub.Controllers
         {
             if (ModelState.IsValid)
             {
-                string[] usernames = cust.UserName.Split(' ');
+                string[] usernames = { cust.UserName }; // Assign the original username to the array
+
+                if (cust.UserName.Contains(' '))
+                {
+                    usernames = cust.UserName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); // Split the username if it contains a space
+                }
 
                 bool isEmailExists = IsEmailExists(cust.Email);
 
@@ -68,6 +73,7 @@ namespace GameHub.Controllers
                     Session["username"] = username;
                     TempShpData.UserID = GetUser(username).CustomerID;
                     TempData["AlertMessageSuccess"] = $"{cust.First_Name} Successfully registered!";
+                    break;
                 }
 
                 return RedirectToAction("Index", "Home");
