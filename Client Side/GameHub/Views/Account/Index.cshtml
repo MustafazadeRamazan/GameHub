@@ -30,7 +30,7 @@
                                                 <hr />
 
                                                 <div class="form-group">
-                                                    @Html.LabelFor(model => model.First_Name, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <label class="control-label col-md-4">First Name<span>*</span></label>
                                                     <div class="col-md-8">
                                                         @Html.EditorFor(model => model.First_Name, new { htmlAttributes = new { @class = "form-control", required = "required", maxlength = "20" } })
                                                         @Html.ValidationMessageFor(model => model.First_Name, "", new { @class = "text-danger" })
@@ -38,14 +38,14 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    @Html.LabelFor(model => model.Last_Name, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <label class="control-label col-md-4">Last Name<span>*</span></label>
                                                     <div class="col-md-8">
                                                         @Html.EditorFor(model => model.Last_Name, new { htmlAttributes = new { @class = "form-control", required = "required", maxlength = "20" } })
                                                         @Html.ValidationMessageFor(model => model.Last_Name, "", new { @class = "text-danger" })
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <label class="control-label col-md-4">Age<span>*</span></label>
                                                     <div class="col-md-8">
                                                         @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control", min = "13", required = "required", maxlength = "2", oninput = "javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" } })
                                                         @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
@@ -104,7 +104,7 @@
                                                 <hr />
 
                                                 <div class="form-group">
-                                                    @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <label class="control-label col-md-4">Country<span>*</span></label>
                                                     <div class="col-md-8">
                                                         @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control", required = "required", maxlength = "20" } })
                                                         @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
@@ -136,7 +136,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <label class="control-label col-md-4">Email<span>*</span></label>
                                                     <div class="col-md-8">
                                                         @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email", required = "required", maxlength = "30" } })
                                                         @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
@@ -168,7 +168,7 @@
         </div>*@
 
                                                 <div class="form-group">
-                                                    @Html.LabelFor(model => model.Mobile1, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <label class="control-label col-md-4">Mobile<span>*</span></label>
                                                     <div class="col-md-8">
                                                         @Html.EditorFor(model => model.Mobile1, new { htmlAttributes = new { @class = "form-control", type = "number", required = "required", maxlength = "15", oninput = "javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" } })
                                                         @Html.ValidationMessageFor(model => model.Mobile1, "", new { @class = "text-danger" })
@@ -213,12 +213,21 @@
                                                     <br />
                                                     <div class="form-group text-center">
                                                         <div>
-                                                            @if (string.IsNullOrEmpty(Model.Picture))
+                                                        @if(Session["username"] != null)
+                {
+                                                            if (string.IsNullOrEmpty(Model.Picture))
                                                             {
                                             <img id="profile-image" src="~/Content/Images/no-image.png" alt="" class="img-thumbnail" width="230" height="230" /> }
                                                             else
                                                             {
                                             <img id="profile-image" src="@Model.Picture" alt="" class="img-thumbnail" width="230" height="230" />}
+                }
+                else
+                {
+                    <script>
+                            window.location.href = '@Url.Action("SessionExpired", "Account")';
+                        </script>
+                }
                                                         </div><br />
                                                         <div>
                                                             <input type="file" id="image-input" style="display:none" />
@@ -234,7 +243,7 @@
                                                 <hr />
 
                                                 <div class="form-group">
-                                                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <label class="control-label col-md-4">Username<span>*</span></label>
                                                     <div class="col-md-8">
                                                         @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", required = "required", maxlength = "20" } })
                                                         @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
@@ -242,7 +251,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <label class="control-label col-md-4">Password<span>*</span></label>
                                                     <div class="col-md-8">
                                                         @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", required = "required", maxlength = "20" } })
                                                         @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })

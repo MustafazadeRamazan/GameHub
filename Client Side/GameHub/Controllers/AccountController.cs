@@ -231,6 +231,13 @@ namespace GameHub.Controllers
             return false;
         }
 
+        public ActionResult SessionExpired()
+        {
+            Session.Clear();
+            TempData["AlertMessageError"] = "Session Expired, please login again";
+            return RedirectToAction("Login", "Account");
+        }
+
 
     }
 }
