@@ -4,313 +4,370 @@
 }
 
 <style>
-/* Google Font Link */
-@@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    /* ===== Google Font Import - Poformsins ===== */
+@@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.input-field .user-box {
+                position: relative;
+            }
+
+                .input-field .user-box input {
+                    width: 100%;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    color: #000000;
+                    margin-bottom: 30px;
+                    border: none;
+                    border-bottom: 1px solid #000000;
+                    outline: none;
+                    background: transparent;
+                }
+
+                .input-field .user-box label {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-weight: 500;
+                    font-size: 20px;
+                    color: #000000;
+                    pointer-events: none;
+                    transition: .5s;
+                }
+
+                .input-field .user-box input:focus ~ label,
+                .input-field .user-box input:valid ~ label {
+                    top: -20px;
+                    left: 0;
+                    color: #A251E2;
+                    font-size: 16px;
+                }
+
+.input-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 .container2{
-  position: relative;
-  max-width: 850px;
-  width: 100%;
-  background: #fff;
-  padding: 40px 30px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  perspective: 2700px;
-}
-.container2 .cover{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width: 50%;
-  z-index: 98;
-  transition: all 1s ease;
-  transform-origin: left;
-  transform-style: preserve-3d;
-}
-.container2 #flip:checked ~ .cover{
-  transform: rotateY(-180deg);
-}
- .container2 .cover .front,
- .container2 .cover .back{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.cover .back{
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-}
-.container2 .cover::before,
-.container2 .cover::after{
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #7d2ae8;
-  opacity: 0.5;
-  z-index: 12;
-}
-.container2 .cover::after{
-  opacity: 0.3;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-}
-.container2 .cover img{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 10;
-}
-.container2 .cover .text{
-  position: absolute;
-  z-index: 130;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.cover .text .text-1,
-.cover .text .text-2{
-  font-size: 26px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-}
-.cover .text .text-2{
-  font-size: 15px;
-  font-weight: 500;
-}
-.container2 .forms{
-  height: 100%;
-  width: 100%;
-  background: #fff;
-}
-.container2 .form-content{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.form-content .login-form,
-.form-content .signup-form{
-  width: calc(100% / 2 - 25px);
-}
-.forms .form-content .title{
-  position: relative;
-  font-size: 24px;
-  font-weight: 500;
-  color: #333;
-}
-.forms .form-content .title:before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 25px;
-  background: #7d2ae8;
-}
-.forms .signup-form  .title:before{
-  width: 20px;
-}
-.forms .form-content .input-boxes{
-  margin-top: 30px;
-}
-.forms .form-content .input-box{
-  display: flex;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  margin: 10px 0;
-  position: relative;
-}
-.form-content .input-box input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  padding: 0 30px;
-  font-size: 16px;
-  font-weight: 500;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
-.form-content .input-box input:focus,
-.form-content .input-box input:valid{
-  border-color: #7d2ae8;
-}
-.form-content .input-box i{
-  position: absolute;
-  color: #7d2ae8;
-  font-size: 17px;
-}
-.forms .form-content .text{
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-}
-.forms .form-content .text a{
-  text-decoration: none;
-}
-.forms .form-content .text a:hover{
-  text-decoration: underline;
-}
-.forms .form-content .button{
-  color: #fff;
-  margin-top: 40px;
-}
-.forms .form-content .button input{
-  color: #fff;
-  background: #7d2ae8;
-  border-radius: 6px;
-  padding: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-.forms .form-content .button input:hover{
-  background: #5b13b9;
-}
-.forms .form-content label{
-  color: #5b13b9;
-  cursor: pointer;
-}
-.forms .form-content label:hover{
-  text-decoration: underline;
-}
-.forms .form-content .login-text,
-.forms .form-content .sign-up-text{
-  text-align: center;
-  margin-top: 25px;
-}
-.container2 #flip{
-  display: none;
-}
-@@media (max-width: 730px) {
-  .container2 .cover{
-    display: none;
-  }
-  .form-content .login-form,
-  .form-content .signup-form{
+    position: relative;
+    max-width: 430px;
     width: 100%;
-  }
-  .form-content .signup-form{
-    display: none;
-  }
-  .container2 #flip:checked ~ .forms .signup-form{
-    display: block;
-  }
-  .container2 #flip:checked ~ .forms .login-form{
-    display: none;
-  }
-}</style>
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 auto; /* Center horizontally */
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    font-family: 'Poppins', sans-serif;
+}
+
+.container2 .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container2 .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container2.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container2 .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container2.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container2.active .forms{
+    height: 600px;
+}
+.container2 .form .title{
+    padding-bottom:40px;
+    text-align:center;
+    position: relative;
+    font-size: 47px;
+    font-weight: 600;
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #4070f4;
+}
+
+.form .text{
+    color: #333;
+}
+
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #265df2;
+}
+
+.form .login-signup{
+    margin-top: 10px;
+    text-align: center;
+}
+</style>
 
 <!-- Cart view section -->
-<section id="aa-myaccount">
+<section id="aa-myaccount"style="background: linear-gradient(to bottom, #e1e1e1, #b272f1); ">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="aa-myaccount-area">
                     <div class="row">
-                    @if (TempData["AlertMessageErrorLogin"] != null)
-                    {
-                     <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                         <strong>@TempData["AlertMessageErrorLogin"].ToString()</strong>
-                         <script>
-                             window.setTimeout(function () {
-                                 $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
-                                     $(this).remove();
-                                 });
-                             }, 2000);
-                         </script>
-                     </div>
-                     }
-                    <div class="container2">
-                        <input type="checkbox" id="flip">
-                        <div class="cover">
-                            <div class="front">
-                                <img src="images/frontImg.jpg" alt="">
-                                <div class="text">
-                                    <span class="text-1">Every new friend is a <br> new adventure</span>
-                                    <span class="text-2">Let's get connected</span>
+                         <div class="container2">
+        <div class="forms">
+            <div class="form login">
+                <h2 class="title">Login</h2>
+                @if (TempData["AlertMessageErrorLogin"] != null)
+                {
+            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                <strong>@TempData["AlertMessageErrorLogin"].ToString()</strong>
+                <script>
+                    window.setTimeout(function () {
+                        $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
+                            $(this).remove();
+                        });
+                    }, 2000);
+                </script>
+            </div>}
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
+                {
+            <div class="input-field">
+                <div class="user-box">
+                    <input name="UserName" type="text" required maxlength="20">
+                    <label>Username</label>
+                </div>
+            </div>
+                            <div class="input-field">
+                                <div class="user-box">
+                                    <input name="Password" type="password" required maxlength="20">
+                                    <label>Password</label>
                                 </div>
                             </div>
-                            <div class="back">
-                                <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
-                                <div class="text">
-                                    <span class="text-1">Complete miles of journey <br> with one step</span>
-                                    <span class="text-2">Let's get started</span>
-                                </div>
+                                            <div class="text" style="padding-top:20px;"><a href="#">Forgot password?</a></div>
+                                                            <div class="button input-field">
+                                                                <button type="submit" class="aa-browse-btn" style="margin-top: -10px; width: 365px;">Login</button>
+                                                            </div>}
+                <div class="login-signup">
+                    <span class="text">
+                        Don't have an account?
+                        <a href="#" class="text signup-link">Register Now</a>
+                    </span>
+                </div>
+            </div>
+            <!-- Registration Form -->
+            <div class="form signup">
+                <h2 class="title">Registration</h2>
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
+                {
+                <div class="input-boxes">
+                    <div class="input-field">
+                        <div class="user-box">
+                            <input id="first-name" required name="First_Name" type="text" maxlength="20">
+                            <label>First Name</label>
+                        </div>
+                        </div>
+                    <div class="input-field">
+                        <div class="user-box">
+                            <input id="last-name" required name="Last_Name" type="text" maxlength="20">
+                            <label>Last Name</label>
+                        </div>
+                        </div>
+                    <div class="input-field">
+                        <div class="user-box">
+                            <input id="username" required name="UserName" type="text" maxlength="20">
+                            <label>UserName</label>
+                        </div>
+                        </div>
+                    <div class="input-field">
+                        <div class="user-box">
+                            <input id="age" required min="13" name="Age" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2">
+                            <label>Age</label>
+                        </div>
+                        </div>
+                    <div class="input-field">
+                        <div class="user-box">
+                            <input id="email" name="Email" type="email" required maxlength="30">
+                            <label>Email</label>
+                        </div>
+                        </div>
+                    <div class="input-field">
+                        <div class="user-box">
+                            <input id="password" required name="Password" type="password" maxlength="20">
+                            <label>Password</label>
+                        </div>
+                        </div>
+                        <div class="input-field">
+                            <div class="user-box">
+                                <input id="mobile" required min="0" name="Mobile1" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="15">
+                                <label>Mobile</label>
+                            </div>
+                            </div>
+                        <div class="input-field">
+                            <div class="user-box">
+                                <input id="country" required name="Country" type="text" maxlength="20">
+                                <label>Country</label>
+                            </div>
                             </div>
                         </div>
-                        <div class="forms">
-                            <div class="form-content">
-                                <div class="login-form">
-                                    <div class="title">Login</div>
-                                    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
-                                    {
-                                        <div class="input-boxes">
-                                            <div class="input-box">
-                                                <input name="UserName" type="text" required placeholder="Username" maxlength="20">
-                                            </div>
-                                            <div class="input-box">
-                                                <input name="Password" type="password" required placeholder="Password" maxlength="20">
-                                            </div>
-                                            <div class="text"><a href="#">Forgot password?</a></div>
-                                            <div class="button input-box">
-                                            <button type="submit" class="aa-browse-btn">Login</button>
-                                                </div>
-                                            <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
-                                        </div>
-                                    }
-                                </div>
-                                <div class="signup-form">
-                                    <div class="title">Signup</div>
-                                    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
-                                    {
-                                        <label for="">First Name<span>*</span></label>
-                                        <input required name="First_Name" type="text" placeholder="Enter first name" maxlength="20">
-
-                                        <label for="">Last Name<span>*</span></label>
-                                        <input required name="Last_Name" type="text" placeholder="Enter last name" maxlength="20">
-
-                                        <label for="">Username<span>*</span></label>
-                                        <input required name="UserName" type="text" placeholder="Username" maxlength="20">
-
-                                        <label for="">Age<span>*</span></label>
-                                        <input required min="13" name="Age" type="number" placeholder="Age" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2">
-
-                                        <label for="">Email<span>*</span></label>
-                                        <input name="Email" type="email" required placeholder="Enter your email" maxlength="30">
-
-                                        <label for="">Password<span>*</span></label>
-                                        <input required name="Password" type="password" placeholder="Password" maxlength="20">
-
-                                        <label for="">Mobile<span>*</span></label>
-                                        <input required min="0" name="Mobile1" type="number" placeholder="Mobile" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="15">
-
-                                        <label for="">Country<span>*</span></label>
-                                        <input required name="Country" type="text" placeholder="Country" maxlength="20">
-
-                                        <button type="submit" class="aa-browse-btn">Register</button>
-                                    }
-                                    <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="button input-field">
+                        <button type="submit" class="aa-browse-btn" style="margin-top: -10px; width: 365px;">Register</button>
                     </div>
-
+                }
+                <div class="login-signup">
+                    <span class="text">
+                        Already have an account?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
+     <script>
+         const container2 = document.querySelector(".container2"),
+             pwShowHide = document.querySelectorAll(".showHidePw"),
+             pwFields = document.querySelectorAll(".password"),
+             signUp = document.querySelector(".signup-link"),
+             login = document.querySelector(".login-link");
+
+         //   js code to show/hide password and change icon
+         pwShowHide.forEach(eyeIcon => {
+             eyeIcon.addEventListener("click", () => {
+                 pwFields.forEach(pwField => {
+                     if (pwField.type === "password") {
+                         pwField.type = "text";
+
+                         pwShowHide.forEach(icon => {
+                             icon.classList.replace("uil-eye-slash", "uil-eye");
+                         })
+                     } else {
+                         pwField.type = "password";
+
+                         pwShowHide.forEach(icon => {
+                             icon.classList.replace("uil-eye", "uil-eye-slash");
+                         })
+                     }
+                 })
+             })
+         })
+
+         // js code to appear signup and login form
+         signUp.addEventListener("click", () => {
+             container2.classList.add("active");
+         });
+         login.addEventListener("click", () => {
+             container2.classList.remove("active");
+         });
+
+     </script> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
 <!-- / Cart view section -->
