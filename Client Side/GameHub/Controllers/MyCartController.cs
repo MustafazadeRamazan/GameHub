@@ -12,7 +12,6 @@ namespace GameHub.Controllers
     {
         GameHubEntities db = new GameHubEntities();
 
-        // GET: MyCart
         public ActionResult Index()
         {
              var data=this.GetDefaultData();

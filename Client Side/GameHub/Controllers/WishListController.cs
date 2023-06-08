@@ -11,7 +11,6 @@ namespace GameHub.Controllers
     {
         GameHubEntities db = new GameHubEntities();
 
-        // GET: WishList
         public ActionResult Index()
         {
              this.GetDefaultData();
@@ -20,7 +19,7 @@ namespace GameHub.Controllers
             return View(wishlistProducts);
         }
 
-        //REMOVE ITEM FROM WISHLIST
+
         public ActionResult Remove(int id)
         {
             int productId = db.Wishlists.Find(id).ProductID;
@@ -31,7 +30,7 @@ namespace GameHub.Controllers
             return RedirectToAction("Index");
 
         }
-        //ADD TO CART WISHLIST
+
         public ActionResult AddToCart(int id)
         {
             int productId = db.Wishlists.Find(id).ProductID;

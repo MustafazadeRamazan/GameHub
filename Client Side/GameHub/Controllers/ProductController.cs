@@ -24,7 +24,6 @@ namespace GameHub.Controllers
             return View("Products");
         }
 
-        //TOP SOLD PRODUCTS
         public List<TopSoldProduct> TopSoldProducts()
         {
             var prodList = (from prod in db.OrderDetails
@@ -50,7 +49,7 @@ namespace GameHub.Controllers
             }
             return topSoldProds;
         }
-        //RECENT VIEWS PRODUCTS
+
         public IEnumerable<Product> RecentViewProducts()
         {
             if (TempShpData.UserID > 0)
@@ -71,7 +70,7 @@ namespace GameHub.Controllers
             }
         }
 
-        //ADD TO CART
+
         public ActionResult AddToCart(int id)
         {
             string name = db.Products.Find(id).Name;
@@ -82,13 +81,12 @@ namespace GameHub.Controllers
                 TempShpData.items = new List<OrderDetail>();
             }
 
-            // Check if the product already exists in the cart
+
             OrderDetail existingItem = TempShpData.items.FirstOrDefault(item => item.ProductID == id);
             if (existingItem != null)
             {
                 if (product.UnitInStock > existingItem.Quantity)
                 {
-                    // Increase the quantity of the existing item
                     existingItem.Quantity++;
                     existingItem.TotalAmount = existingItem.Quantity * existingItem.UnitPrice;
                     TempData["AlertMessageSuccess"] = $"Quantity of {name} increased in the cart";
@@ -116,7 +114,6 @@ namespace GameHub.Controllers
         }
 
 
-        //VIEW DETAILS
         public ActionResult ViewDetails(int id)
         {
             var prod = db.Products.Find(id);
@@ -141,7 +138,6 @@ namespace GameHub.Controllers
             return View(prod);
         }
 
-        //WISHLIST
         public ActionResult WishList(int id)
         {
             
@@ -163,7 +159,6 @@ namespace GameHub.Controllers
             return Redirect(TempData["returnURL"].ToString());
         }
 
-        //ADD RECENT VIEWS PRODUCT IN DB
         public void AddRecentViewProduct(int pid)
         {
             if (TempShpData.UserID > 0)
@@ -177,7 +172,7 @@ namespace GameHub.Controllers
             }
         }
 
-        //ADD REVIEWS ABOUT PRODUCT
+
         public ActionResult AddReview(int productID, FormCollection getReview)
         {
 
@@ -206,7 +201,7 @@ namespace GameHub.Controllers
             return View(prods);
         }
 
-        //GET PRODUCTS BY CATEGORY
+
         public ActionResult GetProductsByCategory(string categoryName, int? page)
         {
             ViewBag.Categories = db.Categories.Select(x => x.Name).ToList();
@@ -218,7 +213,7 @@ namespace GameHub.Controllers
             return View("Products", prods.ToPagedList(page ?? 1, 9));
         }
 
-        //SEARCH BAR
+
         public ActionResult Search(string product,int? page)
         {
             ViewBag.Categories = db.Categories.Select(x => x.Name).ToList();

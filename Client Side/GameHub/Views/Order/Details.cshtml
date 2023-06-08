@@ -29,15 +29,10 @@
                             <div class="col-md-6">
                                 <dl class="dl-horizontal ">
                                     <dt>
-                                        @Html.DisplayName("Order Canceled : ")
+                                        @Html.DisplayName("Order ID : ")
                                     </dt>
                                     <dd>
-                                        @if (Model.Item1.CancelOrder == true)
-                                        {
-                            <label style="color:red;">✔⠀⠀</label> }
-                                        else
-                                        {
-                            <label style="color:green;">✖⠀⠀</label>}
+                                        @Html.DisplayFor(model => model.Item1.OrderID)
                                     </dd>
                                     <dt>
                                         @Html.DisplayName("Your Name : ")
@@ -81,19 +76,28 @@
                                         @Html.DisplayFor(model => model.Item1.OrderDate)
                                     </dd>
                                     <dt>
+                                        @if (Model.Item1.CancelOrder == true)
+                                        {
+                                    @Html.DisplayName("Order Canceled : ")}
+                                    </dt>
+                                    <dd>
+                                        @if (Model.Item1.CancelOrder == true)
+                                        {
+                                        <label style="color:red;">✖⠀⠀</label> }
+                                    </dd>
+                                    <dt>
                                         @Html.DisplayName("Order Dispatched : ")
                                     </dt>
                                     <dd>
                                         @if (Model.Item1.DIspatched == true)
                                         {
-                            <label style="color:green;">✔⠀⠀</label> }
-                                        else if (Model.Item1.CancelOrder == true)
-                                        {
-                                            <label style="color:red;">✖⠀⠀</label>
-                                        }
-                                        else
-                                        {
-                            <label style="color: red;">-</label>}
+                                <label style="color:green;">✔⠀⠀</label> }
+                            else if (Model.Item1.CancelOrder == true)
+                            {
+                                <label style="color:red;">✖⠀⠀</label> }
+                                            else
+                                            {
+                                <label style="color: red;">-</label>}
                                         @Html.DisplayFor(model => model.Item1.DispatchedDate)
                                     </dd>
                                     <dt>
@@ -102,18 +106,16 @@
                                     <dd>
                                         @if (Model.Item1.Deliver == true)
                                         {
-                            <label style="color:green;">✔⠀⠀</label> }
-                                        else if (Model.Item1.DIspatched == true && Model.Item1.Deliver == false)
-                                        {
-                                            <label>⌛⠀⠀</label>
-                                        }
-                                        else if (Model.Item1.CancelOrder == true)
-                                        {
-                                            <label style="color:red;">✖⠀⠀</label>
-                                        }
-                                        else
-                                        {
-                            <label style="color: red;">-</label>}
+                                <label style="color:green;">✔⠀⠀</label> }
+                            else if (Model.Item1.DIspatched == true && Model.Item1.Deliver == false)
+                            {
+                                <label>⌛⠀⠀</label> }
+                                            else if (Model.Item1.CancelOrder == true)
+                                            {
+                                <label style="color:red;">✖⠀⠀</label> }
+                                            else
+                                            {
+                                <label style="color: red;">-</label>}
                                         @Html.DisplayFor(model => model.Item1.DeliveryDate)
                                     </dd>
                                     <dt>

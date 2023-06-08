@@ -23,7 +23,6 @@ namespace IMS_Project.Controllers
             return View();
         }
         
-        //Area Grap
         public JsonResult GetSalesPerDay()
         {
             var data = (from O in db.Orders
@@ -44,7 +43,7 @@ namespace IMS_Project.Controllers
             return Json(aa, JsonRequestBehavior.AllowGet);
         }
 
-        //Circle Graph
+
         public JsonResult GetTopProductSales()
         {
             var dataforchart = (from OD in db.OrderDetails
@@ -63,7 +62,6 @@ namespace IMS_Project.Controllers
         }
         
 
-        //Line Grap
         public JsonResult GetOrderPerDay()
         {
             var data = from O in db.Orders
@@ -83,7 +81,6 @@ namespace IMS_Project.Controllers
             return Json(aa, JsonRequestBehavior.AllowGet);
         }
 
-        //Bar Grap
         public JsonResult GetSalesPerCountry()
         {
             var dataforBarchart = (from O in db.Orders

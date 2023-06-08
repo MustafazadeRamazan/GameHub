@@ -39,6 +39,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
 
             <th>
                 @Html.DisplayNameFor(model => model.Mobile1)
@@ -76,6 +79,17 @@
         </td>
 
         <td>
+            @if (item.status == "Verified")
+            {
+                <b style="color:green;">Verified</b>
+            }
+            else
+            {
+                <b style="color:red;">Unverified</b>
+            }
+        </td>
+
+        <td>
             @Html.DisplayFor(modelItem => item.Mobile1)
         </td>
 
@@ -83,24 +97,23 @@
         <td>
             @if (Session["username"] != null)
             {
-                            if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Manager")
-            {
-                <a class="btn btn-sm btn-primary" href="@Url.Action("Edit", "Customer", new { id = item.CustomerID })" aria-label="Edit" data-toggle="tooltip" data-placement="top" title="Edit">
-                    <i class="fa fa-edit" aria-hidden="true"></i>
-                </a>
-            }
-            }
+                if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Manager")
+                {
+    <a class="btn btn-sm btn-primary" href="@Url.Action("Edit", "Customer", new { id = item.CustomerID })" aria-label="Edit" data-toggle="tooltip" data-placement="top" title="Edit">
+        <i class="fa fa-edit" aria-hidden="true"></i>
+    </a>}
+                    }
             <a class="btn btn-sm btn-info" href="@Url.Action("Details", "Customer", new { id = item.CustomerID })" aria-label="Details" data-toggle="tooltip" data-placement="top" title="View Details">
                 <i class="fa fa-info" aria-hidden="true"></i>
             </a>
             @if (Session["username"] != null)
             {
-                            if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Manager")
-            {
-        <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", "Customer", new { id = item.CustomerID })" aria-label="Delete" data-toggle="tooltip" data-placement="top" title="Delete">
-            <i class="fa fa-trash-o" aria-hidden="true"></i>
-        </a>}
-            }
+                if (Session["username"].ToString() == "Admin" || Session["username"].ToString() == "Manager")
+                {
+    <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", "Customer", new { id = item.CustomerID })" aria-label="Delete" data-toggle="tooltip" data-placement="top" title="Delete">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+    </a>}
+}
         </td>
     </tr>
 

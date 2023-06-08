@@ -113,7 +113,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email", required = "required", maxlength = "30" } })
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email", required = "required", maxlength = "50" } })
                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -163,6 +163,18 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Address1, new { htmlAttributes = new { @class = "form-control", maxlength = "20" } })
                 @Html.ValidationMessageFor(model => model.Address1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("status", new List<SelectListItem>() {
+                                        new SelectListItem(){Text="Verified",Value="Verified"},
+                                        new SelectListItem(){Text="Unverified",Value="Unverified"}
+
+                        }, "--Select Status--", new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
             </div>
         </div>
 

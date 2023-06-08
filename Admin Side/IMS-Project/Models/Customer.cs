@@ -11,7 +11,8 @@ namespace IMS_Project.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Customer
     {
         public Customer()
@@ -43,6 +44,7 @@ namespace IMS_Project.Models
         public string Address1 { get; set; }
         public string Address2 { get; set; }
         public string Picture { get; set; }
+        [Display(Name = "Status")]
         public string status { get; set; }
         public Nullable<System.DateTime> LastLogin { get; set; }
         public Nullable<System.DateTime> Created { get; set; }

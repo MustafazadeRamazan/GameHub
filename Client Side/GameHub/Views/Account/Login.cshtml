@@ -219,113 +219,143 @@
                 <div class="aa-myaccount-area">
                     <div class="row">
                          <div class="container2">
-        <div class="forms">
-            <div class="form login">
-                <h2 class="title">Login</h2>
-                @if (TempData["AlertMessageErrorLogin"] != null)
-                {
-            <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                <strong>@TempData["AlertMessageErrorLogin"].ToString()</strong>
-                <script>
-                    window.setTimeout(function () {
-                        $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
-                            $(this).remove();
-                        });
-                    }, 2000);
-                </script>
-            </div>}
-                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
-                {
-            <div class="input-field">
-                <div class="user-box">
-                    <input name="UserName" type="text" required maxlength="20">
-                    <label>Username</label>
-                </div>
-            </div>
-                            <div class="input-field">
-                                <div class="user-box">
-                                    <input name="Password" type="password" required maxlength="20">
-                                    <label>Password</label>
-                                </div>
-                            </div>
-                                            <div class="text" style="padding-top:20px;"><a href="#">Forgot password?</a></div>
-                                                            <div class="button input-field">
-                                                                <button type="submit" class="aa-browse-btn" style="margin-top: -10px; width: 365px;">Login</button>
-                                                            </div>}
-                <div class="login-signup">
-                    <span class="text">
-                        Don't have an account?
-                        <a href="#" class="text signup-link">Register Now</a>
-                    </span>
-                </div>
-            </div>
-            <!-- Registration Form -->
-            <div class="form signup">
-                <h2 class="title">Registration</h2>
-                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
-                {
-                <div class="input-boxes">
-                    <div class="input-field">
-                        <div class="user-box">
-                            <input id="first-name" required name="First_Name" type="text" maxlength="20">
-                            <label>First Name</label>
-                        </div>
-                        </div>
-                    <div class="input-field">
-                        <div class="user-box">
-                            <input id="last-name" required name="Last_Name" type="text" maxlength="20">
-                            <label>Last Name</label>
-                        </div>
-                        </div>
-                    <div class="input-field">
-                        <div class="user-box">
-                            <input id="username" required name="UserName" type="text" maxlength="20">
-                            <label>UserName</label>
-                        </div>
-                        </div>
-                    <div class="input-field">
-                        <div class="user-box">
-                            <input id="age" required min="13" name="Age" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2">
-                            <label>Age</label>
-                        </div>
-                        </div>
-                    <div class="input-field">
-                        <div class="user-box">
-                            <input id="email" name="Email" type="email" required maxlength="30">
-                            <label>Email</label>
-                        </div>
-                        </div>
-                    <div class="input-field">
-                        <div class="user-box">
-                            <input id="password" required name="Password" type="password" maxlength="20">
-                            <label>Password</label>
-                        </div>
-                        </div>
-                        <div class="input-field">
-                            <div class="user-box">
-                                <input id="mobile" required min="0" name="Mobile1" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="15">
-                                <label>Mobile</label>
-                            </div>
-                            </div>
-                        <div class="input-field">
-                            <div class="user-box">
-                                <input id="country" required name="Country" type="text" maxlength="20">
-                                <label>Country</label>
-                            </div>
-                            </div>
-                        </div>
-                    <div class="button input-field">
-                        <button type="submit" class="aa-browse-btn" style="margin-top: -10px; width: 365px;">Register</button>
-                    </div>
-                }
-                <div class="login-signup">
-                    <span class="text">
-                        Already have an account?
-                        <a href="#" class="text login-link">Login Now</a>
-                    </span>
-                </div>
-            </div>
-        </div>
+                             <div class="forms">
+                                 <div class="form login">
+                                     <h2 class="title">Login</h2>
+                                     @if (TempData["AlertMessageErrorLogin"] != null)
+                                     {
+                             <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                                 <strong>@TempData["AlertMessageErrorLogin"].ToString()</strong>
+                                 <script>
+                                     window.setTimeout(function () {
+                                         $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
+                                             $(this).remove();
+                                         });
+                                     }, 2000);
+                                 </script>
+                             </div>}
+                                     @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
+                                     {
+                             <div class="input-field">
+                                 <div class="user-box">
+                                     <input name="UserName" type="text" required maxlength="20">
+                                     <label>Username</label>
+                                 </div>
+                             </div>
+                                             <div class="input-field">
+                                                 <div class="user-box">
+                                                     <input name="Password" type="password" required maxlength="20">
+                                                     <label>Password</label>
+                                                 </div>
+                                             </div>
+                                                             <div class="text" style="padding-top:20px;"><a href="#" id="forgot-password-link">Forgot password?</a></div>
+                                                                             <div class="button input-field">
+                                                                                 <button type="submit" class="aa-browse-btn" style="margin-top: -10px; width: 365px;">Login</button>
+                                                                             </div>}
+                                     <div class="login-signup">
+                                         <span class="text">
+                                             Don't have an account?
+                                             <a href="#" class="text signup-link">Register Now</a>
+                                         </span>
+                                     </div>
+                                 </div>
+                                 <!-- Registration Form -->
+                                 <div class="form signup">
+                                     <h2 class="title">Registration</h2>
+                                     @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
+                                     {
+                             <div class="input-boxes">
+                                 <div class="input-field">
+                                     <div class="user-box">
+                                         <input id="first-name" required name="First_Name" type="text" maxlength="20">
+                                         <label>First Name</label>
+                                     </div>
+                                 </div>
+                                 <div class="input-field">
+                                     <div class="user-box">
+                                         <input id="last-name" required name="Last_Name" type="text" maxlength="20">
+                                         <label>Last Name</label>
+                                     </div>
+                                 </div>
+                                 <div class="input-field">
+                                     <div class="user-box">
+                                         <input id="username" required name="UserName" type="text" maxlength="20">
+                                         <label>UserName</label>
+                                     </div>
+                                 </div>
+                                 <div class="input-field">
+                                     <div class="user-box">
+                                         <input id="age" required min="13" name="Age" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2">
+                                         <label>Age</label>
+                                     </div>
+                                 </div>
+                                 <div class="input-field">
+                                     <div class="user-box">
+                                         <input id="email" name="Email" type="email" required maxlength="50">
+                                         <label>Email</label>
+                                     </div>
+                                 </div>
+                                 <div class="input-field">
+                                     <div class="user-box">
+                                         <input id="password" required name="Password" type="password" maxlength="20">
+                                         <label>Password</label>
+                                     </div>
+                                 </div>
+                                 <div class="input-field">
+                                     <div class="user-box">
+                                         <input id="mobile" required min="0" name="Mobile1" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="15">
+                                         <label>Mobile</label>
+                                     </div>
+                                 </div>
+                                 <div class="input-field">
+                                     <div class="user-box">
+                                         <input id="country" required name="Country" type="text" maxlength="20">
+                                         <label>Country</label>
+                                     </div>
+                                 </div>
+                             </div>
+                                             <div class="button input-field">
+                                                 <button type="submit" class="aa-browse-btn" style="margin-top: -10px; width: 365px;">Register</button>
+                                             </div>}
+                                     <div class="login-signup">
+                                         <span class="text">
+                                             Already have an account?
+                                             <a href="#" class="text login-link">Login Now</a>
+                                         </span>
+                                     </div>
+                                 </div>
+
+                                 <div class="form forgot-password">
+                                     <h2 class="title">Forgot Password</h2>
+                                     <form method="post" action="@Url.Action("ForgotPassword", "Account")">
+                                         <div class="input-field">
+                                             <div class="user-box">
+                                                 <input id="email" name="email" type="email" required maxlength="50">
+                                                 <label style="margin-top:-5px;">Email</label>
+                                             </div>
+                                         </div>
+                                         <div class="button input-field">
+                                             <button type="submit" class="aa-browse-btn" style="margin-top: -10px; width: 365px;">Reset Password</button>
+                                         </div>
+                                     </form>
+                                     <div class="login-signup">
+                                         <span class="text">
+                                             Remembered your password?
+                                             <a href="#" class="text login-link">Login Now</a>
+                                         </span>
+                                     </div>
+                                 </div>
+
+
+                                 <script>
+    function redirectToForgotPassword() {
+        // Redirect to the ForgotPassword page
+        window.location.href = '@Url.Action("ForgotPassword", "Account")';
+    }
+                                 </script>
+
+
+                             </div>
     </div>
      <script>
          const container2 = document.querySelector(".container2"),
@@ -361,6 +391,20 @@
          });
          login.addEventListener("click", () => {
              container2.classList.remove("active");
+         });
+
+         $(document).ready(function () {
+             // Switch to forgot password form
+             $('#forgot-password-link').click(function () {
+                 $('.form.login').hide();
+                 $('.form.signup').hide();
+                 $('.form.forgot-password').show();
+             });
+             $('.login-link').click(function () {
+                 $('.form.login').show();
+                 $('.form.signup').show();
+                 $('.form.forgot-password').hide();
+             });
          });
 
      </script> 

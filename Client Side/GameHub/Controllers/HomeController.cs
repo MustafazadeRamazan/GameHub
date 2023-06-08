@@ -12,7 +12,6 @@ namespace GameHub.Controllers
     {
         GameHubEntities db = new GameHubEntities();
 
-        // GET: Home
         public ActionResult Index()
         {
             ViewBag.FpsGames = db.Products.Where(x => x.Category.Name.Equals("Fps Games")).ToList();

@@ -10,7 +10,6 @@ namespace IMS_Project.Controllers
     public class admin_LoginController : Controller
     {
         GameHubEntities db = new GameHubEntities();
-        // GET: admin_Login
         public ActionResult Index()
         {
             return View();

@@ -36,7 +36,6 @@ namespace IMS_Project.Controllers
             return View();
         }
 
-        //Get Edit
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -49,7 +48,6 @@ namespace IMS_Project.Controllers
             return View("Edit",emp);
         }
 
-        //Post Edit
         [HttpPost]
         public ActionResult Edit(admin_Employee emp)
         {
@@ -64,7 +62,7 @@ namespace IMS_Project.Controllers
             return View(emp);
         }
 
-        //Get Details
+
         public ActionResult Details(int id)
         {
            admin_Employee emp= db.admin_Employee.Find(id);
@@ -75,7 +73,7 @@ namespace IMS_Project.Controllers
            return View(emp);
         }
 
-        //Get Delete
+
         public ActionResult Delete(int id)
         {
             admin_Employee emp = db.admin_Employee.Find(id);
@@ -87,7 +85,7 @@ namespace IMS_Project.Controllers
  
         }
 
-        //Post Delete Confirmed
+
         [HttpPost,ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

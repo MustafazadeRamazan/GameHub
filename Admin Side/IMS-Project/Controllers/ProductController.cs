@@ -69,7 +69,6 @@ namespace IMS_Project.Controllers
         }
 
 
-        //Get Edit
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -82,7 +81,7 @@ namespace IMS_Project.Controllers
             return View("Edit", product);
         }
 
-        //Post Edit
+
         [HttpPost]
         public ActionResult Edit(Product prod)
         {
@@ -97,7 +96,6 @@ namespace IMS_Project.Controllers
             return View(prod);
         }
 
-        //Get Details
         public ActionResult Details(int id)
         {
             Product  product = db.Products.Find(id);
@@ -108,7 +106,7 @@ namespace IMS_Project.Controllers
             return View(product);
         }
 
-        //Get Delete
+
         public ActionResult Delete(int id)
         {
             Product product = db.Products.Find(id);
@@ -120,7 +118,7 @@ namespace IMS_Project.Controllers
 
         }
 
-        //Post Delete Confirmed
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

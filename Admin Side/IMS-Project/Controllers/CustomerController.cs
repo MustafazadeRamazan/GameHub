@@ -27,11 +27,11 @@ namespace IMS_Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                string[] usernames = { customer.UserName }; // Assign the original username to the array
+                string[] usernames = { customer.UserName };
 
                 if (customer.UserName.Contains(' '))
                 {
-                    usernames = customer.UserName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); // Split the username if it contains a space
+                    usernames = customer.UserName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 }
 
                 bool isEmailExists = IsEmailExists(customer.Email);
@@ -63,7 +63,8 @@ namespace IMS_Project.Controllers
                         Email = customer.Email,
                         Password = customer.Password,
                         Mobile1 = customer.Mobile1,
-                        Country = customer.Country
+                        Country = customer.Country,
+                        status = customer.status
                     };
 
                     db.Customers.Add(customers);
@@ -79,7 +80,6 @@ namespace IMS_Project.Controllers
             return View();
         }
 
-        //Get Edit
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -118,7 +118,6 @@ namespace IMS_Project.Controllers
             return false;
         }
 
-        //Post Edit
         [HttpPost]
         public ActionResult Edit(Customer cust)
         {
@@ -126,17 +125,14 @@ namespace IMS_Project.Controllers
             {
                 Customer existingCustomer = db.Customers.Find(cust.CustomerID);
 
-                // Check if the provided email already exists in the database, excluding the case where the email belongs to the current customer being updated.
                 if (existingCustomer.Email != cust.Email && IsEmailExists(cust.Email))
                 {
                     TempData["AlertMessageError"] = $"Customer ID: {cust.CustomerID} Email already exists. Please choose a different email.";
                     return RedirectToAction("Index", "Customer");
                 }
 
-                // Split the new username by space if necessary
                 string[] newUsername = cust.UserName.Split(' ');
 
-                // If the username is changed, check if the new username(s) already exist.
                 if (!string.Equals(existingCustomer.UserName, cust.UserName, StringComparison.OrdinalIgnoreCase) && IsAnyUsernameExists(newUsername))
                 {
                     TempData["AlertMessageError"] = $"Customer ID: {cust.CustomerID} Username already exists. Please choose a different username.";
@@ -156,6 +152,7 @@ namespace IMS_Project.Controllers
                 existingCustomer.Password = cust.Password;
                 existingCustomer.Mobile1 = cust.Mobile1;
                 existingCustomer.Country = cust.Country;
+                existingCustomer.status = cust.status;
 
                 db.Entry(existingCustomer).State = EntityState.Modified;
                 db.SaveChanges();
@@ -181,7 +178,6 @@ namespace IMS_Project.Controllers
         }
 
 
-        //Get Details
         public ActionResult Details(int id)
         {
             Customer cust = db.Customers.Find(id);
@@ -192,7 +188,6 @@ namespace IMS_Project.Controllers
             return View(cust);
         }
 
-        //Get Delete
         public ActionResult Delete(int id)
         {
             Customer cust = db.Customers.Find(id);
@@ -204,7 +199,6 @@ namespace IMS_Project.Controllers
 
         }
 
-        //Post Delete Confirmed
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

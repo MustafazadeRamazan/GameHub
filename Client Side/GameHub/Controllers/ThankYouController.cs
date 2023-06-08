@@ -9,7 +9,6 @@ namespace GameHub.Controllers
 {
     public class ThankYouController : Controller
     {
-        // GET: ThankYou
         public ActionResult Index()
         {
             ViewBag.cartBox = null;

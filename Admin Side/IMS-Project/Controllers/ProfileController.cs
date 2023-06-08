@@ -11,7 +11,7 @@ namespace IMS_Project.Controllers
     public class ProfileController : Controller
     {
         GameHubEntities db = new GameHubEntities();
-        // GET: Profile
+
         public ActionResult Index()
         {
             return View(db.admin_Employee.Find(TemData.EmpID));

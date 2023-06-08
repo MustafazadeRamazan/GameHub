@@ -13,7 +13,6 @@ namespace IMS_Project.Controllers
 
         GameHubEntities db = new GameHubEntities();
 
-        // GET: Supplier
         public ActionResult Index()
         {
             return View(db.Suppliers.ToList());
@@ -80,7 +79,7 @@ namespace IMS_Project.Controllers
             return View(supp);
         }
 
-        //Post Delete Confirmed
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

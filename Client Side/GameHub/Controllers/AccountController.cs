@@ -5,14 +5,18 @@ using System.Web;
 using System.Web.Mvc;
 using GameHub.Models;
 using System.Data;
+using System.Net;
+using System.Net.Mail;
+
 
 namespace GameHub.Controllers
 {
     public class AccountController : Controller
     {
         GameHubEntities db = new GameHubEntities();
+        string senderEmail = "your-email@gmail.com"; // Update with your email address
+        string senderPassword = "your-password"; // Update with your email password
 
-        // GET: Account
         public ActionResult Index()
         {
             this.GetDefaultData();
@@ -23,17 +27,16 @@ namespace GameHub.Controllers
         }
 
 
-        //REGISTER CUSTOMER
         [HttpPost]
         public ActionResult Register(Customer cust)
         {
             if (ModelState.IsValid)
             {
-                string[] usernames = { cust.UserName }; // Assign the original username to the array
+                string[] usernames = { cust.UserName };
 
                 if (cust.UserName.Contains(' '))
                 {
-                    usernames = cust.UserName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); // Split the username if it contains a space
+                    usernames = cust.UserName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 }
 
                 bool isEmailExists = IsEmailExists(cust.Email);
@@ -53,6 +56,8 @@ namespace GameHub.Controllers
                     return RedirectToAction("Login", "Account");
                 }
 
+                string verificationToken = Guid.NewGuid().ToString();
+
                 foreach (string username in usernames)
                 {
                     Customer customer = new Customer
@@ -64,22 +69,145 @@ namespace GameHub.Controllers
                         Email = cust.Email,
                         Password = cust.Password,
                         Mobile1 = cust.Mobile1,
-                        Country = cust.Country
+                        Country = cust.Country,
+                        Organization = verificationToken
                     };
+
+                    SendVerificationEmail(customer, verificationToken);
 
                     db.Customers.Add(customer);
                     db.SaveChanges();
-
-                    Session["username"] = username;
-                    TempShpData.UserID = GetUser(username).CustomerID;
-                    TempData["AlertMessageSuccess"] = $"{cust.First_Name} Successfully registered!";
+                    TempData["AlertMessageSuccess"] = $"Email verification code sent to {cust.Email}, please confirm to login";
                     break;
                 }
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Login", "Account");
             }
 
             return View();
+        }
+
+        private void SendVerificationEmail(Customer customer, string verificationToken)
+        {
+            string emailSubject = "Account Verification";
+
+            MailMessage mailMessage = new MailMessage(senderEmail, customer.Email)
+            {
+                Subject = emailSubject,
+                IsBodyHtml = true
+            };
+            mailMessage.Body = "<h2>" + "Hi <strong>" + customer.UserName + "</strong>," + "</h2>" +
+                        "<br>" +
+                        "<h3>" + "Thank you for joining the GameHub family, click the link below to verify your account" + "</h3>" +
+                        "<br>" +
+                        $"<h3>Please click the following link to verify your account: {Url.Action("VerifyEmail", "Account", new { token = verificationToken }, Request.Url.Scheme)}</h3>" +
+                        "<br>";
+            mailMessage.Body += "<br>Best regards,<br><strong>GameHub Support</strong>";
+
+            SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(senderEmail, senderPassword),
+                EnableSsl = true
+            };
+
+            try
+            {
+                smtpClient.Send(mailMessage);
+            }
+            catch (Exception)
+            {
+                TempData["AlertMessageError"] = "Something went wrong, please try again.";
+            }
+        }
+
+        public ActionResult VerifyEmail(string token)
+        {
+            Customer customer = db.Customers.FirstOrDefault(c => c.Organization == token);
+
+            if (customer != null)
+            {
+                customer.status = "Verified";
+                customer.Organization = null;
+
+                db.SaveChanges();
+
+                Session["username"] = customer.UserName;
+                TempShpData.UserID = customer.CustomerID;
+                TempData["AlertMessageSuccess"] = $"{customer.First_Name} Successfully registered!";
+            }
+            else
+            {
+                TempData["AlertMessageError"] = "Invalid verification token. Please check your email or request a new verification link.";
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult ForgotPassword(string email)
+        {
+            Customer customer = db.Customers.FirstOrDefault(c => c.Email == email);
+
+            if (customer != null)
+            {
+                string newPassword = GenerateRandomPassword();
+
+                customer.Password = newPassword;
+
+                db.SaveChanges();
+                SendNewPasswordEmail(customer, newPassword);
+
+                TempData["AlertMessageSuccess"] = "A new password has been sent to your email address.";
+            }
+            else
+            {
+                TempData["AlertMessageError"] = "Invalid email address. Please check your input or contact support.";
+            }
+
+            return RedirectToAction("Login", "Account");
+        }
+
+        private string GenerateRandomPassword()
+        {
+            const string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            Random random = new Random();
+            string newPassword = new string(
+                Enumerable.Repeat(allowedChars, 8)
+                          .Select(s => s[random.Next(s.Length)])
+                          .ToArray());
+
+            return newPassword;
+        }
+
+        private void SendNewPasswordEmail(Customer customer, string newPassword)
+        {
+            MailMessage mail = new MailMessage();
+            mail.From = new MailAddress(senderEmail);
+            mail.To.Add(customer.Email);
+            mail.Subject = "New Password";
+            mail.IsBodyHtml = true;
+            mail.Body = "<h2>" + "Hi <strong>" + customer.UserName + "</strong>," + "</h2>" +
+                        "<br>" +
+                        "<h2>" + "Please don't share your password with others!" + "</h2>" +
+                        "<br>" +
+                        "<h1>Your new password is: <strong style=\"color: green;\">" + newPassword + "</strong></h1>" +
+                        "<br>";
+            mail.Body += $"<br><br>Best regards,<br><strong>GameHub Support</strong>";
+
+            using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
+            {
+                smtpClient.Credentials = new NetworkCredential(senderEmail, senderPassword);
+                smtpClient.EnableSsl = true;
+                try
+                {
+                    smtpClient.Send(mail);
+                }
+                catch (Exception)
+                {
+                    TempData["AlertMessageError"] = "Something went wrong, please try again.";
+                }
+            }
         }
 
 
@@ -111,9 +239,6 @@ namespace GameHub.Controllers
         }
 
 
-
-
-        //LOG IN
         public ActionResult Login()
         {
             return View();
@@ -131,7 +256,7 @@ namespace GameHub.Controllers
                             where (m.UserName == usrName && m.Password == Pass)
                             select m).SingleOrDefault();
 
-                if (cust !=null )
+                if (cust != null && cust.status == "Verified")
                 {
                     TempShpData.UserID = cust.CustomerID;
                     Session["username"] = cust.UserName;
@@ -147,7 +272,6 @@ namespace GameHub.Controllers
             return View();
         }
 
-        //LOG OUT
          public ActionResult Logout()
          {
              Session["username"] = null;
@@ -167,7 +291,6 @@ namespace GameHub.Controllers
             return cust;
         }
 
-        //UPDATE CUSTOMER DATA
         [HttpPost]
         public ActionResult Update(Customer cust)
         {
@@ -175,17 +298,14 @@ namespace GameHub.Controllers
             {
                 Customer existingCustomer = db.Customers.Find(cust.CustomerID);
 
-                // Check if the provided email already exists in the database, excluding the case where the email belongs to the current customer being updated.
                 if (existingCustomer.Email != cust.Email && IsEmailExists(cust.Email))
                 {
                     TempData["AlertMessageError"] = "Email already exists. Please choose a different email.";
                     return RedirectToAction("Index", "Home");
                 }
 
-                // Split the new username by space if necessary
                 string[] newUsername = cust.UserName.Split(' ');
 
-                // If the username is changed, check if the new username(s) already exist.
                 if (!string.Equals(existingCustomer.UserName, cust.UserName, StringComparison.OrdinalIgnoreCase) && IsAnyUsernameExists(newUsername))
                 {
                     TempData["AlertMessageError"] = "Username already exists. Please choose a different username.";
