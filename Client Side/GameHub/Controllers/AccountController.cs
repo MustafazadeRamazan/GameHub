@@ -14,8 +14,8 @@ namespace GameHub.Controllers
     public class AccountController : Controller
     {
         GameHubEntities db = new GameHubEntities();
-        string senderEmail = "your-email@gmail.com"; // Update with your email address
-        string senderPassword = "your-password"; // Update with your email password
+        string senderEmail = ""; // Update with your email address
+        string senderPassword = ""; // Update with your email password
 
         public ActionResult Index()
         {
